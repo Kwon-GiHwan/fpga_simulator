@@ -101,10 +101,12 @@ jobs:
         run: |
           set -e
           # result.json에서 metric 추출
-          CYCLES=$(jq -r '.total_cycles // "N/A"' "$RESULT_FILE")
-          INFER_MS=$(jq -r '.inference_time_ms // "N/A"' "$RESULT_FILE")
-          SRAM=$(jq -r '.sram_used_kb // "N/A"' "$RESULT_FILE")
-          FLASH=$(jq -r '.flash_used_kb // "N/A"' "$RESULT_FILE")
+          VELA_CYCLES=$(jq -r '.vela_estimated_cycles // "N/A"' "$RESULT_FILE")
+          VELA_SRAM=$(jq -r '.vela_sram_used_kb // "N/A"' "$RESULT_FILE")
+          VELA_FLASH=$(jq -r '.vela_flash_used_kb // "N/A"' "$RESULT_FILE")
+          FVP_TOTAL=$(jq -r '.fvp_npu_total_cycles // "N/A"' "$RESULT_FILE")
+          FVP_ACTIVE=$(jq -r '.fvp_npu_active_cycles // "N/A"' "$RESULT_FILE")
+          FVP_IDLE=$(jq -r '.fvp_npu_idle_cycles // "N/A"' "$RESULT_FILE")
 
           # PR 번호 역조회
           PR_LOOKUP=$(curl -fsSL \
@@ -117,12 +119,21 @@ jobs:
           BODY=$(cat <<EOF
           #### 🚀 NPU Simulation Result
 
+          **Vela 분석** (사용자 모델 직접 분석)
+
           | Metric | Value |
           |--------|-------|
-          | Total Cycles | \`${CYCLES}\` |
-          | Inference Time | \`${INFER_MS} ms\` |
-          | SRAM Used | \`${SRAM} KB\` |
-          | Flash Used | \`${FLASH} KB\` |
+          | Estimated Cycles | \`${VELA_CYCLES}\` |
+          | SRAM Used | \`${VELA_SRAM} KiB\` |
+          | Flash Used | \`${VELA_FLASH} KiB\` |
+
+          **FVP 실측** (사전 빌드된 mlek_img_class.axf — MobileNetV2 INT8 reference)
+
+          | Metric | Value |
+          |--------|-------|
+          | NPU TOTAL Cycles | \`${FVP_TOTAL}\` |
+          | NPU ACTIVE | \`${FVP_ACTIVE}\` |
+          | NPU IDLE | \`${FVP_IDLE}\` |
 
           - **Target Commit**: \`${COMMIT_SHA}\`
           - **Source**: \`${SOURCE_REPO}\`
