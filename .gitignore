@@ -1,0 +1,34 @@
+# FVP installer tarballs (too large for git, downloaded out-of-band)
+FVP_*.tgz
+FVP_*.tar.gz
+
+# Personal/sensitive
+자소서.txt
+.env
+*.env
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+
+# Build / sim artifacts
+build/
+output/
+*.elf
+*.axf
+*.bin
+*.tflite
+sim_result.log
+fvp.log
+result.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
