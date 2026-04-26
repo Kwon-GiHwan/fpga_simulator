@@ -32,6 +32,11 @@
    docker build -t fpga-simulator:latest .
    ```
 
+   > **아키텍처 노트**: 현재 Dockerfile은 x86_64 호스트용입니다. FVP tarball은 컨테이너 빌드 시
+   > ARM Developer 사이트에서 자동 다운로드됩니다 (등록 없이 받을 수 있는 다이렉트 링크 사용).
+   > ARM64 호스트로 이전 시 base image를 `arm64v8/ubuntu:22.04`로, FVP tarball/toolchain을
+   > ARM64 빌드로 교체하면 됩니다 (.devcontainer 시절 ARM tarball은 디렉토리에 보존되어 있음).
+
 2. **Self-hosted runner 등록** — `docs/runner-setup.md` 참조 (라벨: `npu-server`)
 
 3. **서버 `.env` 작성**
