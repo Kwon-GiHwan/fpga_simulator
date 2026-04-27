@@ -28,12 +28,21 @@
 ## 사전 준비
 
 1. **Docker 이미지 빌드** (서버에서)
+
+   기본(Corstone-300 / Ethos-U55):
    ```bash
    docker build -t fpga-simulator:latest .
    ```
 
+   Corstone-320 / Ethos-U85 (옵션):
+   ```bash
+   docker build --build-arg NPU_TARGET=u85 -t fpga-simulator:u85 .
+   ```
+
    > **아키텍처 노트**: 현재 Dockerfile은 x86_64 호스트용입니다. FVP tarball은 컨테이너 빌드 시
    > ARM Developer 사이트에서 자동 다운로드됩니다 (등록 없이 받을 수 있는 다이렉트 링크 사용).
+   > NPU 타겟 변경 시: `--build-arg NPU_TARGET=u55|u85`. 빌드된 NPU 타겟은 컨테이너의
+   > `$NPU_TARGET` 환경변수로 보존되어 `sim_inside_container.sh` 등에서 분기 가능.
    > ARM64 호스트로 이전 시 base image를 `arm64v8/ubuntu:22.04`로, FVP tarball/toolchain을
    > ARM64 빌드로 교체하면 됩니다 (.devcontainer 시절 ARM tarball은 디렉토리에 보존되어 있음).
 

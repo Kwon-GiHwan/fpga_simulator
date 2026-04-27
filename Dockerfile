@@ -1,5 +1,14 @@
 FROM ubuntu:22.04
 
+# NPU 타겟 선택 (u55=Corstone-300/Ethos-U55, u85=Corstone-320/Ethos-U85)
+# 기본은 u55 (현재 동작 검증된 경로). u85 사용 시:
+#   docker build --build-arg NPU_TARGET=u85 -t fpga-simulator:u85 .
+ARG NPU_TARGET=u55
+
+# FVP 다운로드 URL (ARM Developer 직접 링크)
+ARG FVP_URL_U55=https://developer.arm.com/-/cdn-downloads/permalink/FVPs-Corstone-IoT/Corstone-300/FVP_Corstone_SSE-300_11.22_35_Linux64.tgz
+ARG FVP_URL_U85=https://developer.arm.com/-/cdn-downloads/permalink/FVPs-Corstone-IoT/Corstone-320/FVP_Corstone_SSE-320_11.27_25_Linux64.tgz
+
 # 환경 변수 설정
 ENV DEBIAN_FRONTEND=noninteractive
 ENV PATH="/opt/arm/gcc-arm-none-eabi/bin:${PATH}"
@@ -26,16 +35,28 @@ RUN wget https://developer.arm.com/-/media/Files/downloads/gnu/15.2.rel1/binrel/
     && tar -xJf arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi.tar.xz -C gcc-arm-none-eabi --strip-components=1 \
     && rm arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi.tar.xz
 
-# 3. FVP Corstone-300 (x86_64 호스트용)
-# 빌드 시점에 ARM Developer에서 직접 다운로드 (tarball을 image에 포함하지 않음)
+# 3. FVP 설치 (NPU_TARGET 에 따라 Corstone-300 또는 Corstone-320 선택)
 RUN mkdir -p /opt/arm/fvp_installed \
-    && wget -O fvp.tgz https://developer.arm.com/-/cdn-downloads/permalink/FVPs-Corstone-IoT/Corstone-300/FVP_Corstone_SSE-300_11.22_35_Linux64.tgz \
+    && case "$NPU_TARGET" in \
+        u55) FVP_URL="$FVP_URL_U55" ;; \
+        u85) FVP_URL="$FVP_URL_U85" ;; \
+        *)   echo "ERROR: NPU_TARGET must be u55 or u85, got $NPU_TARGET" >&2; exit 1 ;; \
+       esac \
+    && wget -O fvp.tgz "$FVP_URL" \
     && tar -xvzf fvp.tgz \
-    && ./FVP_Corstone_SSE-300.sh --i-agree-to-the-contained-eula --no-interactive --destination /opt/arm/fvp_installed \
-    && rm fvp.tgz FVP_Corstone_SSE-300.sh
+    && INSTALL_SCRIPT=$(ls FVP_Corstone_SSE-*.sh | head -1) \
+    && ./"$INSTALL_SCRIPT" --i-agree-to-the-contained-eula --no-interactive --destination /opt/arm/fvp_installed \
+    && rm -f fvp.tgz FVP_Corstone_SSE-*.sh
 
-# FVP 실행 파일이 들어있는 폴더를 PATH에 등록 (x86_64 호스트용)
-ENV PATH="/opt/arm/fvp_installed/models/Linux64_GCC-9.3:${PATH}"
+# 설치된 FVP 실행 폴더(Linux64_GCC-9.3 등)를 표준 위치로 심볼릭 링크
+RUN FVP_BIN_DIR=$(find /opt/arm/fvp_installed/models -maxdepth 1 -type d -name 'Linux64*' | head -1) \
+    && [ -n "$FVP_BIN_DIR" ] || (echo "FVP install dir not found" >&2; exit 1) \
+    && ln -sf "$FVP_BIN_DIR" /opt/arm/fvp_installed/bin
+
+ENV PATH="/opt/arm/fvp_installed/bin:${PATH}"
+
+# 빌드 시점의 NPU 타겟을 런타임에서 활용할 수 있게 보존 (sim_inside_container.sh 등이 분기 가능)
+ENV NPU_TARGET=${NPU_TARGET}
 
 # 4. Vela 설치 (기본 python3 = 3.10 환경)
 RUN pip3 install ethos-u-vela
