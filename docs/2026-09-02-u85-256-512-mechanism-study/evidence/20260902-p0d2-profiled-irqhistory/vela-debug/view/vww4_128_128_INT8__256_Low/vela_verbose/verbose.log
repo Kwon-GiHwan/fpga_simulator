@@ -1,0 +1,1208 @@
+Schedule: 'graph_MIN_BUFFERED'
+	0: Operation Conv2D  - OFM 1, 64, 64, 8
+		Kernel: size=3,3 stride=2,2, dilation=1,1 padding=[t:0,l:0,b:1,r:1,n:0,f:0]
+		Time index = 0
+		Operator Config = OFM Block=[1, 6, 16, 16], IFM Block=[1, 13, 36, 16], OFM UBlock=[1, 4, 8] Traversal=PartKernel, AccType=Acc32
+		IFM Stripe   = [1, 128, 128, 1]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 64, 64, 8]
+		Assigned Cascade = 0
+		Encoded Weights = 320 bytes
+		Weight buffer = 320 bytes
+		Depth slices = [0, 8]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=294912 Cycles=19988
+		Memory Used: 65856 bytes (op=65536, buf=320, ccd=0, nl=0)
+	1: Operation Conv2D  - OFM 1, 64, 64, 4
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 2
+		Operator Config = OFM Block=[1, 2, 64, 16], IFM Block=[1, 2, 64, 16], OFM UBlock=[1, 4, 8] Traversal=PartKernel, AccType=Acc32
+		IFM Stripe   = [1, 64, 64, 8]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 64, 64, 4]
+		Assigned Cascade = 0
+		Encoded Weights = 304 bytes
+		Weight buffer = 304 bytes
+		Depth slices = [0, 4]
+		sub-operations: -
+		Estimated Perf: Macs=131072 Cycles=13926
+		Memory Used: 82224 bytes (op=16384, buf=304, ccd=0, nl=65536)
+	2: Operation Relu6  - OFM 1, 32, 32, 16
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 4
+		Operator Config = OFM Block=[16, 16, 16], IFM Block=[1, 16, 16, 16], OFM UBlock=[1, 2, 16] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 32, 32, 16]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 32, 32, 16]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=16384 Cycles=9420
+		Memory Used: 32768 bytes (op=16384, buf=0, ccd=0, nl=16384)
+	3: Operation DepthwiseConv2D  - OFM 1, 64, 64, 4
+		Kernel: size=3,3 stride=1,1, dilation=1,1 padding=[t:1,l:1,b:1,r:1,n:0,f:0]
+		Time index = 6
+		Operator Config = OFM Block=[16, 16, 16], IFM Block=[1, 18, 18, 16], OFM UBlock=[1, 2, 16] Traversal=Depthwise, AccType=Acc32
+		IFM Stripe   = [1, 64, 64, 4]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 64, 64, 4]
+		Assigned Cascade = 0
+		Encoded Weights = 256 bytes
+		Weight buffer = 256 bytes
+		Depth slices = [0, 4]
+		sub-operations: -
+		Estimated Perf: Macs=147456 Cycles=25830
+		Memory Used: 33024 bytes (op=16384, buf=256, ccd=0, nl=16384)
+	4: Operation Relu6  - OFM 1, 32, 32, 16
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 8
+		Operator Config = OFM Block=[16, 16, 16], IFM Block=[1, 16, 16, 16], OFM UBlock=[1, 2, 16] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 32, 32, 16]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 32, 32, 16]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=16384 Cycles=9420
+		Memory Used: 32768 bytes (op=16384, buf=0, ccd=0, nl=16384)
+	5: Operation Conv2D  - OFM 1, 64, 64, 4
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 10
+		Operator Config = OFM Block=[1, 2, 64, 16], IFM Block=[1, 2, 64, 16], OFM UBlock=[1, 4, 8] Traversal=PartKernel, AccType=Acc32
+		IFM Stripe   = [1, 64, 64, 4]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 64, 64, 4]
+		Assigned Cascade = 0
+		Encoded Weights = 272 bytes
+		Weight buffer = 272 bytes
+		Depth slices = [0, 4]
+		sub-operations: -
+		Estimated Perf: Macs=65536 Cycles=13365
+		Memory Used: 82192 bytes (op=65536, buf=272, ccd=0, nl=16384)
+	6: Operation Conv2D  - OFM 1, 64, 64, 8
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 12
+		Operator Config = OFM Block=[1, 2, 64, 16], IFM Block=[1, 2, 64, 16], OFM UBlock=[1, 4, 8] Traversal=PartKernel, AccType=Acc32
+		IFM Stripe   = [1, 64, 64, 4]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 64, 64, 8]
+		Assigned Cascade = 0
+		Encoded Weights = 304 bytes
+		Weight buffer = 304 bytes
+		Depth slices = [0, 8]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=131072 Cycles=11038
+		Memory Used: 131376 bytes (op=65536, buf=304, ccd=0, nl=65536)
+	7: Operation DepthwiseConv2D  - OFM 1, 32, 32, 8
+		Kernel: size=3,3 stride=2,2, dilation=1,1 padding=[t:0,l:0,b:1,r:1,n:0,f:0]
+		Time index = 14
+		Operator Config = OFM Block=[16, 12, 16], IFM Block=[1, 34, 26, 16], OFM UBlock=[1, 2, 16] Traversal=Depthwise, AccType=Acc32
+		IFM Stripe   = [1, 64, 64, 8]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 32, 32, 8]
+		Assigned Cascade = 0
+		Encoded Weights = 288 bytes
+		Weight buffer = 288 bytes
+		Depth slices = [0, 8]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=73728 Cycles=7002
+		Memory Used: 82208 bytes (op=16384, buf=288, ccd=0, nl=65536)
+	8: Operation Conv2D  - OFM 1, 32, 32, 12
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 16
+		Operator Config = OFM Block=[1, 4, 32, 16], IFM Block=[1, 4, 32, 16], OFM UBlock=[1, 4, 8] Traversal=PartKernel, AccType=Acc32
+		IFM Stripe   = [1, 32, 32, 8]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 32, 32, 12]
+		Assigned Cascade = 0
+		Encoded Weights = 368 bytes
+		Weight buffer = 368 bytes
+		Depth slices = [0, 12]
+		sub-operations: -
+		Estimated Perf: Macs=98304 Cycles=3892
+		Memory Used: 33136 bytes (op=16384, buf=368, ccd=0, nl=16384)
+	9: Operation Conv2D  - OFM 1, 32, 32, 14
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 18
+		Operator Config = OFM Block=[1, 4, 32, 16], IFM Block=[1, 4, 32, 16], OFM UBlock=[1, 4, 8] Traversal=PartKernel, AccType=Acc32
+		IFM Stripe   = [1, 32, 32, 12]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 32, 32, 14]
+		Assigned Cascade = 0
+		Encoded Weights = 432 bytes
+		Weight buffer = 432 bytes
+		Depth slices = [0, 14]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=172032 Cycles=4842
+		Memory Used: 33200 bytes (op=16384, buf=432, ccd=0, nl=16384)
+	10: Operation DepthwiseConv2D  - OFM 1, 32, 32, 14
+		Kernel: size=3,3 stride=1,1, dilation=1,1 padding=[t:1,l:1,b:1,r:1,n:0,f:0]
+		Time index = 20
+		Operator Config = OFM Block=[16, 16, 16], IFM Block=[1, 18, 18, 16], OFM UBlock=[1, 2, 16] Traversal=Depthwise, AccType=Acc32
+		IFM Stripe   = [1, 32, 32, 14]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 32, 32, 14]
+		Assigned Cascade = 0
+		Encoded Weights = 336 bytes
+		Weight buffer = 336 bytes
+		Depth slices = [0, 14]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=129024 Cycles=7209
+		Memory Used: 49488 bytes (op=16384, buf=336, ccd=0, nl=32768)
+	11: Operation Conv2D  - OFM 1, 32, 32, 16
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 22
+		Operator Config = OFM Block=[1, 4, 32, 16], IFM Block=[1, 4, 32, 16], OFM UBlock=[1, 4, 8] Traversal=PartKernel, AccType=Acc32
+		IFM Stripe   = [1, 32, 32, 14]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 32, 32, 16]
+		Assigned Cascade = 0
+		Encoded Weights = 512 bytes
+		Weight buffer = 512 bytes
+		Depth slices = [0, 16]
+		sub-operations: -
+		Estimated Perf: Macs=229376 Cycles=5141
+		Memory Used: 49664 bytes (op=16384, buf=512, ccd=0, nl=32768)
+	12: Operation MemoryCopy  - OFM 1, 32, 32, 16
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 24
+		Operator Config = OFM Block=[1, 4, 4, 16], IFM Block=[1, 4, 4, 16], OFM UBlock=[1, 2, 16] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 32, 32, 12]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 32, 32, 12]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=12288 Cycles=19191
+		Memory Used: 49152 bytes (op=16384, buf=0, ccd=0, nl=32768)
+	13: Operation MemoryCopy  - OFM 1, 32, 32, 16
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 26
+		Operator Config = OFM Block=[1, 21, 6, 16], IFM Block=[1, 22, 6, 16], OFM UBlock=[1, 2, 16] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 32, 32, 4]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 32, 32, 4]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=4096 Cycles=8938
+		Memory Used: 32768 bytes (op=0, buf=0, ccd=0, nl=32768)
+	14: Operation Add  - OFM 1, 32, 32, 16
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 28
+		Operator Config = OFM Block=[32, 128, 16], IFM Block=[32, 128, 16], OFM UBlock=[1, 2, 16] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 32, 32, 16]
+		IFM2 Stripe  = [1, 32, 32, 16]
+		OFM Stripe   = [1, 32, 32, 16]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=0 Cycles=4096
+		Memory Used: 32768 bytes (op=0, buf=0, ccd=0, nl=32768)
+	15: Operation Conv2D  - OFM 1, 32, 32, 28
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 30
+		Operator Config = OFM Block=[1, 2, 32, 32], IFM Block=[1, 2, 32, 16], OFM UBlock=[1, 4, 8] Traversal=PartKernel, AccType=Acc32
+		IFM Stripe   = [1, 32, 32, 16]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 32, 32, 28]
+		Assigned Cascade = 0
+		Encoded Weights = 1024 bytes
+		Weight buffer = 1024 bytes
+		Depth slices = [0, 28]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=458752 Cycles=9295
+		Memory Used: 50176 bytes (op=32768, buf=1024, ccd=0, nl=16384)
+	16: Operation DepthwiseConv2D  - OFM 1, 16, 16, 28
+		Kernel: size=3,3 stride=2,2, dilation=1,1 padding=[t:0,l:0,b:1,r:1,n:0,f:0]
+		Time index = 32
+		Operator Config = OFM Block=[25, 8, 16], IFM Block=[1, 52, 18, 16], OFM UBlock=[1, 2, 16] Traversal=Depthwise, AccType=Acc32
+		IFM Stripe   = [1, 32, 32, 28]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 16, 16, 28]
+		Assigned Cascade = 0
+		Encoded Weights = 672 bytes
+		Weight buffer = 672 bytes
+		Depth slices = [0, 28]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=64512 Cycles=4413
+		Memory Used: 41632 bytes (op=8192, buf=672, ccd=0, nl=32768)
+	17: Operation Conv2D  - OFM 1, 16, 16, 32
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 34
+		Operator Config = OFM Block=[1, 4, 16, 32], IFM Block=[1, 4, 16, 16], OFM UBlock=[1, 4, 8] Traversal=PartKernel, AccType=Acc32
+		IFM Stripe   = [1, 16, 16, 28]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 16, 16, 32]
+		Assigned Cascade = 0
+		Encoded Weights = 1696 bytes
+		Weight buffer = 1696 bytes
+		Depth slices = [0, 32]
+		sub-operations: -
+		Estimated Perf: Macs=229376 Cycles=4798
+		Memory Used: 18080 bytes (op=8192, buf=1696, ccd=0, nl=8192)
+	18: Operation Conv2D  - OFM 1, 16, 16, 96
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 36
+		Operator Config = OFM Block=[1, 4, 16, 32], IFM Block=[1, 4, 16, 16], OFM UBlock=[1, 4, 8] Traversal=PartKernel, AccType=Acc32
+		IFM Stripe   = [1, 16, 16, 32]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 16, 16, 96]
+		Assigned Cascade = 0
+		Encoded Weights = 5568 bytes
+		Weight buffer = 5568 bytes
+		Depth slices = [0, 96]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=786432 Cycles=12990
+		Memory Used: 38336 bytes (op=24576, buf=5568, ccd=0, nl=8192)
+	19: Operation DepthwiseConv2D  - OFM 1, 16, 16, 96
+		Kernel: size=3,3 stride=1,1, dilation=1,1 padding=[t:1,l:1,b:1,r:1,n:0,f:0]
+		Time index = 38
+		Operator Config = OFM Block=[16, 16, 16], IFM Block=[1, 18, 18, 16], OFM UBlock=[1, 2, 16] Traversal=Depthwise, AccType=Acc32
+		IFM Stripe   = [1, 16, 16, 96]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 16, 16, 96]
+		Assigned Cascade = 0
+		Encoded Weights = 1936 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 96]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=221184 Cycles=10316
+		Memory Used: 57344 bytes (op=24576, buf=0, ccd=0, nl=32768)
+	20: Operation Conv2D  - OFM 1, 16, 16, 28
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 40
+		Operator Config = OFM Block=[1, 4, 16, 32], IFM Block=[1, 4, 16, 64], OFM UBlock=[1, 4, 8] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 16, 16, 96]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 16, 16, 28]
+		Assigned Cascade = 0
+		Encoded Weights = 3504 bytes
+		Weight buffer = 3504 bytes
+		Depth slices = [0, 28]
+		sub-operations: -
+		Estimated Perf: Macs=688128 Cycles=4872
+		Memory Used: 44464 bytes (op=8192, buf=3504, ccd=0, nl=32768)
+	21: Operation MemoryCopy  - OFM 1, 16, 16, 32
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 42
+		Operator Config = OFM Block=[1, 4, 4, 32], IFM Block=[1, 4, 4, 32], OFM UBlock=[1, 2, 16] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 16, 16, 28]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 16, 16, 28]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=7168 Cycles=7284
+		Memory Used: 24576 bytes (op=8192, buf=0, ccd=0, nl=16384)
+	22: Operation MemoryCopy  - OFM 1, 16, 16, 32
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 44
+		Operator Config = OFM Block=[1, 4, 10, 16], IFM Block=[1, 4, 10, 16], OFM UBlock=[1, 2, 16] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 16, 16, 4]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 16, 16, 4]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=1024 Cycles=2682
+		Memory Used: 16384 bytes (op=0, buf=0, ccd=0, nl=16384)
+	23: Operation Add  - OFM 1, 16, 16, 32
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 46
+		Operator Config = OFM Block=[16, 64, 32], IFM Block=[16, 64, 32], OFM UBlock=[1, 2, 16] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 16, 16, 32]
+		IFM2 Stripe  = [1, 16, 16, 32]
+		OFM Stripe   = [1, 16, 16, 32]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=0 Cycles=2048
+		Memory Used: 24576 bytes (op=8192, buf=0, ccd=0, nl=16384)
+	24: Operation Conv2D  - OFM 1, 16, 16, 96
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 48
+		Operator Config = OFM Block=[1, 4, 16, 32], IFM Block=[1, 4, 16, 16], OFM UBlock=[1, 4, 8] Traversal=PartKernel, AccType=Acc32
+		IFM Stripe   = [1, 16, 16, 32]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 16, 16, 96]
+		Assigned Cascade = 0
+		Encoded Weights = 5568 bytes
+		Weight buffer = 5568 bytes
+		Depth slices = [0, 64, 96]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=786432 Cycles=12990
+		Memory Used: 38336 bytes (op=24576, buf=5568, ccd=0, nl=8192)
+	25: Operation DepthwiseConv2D  - OFM 1, 16, 16, 96
+		Kernel: size=3,3 stride=1,1, dilation=1,1 padding=[t:1,l:1,b:1,r:1,n:0,f:0]
+		Time index = 50
+		Operator Config = OFM Block=[16, 16, 16], IFM Block=[1, 18, 18, 16], OFM UBlock=[1, 2, 16] Traversal=Depthwise, AccType=Acc32
+		IFM Stripe   = [1, 16, 16, 96]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 16, 16, 96]
+		Assigned Cascade = 0
+		Encoded Weights = 1936 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 96]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=221184 Cycles=10316
+		Memory Used: 57344 bytes (op=24576, buf=0, ccd=0, nl=32768)
+	26: Operation Conv2D  - OFM 1, 16, 16, 28
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 52
+		Operator Config = OFM Block=[1, 4, 16, 32], IFM Block=[1, 4, 16, 64], OFM UBlock=[1, 4, 8] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 16, 16, 96]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 16, 16, 28]
+		Assigned Cascade = 0
+		Encoded Weights = 3504 bytes
+		Weight buffer = 3504 bytes
+		Depth slices = [0, 28]
+		sub-operations: -
+		Estimated Perf: Macs=688128 Cycles=4872
+		Memory Used: 44464 bytes (op=8192, buf=3504, ccd=0, nl=32768)
+	27: Operation MemoryCopy  - OFM 1, 16, 16, 32
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 54
+		Operator Config = OFM Block=[1, 4, 4, 32], IFM Block=[1, 4, 4, 32], OFM UBlock=[1, 2, 16] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 16, 16, 28]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 16, 16, 28]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=7168 Cycles=7284
+		Memory Used: 24576 bytes (op=8192, buf=0, ccd=0, nl=16384)
+	28: Operation MemoryCopy  - OFM 1, 16, 16, 32
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 56
+		Operator Config = OFM Block=[1, 4, 10, 16], IFM Block=[1, 4, 10, 16], OFM UBlock=[1, 2, 16] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 16, 16, 4]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 16, 16, 4]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=1024 Cycles=2682
+		Memory Used: 16384 bytes (op=0, buf=0, ccd=0, nl=16384)
+	29: Operation Add  - OFM 1, 16, 16, 32
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 58
+		Operator Config = OFM Block=[16, 64, 32], IFM Block=[16, 64, 32], OFM UBlock=[1, 2, 16] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 16, 16, 32]
+		IFM2 Stripe  = [1, 16, 16, 32]
+		OFM Stripe   = [1, 16, 16, 32]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=0 Cycles=2048
+		Memory Used: 24576 bytes (op=8192, buf=0, ccd=0, nl=16384)
+	30: Operation Conv2D  - OFM 1, 16, 16, 152
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 60
+		Operator Config = OFM Block=[1, 4, 16, 32], IFM Block=[1, 4, 16, 16], OFM UBlock=[1, 4, 8] Traversal=PartKernel, AccType=Acc32
+		IFM Stripe   = [1, 16, 16, 32]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 16, 16, 152]
+		Assigned Cascade = 0
+		Encoded Weights = 8896 bytes
+		Weight buffer = 8896 bytes
+		Depth slices = [0, 80, 152]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=1245184 Cycles=20158
+		Memory Used: 58048 bytes (op=40960, buf=8896, ccd=0, nl=8192)
+	31: Operation DepthwiseConv2D  - OFM 1, 8, 8, 152
+		Kernel: size=3,3 stride=2,2, dilation=1,1 padding=[t:0,l:0,b:1,r:1,n:0,f:0]
+		Time index = 62
+		Operator Config = OFM Block=[8, 8, 32], IFM Block=[1, 17, 18, 32], OFM UBlock=[1, 2, 16] Traversal=Depthwise, AccType=Acc32
+		IFM Stripe   = [1, 16, 16, 152]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 152]
+		Assigned Cascade = 0
+		Encoded Weights = 3232 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 152]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=87552 Cycles=5262
+		Memory Used: 51200 bytes (op=10240, buf=0, ccd=0, nl=40960)
+	32: Operation Conv2D  - OFM 1, 8, 8, 44
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 64
+		Operator Config = OFM Block=[1, 4, 8, 48], IFM Block=[1, 4, 8, 64], OFM UBlock=[1, 4, 8] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 152]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 44]
+		Assigned Cascade = 0
+		Encoded Weights = 8272 bytes
+		Weight buffer = 8272 bytes
+		Depth slices = [0, 44]
+		sub-operations: -
+		Estimated Perf: Macs=428032 Cycles=3163
+		Memory Used: 21584 bytes (op=3072, buf=8272, ccd=0, nl=10240)
+	33: Operation Conv2D  - OFM 1, 8, 8, 268
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 66
+		Operator Config = OFM Block=[1, 8, 8, 32], IFM Block=[1, 8, 8, 64], OFM UBlock=[1, 4, 8] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 44]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 268]
+		Assigned Cascade = 0
+		Encoded Weights = 16656 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 268]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=754688 Cycles=5898
+		Memory Used: 20480 bytes (op=17408, buf=0, ccd=0, nl=3072)
+	34: Operation DepthwiseConv2D  - OFM 1, 8, 8, 268
+		Kernel: size=3,3 stride=1,1, dilation=1,1 padding=[t:1,l:1,b:1,r:1,n:0,f:0]
+		Time index = 68
+		Operator Config = OFM Block=[8, 8, 64], IFM Block=[1, 10, 10, 64], OFM UBlock=[1, 2, 16] Traversal=Depthwise, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 268]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 268]
+		Assigned Cascade = 0
+		Encoded Weights = 5472 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 268]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=154368 Cycles=7778
+		Memory Used: 37888 bytes (op=17408, buf=0, ccd=0, nl=20480)
+	35: Operation Conv2D  - OFM 1, 8, 8, 40
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 70
+		Operator Config = OFM Block=[1, 4, 8, 40], IFM Block=[1, 4, 8, 64], OFM UBlock=[1, 4, 8] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 268]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 40]
+		Assigned Cascade = 0
+		Encoded Weights = 11888 bytes
+		Weight buffer = 11888 bytes
+		Depth slices = [0, 40]
+		sub-operations: -
+		Estimated Perf: Macs=686080 Cycles=4093
+		Memory Used: 35440 bytes (op=3072, buf=11888, ccd=0, nl=20480)
+	36: Operation MemoryCopy  - OFM 1, 8, 8, 44
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 72
+		Operator Config = OFM Block=[1, 6, 8, 32], IFM Block=[1, 6, 8, 32], OFM UBlock=[1, 2, 16] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 40]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 40]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=2560 Cycles=2808
+		Memory Used: 8960 bytes (op=2816, buf=0, ccd=0, nl=6144)
+	37: Operation MemoryCopy  - OFM 1, 8, 8, 44
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 74
+		Operator Config = OFM Block=[1, 4, 4, 16], IFM Block=[1, 4, 4, 16], OFM UBlock=[1, 2, 16] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 4]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 4]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=256 Cycles=1287
+		Memory Used: 5888 bytes (op=0, buf=0, ccd=0, nl=5888)
+	38: Operation Add  - OFM 1, 8, 8, 44
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 76
+		Operator Config = OFM Block=[8, 42, 48], IFM Block=[8, 42, 48], OFM UBlock=[1, 2, 16] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 44]
+		IFM2 Stripe  = [1, 8, 8, 44]
+		OFM Stripe   = [1, 8, 8, 44]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=0 Cycles=768
+		Memory Used: 8960 bytes (op=3072, buf=0, ccd=0, nl=5888)
+	39: Operation Conv2D  - OFM 1, 8, 8, 268
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 78
+		Operator Config = OFM Block=[1, 8, 8, 32], IFM Block=[1, 8, 8, 64], OFM UBlock=[1, 4, 8] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 44]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 268]
+		Assigned Cascade = 0
+		Encoded Weights = 16640 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 268]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=754688 Cycles=5898
+		Memory Used: 20480 bytes (op=17408, buf=0, ccd=0, nl=3072)
+	40: Operation DepthwiseConv2D  - OFM 1, 8, 8, 268
+		Kernel: size=3,3 stride=1,1, dilation=1,1 padding=[t:1,l:1,b:1,r:1,n:0,f:0]
+		Time index = 80
+		Operator Config = OFM Block=[8, 8, 64], IFM Block=[1, 10, 10, 64], OFM UBlock=[1, 2, 16] Traversal=Depthwise, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 268]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 268]
+		Assigned Cascade = 0
+		Encoded Weights = 5488 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 268]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=154368 Cycles=7778
+		Memory Used: 37888 bytes (op=17408, buf=0, ccd=0, nl=20480)
+	41: Operation Conv2D  - OFM 1, 8, 8, 52
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 82
+		Operator Config = OFM Block=[1, 4, 8, 56], IFM Block=[1, 4, 8, 64], OFM UBlock=[1, 4, 8] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 268]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 52]
+		Assigned Cascade = 0
+		Encoded Weights = 15536 bytes
+		Weight buffer = 15536 bytes
+		Depth slices = [0, 52]
+		sub-operations: -
+		Estimated Perf: Macs=891904 Cycles=5604
+		Memory Used: 40112 bytes (op=4096, buf=15536, ccd=0, nl=20480)
+	42: Operation MemoryCopy  - OFM 1, 8, 8, 52
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 84
+		Operator Config = OFM Block=[1, 6, 8, 32], IFM Block=[1, 6, 8, 32], OFM UBlock=[1, 2, 16] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 44]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 44]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=2816 Cycles=2808
+		Memory Used: 10496 bytes (op=3328, buf=0, ccd=0, nl=7168)
+	43: Operation MemoryCopy  - OFM 1, 8, 8, 52
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 86
+		Operator Config = OFM Block=[1, 4, 6, 16], IFM Block=[1, 4, 6, 16], OFM UBlock=[1, 2, 16] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 8]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 8]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=512 Cycles=1281
+		Memory Used: 7424 bytes (op=0, buf=0, ccd=0, nl=7424)
+	44: Operation Add  - OFM 1, 8, 8, 52
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 88
+		Operator Config = OFM Block=[8, 32, 64], IFM Block=[8, 32, 64], OFM UBlock=[1, 4, 8] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 52]
+		IFM2 Stripe  = [1, 8, 8, 52]
+		OFM Stripe   = [1, 8, 8, 52]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=0 Cycles=1024
+		Memory Used: 7424 bytes (op=0, buf=0, ccd=0, nl=7424)
+	45: Operation Conv2D  - OFM 1, 8, 8, 268
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 90
+		Operator Config = OFM Block=[1, 8, 8, 32], IFM Block=[1, 8, 8, 64], OFM UBlock=[1, 4, 8] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 52]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 268]
+		Assigned Cascade = 0
+		Encoded Weights = 18768 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 268]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=891904 Cycles=5931
+		Memory Used: 21504 bytes (op=17408, buf=0, ccd=0, nl=4096)
+	46: Operation DepthwiseConv2D  - OFM 1, 8, 8, 268
+		Kernel: size=3,3 stride=1,1, dilation=1,1 padding=[t:1,l:1,b:1,r:1,n:0,f:0]
+		Time index = 92
+		Operator Config = OFM Block=[8, 8, 64], IFM Block=[1, 10, 10, 64], OFM UBlock=[1, 2, 16] Traversal=Depthwise, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 268]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 268]
+		Assigned Cascade = 0
+		Encoded Weights = 5488 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 268]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=154368 Cycles=7778
+		Memory Used: 38912 bytes (op=17408, buf=0, ccd=0, nl=21504)
+	47: Operation Conv2D  - OFM 1, 8, 8, 44
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 94
+		Operator Config = OFM Block=[1, 4, 8, 48], IFM Block=[1, 4, 8, 64], OFM UBlock=[1, 4, 8] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 268]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 44]
+		Assigned Cascade = 0
+		Encoded Weights = 13104 bytes
+		Weight buffer = 13104 bytes
+		Depth slices = [0, 44]
+		sub-operations: -
+		Estimated Perf: Macs=754688 Cycles=4837
+		Memory Used: 37680 bytes (op=3072, buf=13104, ccd=0, nl=21504)
+	48: Operation MemoryCopy  - OFM 1, 8, 8, 52
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 96
+		Operator Config = OFM Block=[1, 6, 8, 32], IFM Block=[1, 6, 8, 32], OFM UBlock=[1, 2, 16] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 44]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 44]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=2816 Cycles=2808
+		Memory Used: 10496 bytes (op=3328, buf=0, ccd=0, nl=7168)
+	49: Operation MemoryCopy  - OFM 1, 8, 8, 52
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 98
+		Operator Config = OFM Block=[1, 4, 6, 16], IFM Block=[1, 4, 6, 16], OFM UBlock=[1, 2, 16] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 8]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 8]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=512 Cycles=1281
+		Memory Used: 7424 bytes (op=0, buf=0, ccd=0, nl=7424)
+	50: Operation Add  - OFM 1, 8, 8, 52
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 100
+		Operator Config = OFM Block=[8, 32, 64], IFM Block=[8, 32, 64], OFM UBlock=[1, 4, 8] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 52]
+		IFM2 Stripe  = [1, 8, 8, 52]
+		OFM Stripe   = [1, 8, 8, 52]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=0 Cycles=1024
+		Memory Used: 11520 bytes (op=4096, buf=0, ccd=0, nl=7424)
+	51: Operation Conv2D  - OFM 1, 8, 8, 192
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 102
+		Operator Config = OFM Block=[1, 8, 8, 32], IFM Block=[1, 8, 8, 64], OFM UBlock=[1, 4, 8] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 52]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 192]
+		Assigned Cascade = 0
+		Encoded Weights = 13392 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 192]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=638976 Cycles=4368
+		Memory Used: 16384 bytes (op=12288, buf=0, ccd=0, nl=4096)
+	52: Operation DepthwiseConv2D  - OFM 1, 8, 8, 192
+		Kernel: size=3,3 stride=1,1, dilation=1,1 padding=[t:1,l:1,b:1,r:1,n:0,f:0]
+		Time index = 104
+		Operator Config = OFM Block=[8, 8, 64], IFM Block=[1, 10, 10, 64], OFM UBlock=[1, 2, 16] Traversal=Depthwise, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 192]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 192]
+		Assigned Cascade = 0
+		Encoded Weights = 3872 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 192]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=110592 Cycles=5858
+		Memory Used: 24576 bytes (op=12288, buf=0, ccd=0, nl=12288)
+	53: Operation Conv2D  - OFM 1, 8, 8, 68
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 106
+		Operator Config = OFM Block=[1, 8, 8, 32], IFM Block=[1, 8, 8, 64], OFM UBlock=[1, 4, 8] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 192]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 68]
+		Assigned Cascade = 0
+		Encoded Weights = 14656 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 68]
+		sub-operations: -
+		Estimated Perf: Macs=835584 Cycles=4388
+		Memory Used: 17408 bytes (op=5120, buf=0, ccd=0, nl=12288)
+	54: Operation Conv2D  - OFM 1, 8, 8, 172
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 108
+		Operator Config = OFM Block=[1, 8, 8, 32], IFM Block=[1, 8, 8, 64], OFM UBlock=[1, 4, 8] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 68]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 172]
+		Assigned Cascade = 0
+		Encoded Weights = 16224 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 172]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=748544 Cycles=6436
+		Memory Used: 16384 bytes (op=11264, buf=0, ccd=0, nl=5120)
+	55: Operation DepthwiseConv2D  - OFM 1, 8, 8, 172
+		Kernel: size=3,3 stride=1,1, dilation=1,1 padding=[t:1,l:1,b:1,r:1,n:0,f:0]
+		Time index = 110
+		Operator Config = OFM Block=[8, 8, 64], IFM Block=[1, 10, 10, 64], OFM UBlock=[1, 2, 16] Traversal=Depthwise, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 172]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 172]
+		Assigned Cascade = 0
+		Encoded Weights = 3536 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 172]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=99072 Cycles=5474
+		Memory Used: 27648 bytes (op=11264, buf=0, ccd=0, nl=16384)
+	56: Operation Conv2D  - OFM 1, 8, 8, 68
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 112
+		Operator Config = OFM Block=[1, 8, 8, 32], IFM Block=[1, 8, 8, 64], OFM UBlock=[1, 4, 8] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 172]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 68]
+		Assigned Cascade = 0
+		Encoded Weights = 13504 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 68]
+		sub-operations: [ Add ]
+		Estimated Perf: Macs=748544 Cycles=4488
+		Memory Used: 21504 bytes (op=5120, buf=0, ccd=0, nl=16384)
+	57: Operation Conv2D  - OFM 1, 8, 8, 172
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 114
+		Operator Config = OFM Block=[1, 8, 8, 32], IFM Block=[1, 8, 8, 64], OFM UBlock=[1, 4, 8] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 68]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 172]
+		Assigned Cascade = 0
+		Encoded Weights = 16224 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 172]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=748544 Cycles=6436
+		Memory Used: 16384 bytes (op=11264, buf=0, ccd=0, nl=5120)
+	58: Operation DepthwiseConv2D  - OFM 1, 8, 8, 172
+		Kernel: size=3,3 stride=1,1, dilation=1,1 padding=[t:1,l:1,b:1,r:1,n:0,f:0]
+		Time index = 116
+		Operator Config = OFM Block=[8, 8, 64], IFM Block=[1, 10, 10, 64], OFM UBlock=[1, 2, 16] Traversal=Depthwise, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 172]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 172]
+		Assigned Cascade = 0
+		Encoded Weights = 3552 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 172]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=99072 Cycles=5474
+		Memory Used: 27648 bytes (op=11264, buf=0, ccd=0, nl=16384)
+	59: Operation Conv2D  - OFM 1, 8, 8, 48
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 118
+		Operator Config = OFM Block=[1, 4, 8, 48], IFM Block=[1, 4, 8, 64], OFM UBlock=[1, 4, 8] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 172]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 48]
+		Assigned Cascade = 0
+		Encoded Weights = 9392 bytes
+		Weight buffer = 9392 bytes
+		Depth slices = [0, 48]
+		sub-operations: -
+		Estimated Perf: Macs=528384 Cycles=3241
+		Memory Used: 28848 bytes (op=3072, buf=9392, ccd=0, nl=16384)
+	60: Operation MemoryCopy  - OFM 1, 8, 8, 68
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 120
+		Operator Config = OFM Block=[1, 8, 8, 32], IFM Block=[1, 8, 8, 32], OFM UBlock=[1, 2, 16] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 48]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 48]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=3072 Cycles=2244
+		Memory Used: 13312 bytes (op=5120, buf=0, ccd=0, nl=8192)
+	61: Operation MemoryCopy  - OFM 1, 8, 8, 68
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 122
+		Operator Config = OFM Block=[1, 6, 8, 16], IFM Block=[1, 6, 8, 16], OFM UBlock=[1, 2, 16] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 20]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 20]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=1280 Cycles=2059
+		Memory Used: 10240 bytes (op=0, buf=0, ccd=0, nl=10240)
+	62: Operation Add  - OFM 1, 8, 8, 68
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 124
+		Operator Config = OFM Block=[8, 28, 80], IFM Block=[8, 28, 80], OFM UBlock=[1, 4, 8] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 68]
+		IFM2 Stripe  = [1, 8, 8, 68]
+		OFM Stripe   = [1, 8, 8, 68]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=0 Cycles=1280
+		Memory Used: 10240 bytes (op=0, buf=0, ccd=0, nl=10240)
+	63: Operation Conv2D  - OFM 1, 8, 8, 288
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 126
+		Operator Config = OFM Block=[1, 8, 8, 32], IFM Block=[1, 8, 8, 64], OFM UBlock=[1, 4, 8] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 68]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 8, 8, 288]
+		Assigned Cascade = 0
+		Encoded Weights = 26944 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 288]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=1253376 Cycles=10020
+		Memory Used: 23552 bytes (op=18432, buf=0, ccd=0, nl=5120)
+	64: Operation DepthwiseConv2D  - OFM 1, 4, 4, 288
+		Kernel: size=3,3 stride=2,2, dilation=1,1 padding=[t:0,l:0,b:1,r:1,n:0,f:0]
+		Time index = 128
+		Operator Config = OFM Block=[4, 4, 128], IFM Block=[1, 9, 9, 128], OFM UBlock=[1, 2, 16] Traversal=Depthwise, AccType=Acc32
+		IFM Stripe   = [1, 8, 8, 288]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 4, 4, 288]
+		Assigned Cascade = 0
+		Encoded Weights = 5792 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 288]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=41472 Cycles=7231
+		Memory Used: 23040 bytes (op=4608, buf=0, ccd=0, nl=18432)
+	65: Operation Conv2D  - OFM 1, 4, 4, 16
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 130
+		Operator Config = OFM Block=[1, 4, 4, 16], IFM Block=[1, 4, 4, 64], OFM UBlock=[1, 4, 8] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 4, 4, 288]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 4, 4, 16]
+		Assigned Cascade = 0
+		Encoded Weights = 5088 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 16]
+		sub-operations: -
+		Estimated Perf: Macs=73728 Cycles=793
+		Memory Used: 4864 bytes (op=256, buf=0, ccd=0, nl=4608)
+	66: Operation Conv2D  - OFM 1, 4, 4, 96
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 132
+		Operator Config = OFM Block=[1, 4, 4, 96], IFM Block=[1, 4, 4, 16], OFM UBlock=[1, 4, 8] Traversal=PartKernel, AccType=Acc32
+		IFM Stripe   = [1, 4, 4, 16]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 4, 4, 96]
+		Assigned Cascade = 0
+		Encoded Weights = 3264 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 96]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=24576 Cycles=2842
+		Memory Used: 1792 bytes (op=1536, buf=0, ccd=0, nl=256)
+	67: Operation DepthwiseConv2D  - OFM 1, 4, 4, 96
+		Kernel: size=3,3 stride=1,1, dilation=1,1 padding=[t:1,l:1,b:1,r:1,n:0,f:0]
+		Time index = 134
+		Operator Config = OFM Block=[4, 4, 64], IFM Block=[1, 6, 6, 64], OFM UBlock=[1, 2, 16] Traversal=Depthwise, AccType=Acc32
+		IFM Stripe   = [1, 4, 4, 96]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 4, 4, 96]
+		Assigned Cascade = 0
+		Encoded Weights = 1936 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 96]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=13824 Cycles=2643
+		Memory Used: 3328 bytes (op=1536, buf=0, ccd=0, nl=1792)
+	68: Operation Conv2D  - OFM 1, 4, 4, 16
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 136
+		Operator Config = OFM Block=[1, 4, 4, 16], IFM Block=[1, 4, 4, 64], OFM UBlock=[1, 4, 8] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 4, 4, 96]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 4, 4, 16]
+		Assigned Cascade = 0
+		Encoded Weights = 1920 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 16]
+		sub-operations: [ Add ]
+		Estimated Perf: Macs=24576 Cycles=697
+		Memory Used: 2048 bytes (op=256, buf=0, ccd=0, nl=1792)
+	69: Operation Conv2D  - OFM 1, 4, 4, 96
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 138
+		Operator Config = OFM Block=[1, 4, 4, 96], IFM Block=[1, 4, 4, 16], OFM UBlock=[1, 4, 8] Traversal=PartKernel, AccType=Acc32
+		IFM Stripe   = [1, 4, 4, 16]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 4, 4, 96]
+		Assigned Cascade = 0
+		Encoded Weights = 3264 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 96]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=24576 Cycles=2842
+		Memory Used: 1792 bytes (op=1536, buf=0, ccd=0, nl=256)
+	70: Operation DepthwiseConv2D  - OFM 1, 4, 4, 96
+		Kernel: size=3,3 stride=1,1, dilation=1,1 padding=[t:1,l:1,b:1,r:1,n:0,f:0]
+		Time index = 140
+		Operator Config = OFM Block=[4, 4, 64], IFM Block=[1, 6, 6, 64], OFM UBlock=[1, 2, 16] Traversal=Depthwise, AccType=Acc32
+		IFM Stripe   = [1, 4, 4, 96]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 4, 4, 96]
+		Assigned Cascade = 0
+		Encoded Weights = 1952 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 96]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=13824 Cycles=2643
+		Memory Used: 3328 bytes (op=1536, buf=0, ccd=0, nl=1792)
+	71: Operation Conv2D  - OFM 1, 4, 4, 32
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 142
+		Operator Config = OFM Block=[1, 4, 4, 32], IFM Block=[1, 4, 4, 64], OFM UBlock=[1, 4, 8] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 4, 4, 96]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 4, 4, 32]
+		Assigned Cascade = 0
+		Encoded Weights = 3856 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 32]
+		sub-operations: -
+		Estimated Perf: Macs=49152 Cycles=1100
+		Memory Used: 2304 bytes (op=512, buf=0, ccd=0, nl=1792)
+	72: Operation MemoryCopy  - OFM 1, 4, 4, 32
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 144
+		Operator Config = OFM Block=[1, 4, 4, 16], IFM Block=[1, 4, 4, 16], OFM UBlock=[1, 2, 16] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 4, 4, 16]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 4, 4, 16]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=256 Cycles=539
+		Memory Used: 1280 bytes (op=512, buf=0, ccd=0, nl=768)
+	73: Operation MemoryCopy  - OFM 1, 4, 4, 32
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 146
+		Operator Config = OFM Block=[1, 4, 4, 16], IFM Block=[1, 4, 4, 16], OFM UBlock=[1, 2, 16] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 4, 4, 16]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 4, 4, 16]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=256 Cycles=539
+		Memory Used: 1024 bytes (op=0, buf=0, ccd=0, nl=1024)
+	74: Operation Add  - OFM 1, 4, 4, 32
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 148
+		Operator Config = OFM Block=[4, 64, 32], IFM Block=[4, 64, 32], OFM UBlock=[1, 2, 16] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 4, 4, 32]
+		IFM2 Stripe  = [1, 4, 4, 32]
+		OFM Stripe   = [1, 4, 4, 32]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=0 Cycles=128
+		Memory Used: 1024 bytes (op=0, buf=0, ccd=0, nl=1024)
+	75: Operation Conv2D  - OFM 1, 4, 4, 96
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 150
+		Operator Config = OFM Block=[1, 4, 4, 96], IFM Block=[1, 4, 4, 16], OFM UBlock=[1, 4, 8] Traversal=PartKernel, AccType=Acc32
+		IFM Stripe   = [1, 4, 4, 32]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 4, 4, 96]
+		Assigned Cascade = 0
+		Encoded Weights = 5552 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 96]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=49152 Cycles=3411
+		Memory Used: 2048 bytes (op=1536, buf=0, ccd=0, nl=512)
+	76: Operation DepthwiseConv2D  - OFM 1, 4, 4, 96
+		Kernel: size=3,3 stride=1,1, dilation=1,1 padding=[t:1,l:1,b:1,r:1,n:0,f:0]
+		Time index = 152
+		Operator Config = OFM Block=[4, 4, 64], IFM Block=[1, 6, 6, 64], OFM UBlock=[1, 2, 16] Traversal=Depthwise, AccType=Acc32
+		IFM Stripe   = [1, 4, 4, 96]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 4, 4, 96]
+		Assigned Cascade = 0
+		Encoded Weights = 1936 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 96]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=13824 Cycles=2643
+		Memory Used: 3072 bytes (op=1536, buf=0, ccd=0, nl=1536)
+	77: Operation Conv2D  - OFM 1, 4, 4, 32
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 154
+		Operator Config = OFM Block=[1, 4, 4, 32], IFM Block=[1, 4, 4, 64], OFM UBlock=[1, 4, 8] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 4, 4, 96]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 4, 4, 32]
+		Assigned Cascade = 0
+		Encoded Weights = 3872 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 32]
+		sub-operations: -
+		Estimated Perf: Macs=49152 Cycles=1100
+		Memory Used: 2048 bytes (op=512, buf=0, ccd=0, nl=1536)
+	78: Operation Conv2D  - OFM 1, 4, 4, 128
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 156
+		Operator Config = OFM Block=[1, 4, 4, 128], IFM Block=[1, 4, 4, 16], OFM UBlock=[1, 4, 8] Traversal=PartKernel, AccType=Acc32
+		IFM Stripe   = [1, 4, 4, 32]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 4, 4, 128]
+		Assigned Cascade = 0
+		Encoded Weights = 7424 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 128]
+		sub-operations: [ Relu6 ]
+		Estimated Perf: Macs=65536 Cycles=4548
+		Memory Used: 2560 bytes (op=2048, buf=0, ccd=0, nl=512)
+	79: Operation AvgPool  - OFM 1, 1, 1, 128
+		Kernel: size=4,4 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 158
+		Operator Config = OFM Block=[1, 2, 128], IFM Block=[1, 4, 5, 128], OFM UBlock=[1, 2, 16] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 4, 4, 128]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 1, 1, 128]
+		Assigned Cascade = 0
+		sub-operations: -
+		Estimated Perf: Macs=2048 Cycles=961
+		Memory Used: 2176 bytes (op=128, buf=0, ccd=0, nl=2048)
+	80: Operation Conv2D  - OFM 1, 1, 1, 2
+		Kernel: size=1,1 stride=1,1, dilation=1,1 padding=[t:0,l:0,b:0,r:0,n:0,f:0]
+		Time index = 160
+		Operator Config = OFM Block=[1, 1, 4, 16], IFM Block=[1, 1, 4, 64], OFM UBlock=[1, 4, 8] Traversal=DepthFirst, AccType=Acc32
+		IFM Stripe   = [1, 1, 1, 128]
+		IFM2 Stripe  = []
+		OFM Stripe   = [1, 1, 1, 2]
+		Assigned Cascade = 0
+		Encoded Weights = 544 bytes
+		Weight buffer = 0 bytes
+		Depth slices = [0, 2]
+		sub-operations: -
+		Estimated Perf: Macs=256 Cycles=438
+		Memory Used: 128 bytes (op=0, buf=0, ccd=0, nl=128)
+	Cascades:
+
+################################################################################
+Performance for NPU Grap /work/u85mech/pd/vww4_128_128_INT8__256_Low/vela_verbose/vww4_128_128_INT8
+Original Operator    NNG Operator         Target Staging Usage  Peak% (Staging)  Op Cycles Network% (cycles)        NPU    SRAM AC    DRAM AC OnFlash AC OffFlash AC  MAC Count Network% (MAC)  Util% (MAC) Name                 
+-------------------- -------------------- ------ ------------- ---------------- ---------- ----------------- ---------- ---------- ---------- ---------- ----------- ---------- -------------- ------------ -------------------- 
+Conv2D               Conv2D               NPU            65856            50.02      50273             10.54      20608       2273      50273          0           0     147456           0.79         1.15 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_4/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_1/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_11/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_17/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_3/PartitionedCall/Conv2D 
+Conv2D               Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_4/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_1/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_11/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_17/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_3/PartitionedCall/Conv2D 
+Conv2D               Conv2D               NPU            82224            62.45      12499              2.62       4224       4240      12499          0           0     131072           0.70         4.10 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_7/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_3/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_5/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_9/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_12/PartitionedCall/Conv2D;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_6/PartitionedCall/Conv2D 
+Conv2D               Relu6                NPU            32768            24.89       9216              1.93       9216       1024          0          0           0      16384           0.09         0.69 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_7/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_3/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_5/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_9/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_12/PartitionedCall/Conv2D;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_6/PartitionedCall/Conv2D 
+DepthwiseConv2D      DepthwiseConv2D      NPU            33024            25.08      25104              5.26      25104       4688       6249          0           0     147456           0.79         2.29 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_10/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_5/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_9/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_12/PartitionedCall/Conv2D 
+DepthwiseConv2D      Relu6                NPU            32768            24.89       9216              1.93       9216       1024          0          0           0      16384           0.09         0.69 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_10/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_5/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_9/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_12/PartitionedCall/Conv2D 
+Conv2D               Conv2D               NPU            82192            62.43      12499              2.62       4547       4208      12499          0           0      65536           0.35         2.05 FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_7/StatefulPartitionedCall/FusedBatchNormV3;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_12/PartitionedCall/Conv2D1 
+Conv2D               Conv2D               NPU           131376            99.78      12499              2.62       8320       4240      12499          0           0     131072           0.70         4.10 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_15/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_9/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_11/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_17/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_14/PartitionedCall/Conv2D 
+Conv2D               Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_15/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_9/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_11/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_17/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_14/PartitionedCall/Conv2D 
+DepthwiseConv2D      DepthwiseConv2D      NPU            82208            62.44       6603              1.38       6603       3188       2343          0           0      73728           0.39         4.36 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_18/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_11/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_17/PartitionedCall/depthwise 
+DepthwiseConv2D      Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_18/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_11/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_17/PartitionedCall/depthwise 
+Conv2D               Conv2D               NPU            33136            25.17       3328              0.70       3328       1076       3124          0           0      98304           0.52        11.54 FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_13/StatefulPartitionedCall/FusedBatchNormV3;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_20/PartitionedCall/Conv2D1 
+Conv2D               Conv2D               NPU            33200            25.22       4544              0.95       4544       1092       3124          0           0     172032           0.92        14.79 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_23/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_15/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_17/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_25/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_22/PartitionedCall/Conv2D 
+Conv2D               Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_23/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_15/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_17/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_25/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_22/PartitionedCall/Conv2D 
+DepthwiseConv2D      DepthwiseConv2D      NPU            49488            37.59       7040              1.48       7040       1182       1562          0           0     129024           0.69         7.16 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_26/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_17/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_25/PartitionedCall/depthwise 
+DepthwiseConv2D      Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_26/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_17/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_25/PartitionedCall/depthwise 
+Conv2D               Conv2D               NPU            49664            37.72       4608              0.97       4608       1112       3124          0           0     229376           1.22        19.44 FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_19/StatefulPartitionedCall/FusedBatchNormV3;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_148/PartitionedCall/Conv2D;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_28/PartitionedCall/Conv2D1 
+Pad                  MemoryCopy           NPU            49152            37.33       8251              1.73       8251       2048          0          0           0      12288           0.07         0.58 Pad;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_31/PartitionedCall/Pad 
+Pad                  MemoryCopy           NPU            32768            24.89      15468              3.24       8761        512      15468          0           0       4096           0.02         0.10 Pad;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_31/PartitionedCall/Pad 
+Add                  Add                  NPU            32768            24.89       4096              0.86       4096       1536          0          0           0          0           0.00         0.00 add;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_31/PartitionedCall/add 
+Conv2D               Conv2D               NPU            50176            38.11      12499              2.62       9262       1888      12499          0           0     458752           2.44        14.34 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_34/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_21/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_23/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_36/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_58/PartitionedCall/Conv2D;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_33/PartitionedCall/Conv2D 
+Conv2D               Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_34/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_21/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_23/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_36/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_58/PartitionedCall/Conv2D;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_33/PartitionedCall/Conv2D 
+DepthwiseConv2D      DepthwiseConv2D      NPU            41632            31.62       3584              0.75       3584       1430       1562          0           0      64512           0.34         7.03 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_37/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_23/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_36/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_58/PartitionedCall/Conv2D 
+DepthwiseConv2D      Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_37/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_23/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_36/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_58/PartitionedCall/Conv2D 
+Conv2D               Conv2D               NPU            18080            13.73       4721              0.99       4721        684       3124          0           0     229376           1.22        18.98 FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_25/StatefulPartitionedCall/FusedBatchNormV3;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_170/PartitionedCall/Conv2D;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_39/PartitionedCall/Conv2D1 
+Conv2D               Conv2D               NPU            38336            29.12      12913              2.71      12913       2112       9375          0           0     786432           4.19        23.79 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_42/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_27/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_101/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_167/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_41/PartitionedCall/Conv2D 
+Conv2D               Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_42/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_27/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_101/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_167/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_41/PartitionedCall/Conv2D 
+DepthwiseConv2D      DepthwiseConv2D      NPU            57344            43.55      10240              2.15      10240       1536       2343          0           0     221184           1.18         8.44 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_45/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_29/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_101/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_167/PartitionedCall/depthwise;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_44/PartitionedCall/depthwise 
+DepthwiseConv2D      Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_45/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_29/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_101/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_167/PartitionedCall/depthwise;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_44/PartitionedCall/depthwise 
+Conv2D               Conv2D               NPU            44464            33.77       4642              0.97       4642       1422       3124          0           0     688128           3.67        57.91 FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_31/StatefulPartitionedCall/FusedBatchNormV3;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_58/PartitionedCall/Conv2D;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_47/PartitionedCall/Conv2D1 
+Pad                  MemoryCopy           NPU            24576            18.67       4213              0.88       4213       1152          0          0           0       7168           0.04         0.66 Pad;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_50/PartitionedCall/Pad 
+Pad                  MemoryCopy           NPU            16384            12.44       3124              0.65       2314        128       3124          0           0       1024           0.01         0.13 Pad;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_50/PartitionedCall/Pad 
+Add                  Add                  NPU            24576            18.67       2048              0.43       2048        768          0          0           0          0           0.00         0.00 add;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_50/PartitionedCall/add 
+Conv2D               Conv2D               NPU            38336            29.12      12913              2.71      12913       2160       9375          0           0     786432           4.19        23.79 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_53/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_33/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_101/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_167/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_52/PartitionedCall/Conv2D 
+Conv2D               Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_53/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_33/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_101/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_167/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_52/PartitionedCall/Conv2D 
+DepthwiseConv2D      DepthwiseConv2D      NPU            57344            43.55      10240              2.15      10240       1536       2343          0           0     221184           1.18         8.44 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_56/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_35/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_101/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_167/PartitionedCall/depthwise;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_55/PartitionedCall/depthwise 
+DepthwiseConv2D      Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_56/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_35/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_101/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_167/PartitionedCall/depthwise;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_55/PartitionedCall/depthwise 
+Conv2D               Conv2D               NPU            44464            33.77       4642              0.97       4642       1422       3124          0           0     688128           3.67        57.91 FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_37/StatefulPartitionedCall/FusedBatchNormV3;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_58/PartitionedCall/Conv2D1 
+Pad                  MemoryCopy           NPU            24576            18.67       4213              0.88       4213       1152          0          0           0       7168           0.04         0.66 Pad;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_61/PartitionedCall/Pad 
+Pad                  MemoryCopy           NPU            16384            12.44       3124              0.65       2314        128       3124          0           0       1024           0.01         0.13 Pad;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_61/PartitionedCall/Pad 
+Add                  Add                  NPU            24576            18.67       2048              0.43       2048        768          0          0           0          0           0.00         0.00 add;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_61/PartitionedCall/add 
+Conv2D               Conv2D               NPU            58048            44.09      20275              4.25      20275       3580      15624          0           0    1245184           6.64        23.99 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_64/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_39/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_41/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_66/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_63/PartitionedCall/Conv2D 
+Conv2D               Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_64/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_39/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_41/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_66/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_63/PartitionedCall/Conv2D 
+DepthwiseConv2D      DepthwiseConv2D      NPU            51200            38.89       4465              0.94       4465       1600       3906          0           0      87552           0.47         7.66 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_67/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_41/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_66/PartitionedCall/depthwise 
+DepthwiseConv2D      Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_67/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_41/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_66/PartitionedCall/depthwise 
+Conv2D               Conv2D               NPU            21584            16.39       3163              0.66       3163        903       2343          0           0     428032           2.28        52.86 FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_43/StatefulPartitionedCall/FusedBatchNormV3;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_99/PartitionedCall/Conv2D;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_69/PartitionedCall/Conv2D1 
+Conv2D               Conv2D               NPU            20480            15.55       6640              1.39       5632       1408       6640          0           0     754688           4.02        44.40 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_72/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_45/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_59/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_96/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_71/PartitionedCall/Conv2D 
+Conv2D               Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_72/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_45/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_59/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_96/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_71/PartitionedCall/Conv2D 
+DepthwiseConv2D      DepthwiseConv2D      NPU            37888            28.78       7778              1.63       7778       1088       6640          0           0     154368           0.82         7.75 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_75/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_47/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_59/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_96/PartitionedCall/depthwise;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_74/PartitionedCall/depthwise 
+DepthwiseConv2D      Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_75/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_47/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_59/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_96/PartitionedCall/depthwise;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_74/PartitionedCall/depthwise 
+Conv2D               Conv2D               NPU            35440            26.92       3981              0.83       3981       1353       2343          0           0     686080           3.66        67.32 FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_49/StatefulPartitionedCall/FusedBatchNormV3;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_77/PartitionedCall/Conv2D1 
+Pad                  MemoryCopy           NPU             8960             6.81       1920              0.40       1920        464          0          0           0       2560           0.01         0.52 Pad;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_80/PartitionedCall/Pad 
+Pad                  MemoryCopy           NPU             5888             4.47        920              0.19        920         32        625          0           0        256           0.00         0.11 Pad;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_80/PartitionedCall/Pad 
+Add                  Add                  NPU             8960             6.81        768              0.16        768        320          0          0           0          0           0.00         0.00 add;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_80/PartitionedCall/add 
+Conv2D               Conv2D               NPU            20480            15.55       6640              1.39       5632       1408       6640          0           0     754688           4.02        44.40 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_83/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_51/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_59/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_96/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_82/PartitionedCall/Conv2D 
+Conv2D               Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_83/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_51/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_59/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_96/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_82/PartitionedCall/Conv2D 
+DepthwiseConv2D      DepthwiseConv2D      NPU            37888            28.78       7778              1.63       7778       1088       6640          0           0     154368           0.82         7.75 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_86/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_53/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_59/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_96/PartitionedCall/depthwise;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_85/PartitionedCall/depthwise 
+DepthwiseConv2D      Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_86/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_53/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_59/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_96/PartitionedCall/depthwise;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_85/PartitionedCall/depthwise 
+Conv2D               Conv2D               NPU            40112            30.47       5495              1.15       5495       1603       3124          0           0     891904           4.75        63.40 FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_55/StatefulPartitionedCall/FusedBatchNormV3;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_88/PartitionedCall/Conv2D1 
+Pad                  MemoryCopy           NPU            10496             7.97       1920              0.40       1920        496          0          0           0       2816           0.02         0.57 Pad;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_91/PartitionedCall/Pad 
+Pad                  MemoryCopy           NPU             7424             5.64       1874              0.39        902         64       1874          0           0        512           0.00         0.11 Pad;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_91/PartitionedCall/Pad 
+Add                  Add                  NPU             7424             5.64       1024              0.21       1024        336          0          0           0          0           0.00         0.00 add;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_91/PartitionedCall/add 
+Conv2D               Conv2D               NPU            21504            16.33       6640              1.39       5696       1696       6640          0           0     891904           4.75        52.47 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_94/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_57/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_59/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_96/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_93/PartitionedCall/Conv2D 
+Conv2D               Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_94/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_57/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_59/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_96/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_93/PartitionedCall/Conv2D 
+DepthwiseConv2D      DepthwiseConv2D      NPU            38912            29.55       7778              1.63       7778       1088       6640          0           0     154368           0.82         7.75 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_97/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_59/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_96/PartitionedCall/depthwise 
+DepthwiseConv2D      Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_97/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_59/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_96/PartitionedCall/depthwise 
+Conv2D               Conv2D               NPU            37680            28.62       4699              0.98       4699       1429       2343          0           0     754688           4.02        62.74 FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_61/StatefulPartitionedCall/FusedBatchNormV3;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_99/PartitionedCall/Conv2D1 
+Pad                  MemoryCopy           NPU            10496             7.97       1920              0.40       1920        496          0          0           0       2816           0.02         0.57 Pad;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_102/PartitionedCall/Pad 
+Pad                  MemoryCopy           NPU             7424             5.64       1874              0.39        902         64       1874          0           0        512           0.00         0.11 Pad;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_102/PartitionedCall/Pad 
+Add                  Add                  NPU            11520             8.75       1024              0.21       1024        384          0          0           0          0           0.00         0.00 add;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_102/PartitionedCall/add 
+Conv2D               Conv2D               NPU            16384            12.44       4687              0.98       4134       1152       4687          0           0     638976           3.41        53.25 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_105/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_63/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_65/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_107/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_104/PartitionedCall/Conv2D 
+Conv2D               Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_105/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_63/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_65/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_107/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_104/PartitionedCall/Conv2D 
+DepthwiseConv2D      DepthwiseConv2D      NPU            24576            18.67       5858              1.23       5858        768       4687          0           0     110592           0.59         7.37 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_108/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_65/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_107/PartitionedCall/depthwise 
+DepthwiseConv2D      Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_108/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_65/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_107/PartitionedCall/depthwise 
+Conv2D               Conv2D               NPU            17408            13.22       4228              0.89       4081       1312       4228          0           0     835584           4.45        77.20 FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_67/StatefulPartitionedCall/FusedBatchNormV3;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_118/PartitionedCall/Conv2D;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_110/PartitionedCall/Conv2D1 
+Conv2D               Conv2D               NPU            16384            12.44       6257              1.31       6257       1312       4414          0           0     748544           3.99        46.73 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_113/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_69/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_77/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_126/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_112/PartitionedCall/Conv2D 
+Conv2D               Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_113/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_69/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_77/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_126/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_112/PartitionedCall/Conv2D 
+DepthwiseConv2D      DepthwiseConv2D      NPU            27648            21.00       5474              1.15       5474        704       4296          0           0      99072           0.53         7.07 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_116/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_71/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_77/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_126/PartitionedCall/depthwise;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_115/PartitionedCall/depthwise 
+DepthwiseConv2D      Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_116/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_71/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_77/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_126/PartitionedCall/depthwise;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_115/PartitionedCall/depthwise 
+Conv2D               Conv2D               NPU            21504            16.33       4480              0.94       4480       1216       3876          0           0     748544           3.99        65.27 FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_73/StatefulPartitionedCall/FusedBatchNormV3;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_118/PartitionedCall/Conv2D1 
+Add                  Add                  NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 add;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_121/PartitionedCall/add 
+Conv2D               Conv2D               NPU            16384            12.44       6257              1.31       6257       1312       4414          0           0     748544           3.99        46.73 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_124/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_75/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_77/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_126/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_123/PartitionedCall/Conv2D 
+Conv2D               Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_124/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_75/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_77/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_126/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_123/PartitionedCall/Conv2D 
+DepthwiseConv2D      DepthwiseConv2D      NPU            27648            21.00       5474              1.15       5474        704       4296          0           0      99072           0.53         7.07 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_127/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_77/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_126/PartitionedCall/depthwise 
+DepthwiseConv2D      Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_127/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_77/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_126/PartitionedCall/depthwise 
+Conv2D               Conv2D               NPU            28848            21.91       3241              0.68       3241       1005       2343          0           0     528384           2.82        63.68 FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_79/StatefulPartitionedCall/FusedBatchNormV3;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_129/PartitionedCall/Conv2D1 
+Pad                  MemoryCopy           NPU            13312            10.11       2048              0.43       2048        192          0          0           0       3072           0.02         0.59 Pad;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_132/PartitionedCall/Pad 
+Pad                  MemoryCopy           NPU            10240             7.78       4687              0.98       1773         64       4687          0           0       1280           0.01         0.11 Pad;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_132/PartitionedCall/Pad 
+Add                  Add                  NPU            10240             7.78       1280              0.27       1280        480          0          0           0          0           0.00         0.00 add;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_132/PartitionedCall/add 
+Conv2D               Conv2D               NPU            23552            17.89       9841              2.06       9841       2016       7343          0           0    1253376           6.68        49.75 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_135/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_81/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_83/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_137/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_134/PartitionedCall/Conv2D 
+Conv2D               Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_135/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_81/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_83/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_137/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_134/PartitionedCall/Conv2D 
+DepthwiseConv2D      DepthwiseConv2D      NPU            23040            17.50       7161              1.50       7161        720       7031          0           0      41472           0.22         2.26 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_138/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_83/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_137/PartitionedCall/depthwise 
+DepthwiseConv2D      Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_138/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_83/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_137/PartitionedCall/depthwise 
+Conv2D               Conv2D               NPU             4864             3.69       1503              0.32        632        152       1503          0           0      73728           0.39        19.16 FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_85/StatefulPartitionedCall/FusedBatchNormV3;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_148/PartitionedCall/Conv2D;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_140/PartitionedCall/Conv2D1 
+Conv2D               Conv2D               NPU             1792             1.36       2643              0.55       2643         56       2343          0           0      24576           0.13         3.63 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_143/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_87/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_101/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_167/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_142/PartitionedCall/Conv2D 
+Conv2D               Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_143/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_87/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_101/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_167/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_142/PartitionedCall/Conv2D 
+DepthwiseConv2D      DepthwiseConv2D      NPU             3328             2.53       2643              0.55       2643         96       2343          0           0      13824           0.07         2.04 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_146/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_89/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_101/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_167/PartitionedCall/depthwise;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_145/PartitionedCall/depthwise 
+DepthwiseConv2D      Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_146/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_89/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_101/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_167/PartitionedCall/depthwise;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_145/PartitionedCall/depthwise 
+Conv2D               Conv2D               NPU             2048             1.56        537              0.11        514         56        537          0           0      24576           0.13        17.88 FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_91/StatefulPartitionedCall/FusedBatchNormV3;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_148/PartitionedCall/Conv2D1 
+Add                  Add                  NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 add;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_151/PartitionedCall/add 
+Conv2D               Conv2D               NPU             1792             1.36       2643              0.55       2643         56       2343          0           0      24576           0.13         3.63 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_154/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_93/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_101/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_167/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_153/PartitionedCall/Conv2D 
+Conv2D               Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_154/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_93/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_101/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_167/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_153/PartitionedCall/Conv2D 
+DepthwiseConv2D      DepthwiseConv2D      NPU             3328             2.53       2643              0.55       2643         96       2343          0           0      13824           0.07         2.04 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_157/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_95/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_101/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_167/PartitionedCall/depthwise;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_156/PartitionedCall/depthwise 
+DepthwiseConv2D      Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_157/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_95/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_101/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_167/PartitionedCall/depthwise;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_156/PartitionedCall/depthwise 
+Conv2D               Conv2D               NPU             2304             1.75       1079              0.23        881         64       1079          0           0      49152           0.26        17.79 FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_97/StatefulPartitionedCall/FusedBatchNormV3;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_170/PartitionedCall/Conv2D;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_159/PartitionedCall/Conv2D1 
+Pad                  MemoryCopy           NPU             1280             0.97        192              0.04        192         16          0          0           0        256           0.00         0.52 Pad;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_162/PartitionedCall/Pad 
+Pad                  MemoryCopy           NPU             1024             0.78        392              0.08        392          8        156          0           0        256           0.00         0.26 Pad;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_162/PartitionedCall/Pad 
+Add                  Add                  NPU             1024             0.78        128              0.03        128         48          0          0           0          0           0.00         0.00 add;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_162/PartitionedCall/add 
+Conv2D               Conv2D               NPU             2048             1.56       3411              0.71       3411         64       2343          0           0      49152           0.26         5.63 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_165/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_99/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_101/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_167/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_164/PartitionedCall/Conv2D 
+Conv2D               Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_165/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_99/StatefulPartitionedCall/FusedBatchNormV3;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_101/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_167/PartitionedCall/depthwise;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_164/PartitionedCall/Conv2D 
+DepthwiseConv2D      DepthwiseConv2D      NPU             3072             2.33       2643              0.55       2643         96       2343          0           0      13824           0.07         2.04 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_168/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_101/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_167/PartitionedCall/depthwise 
+DepthwiseConv2D      Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_168/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_101/StatefulPartitionedCall/FusedBatchNormV3;depthwise;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_167/PartitionedCall/depthwise 
+Conv2D               Conv2D               NPU             2048             1.56       1083              0.23        881         64       1083          0           0      49152           0.26        17.73 FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_103/StatefulPartitionedCall/FusedBatchNormV3;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_170/PartitionedCall/Conv2D1 
+Conv2D               Conv2D               NPU             2560             1.94       4548              0.95       4548         80       3124          0           0      65536           0.35         5.63 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_173/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_105/StatefulPartitionedCall/FusedBatchNormV3;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_172/PartitionedCall/Conv2D 
+Conv2D               Relu6                NPU                0             0.00          0              0.00          0          0          0          0           0          0           0.00       100.00 Relu6;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_173/PartitionedCall/Relu6;FusedBatchNormV3;StatefulPartitionedCall/StatefulPartitionedCall/StatefulPartitionedCall_105/StatefulPartitionedCall/FusedBatchNormV3;Conv2D;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_172/PartitionedCall/Conv2D 
+AvgPool              AvgPool              NPU             2176             1.65        674              0.14        674         72          0          0           0       2048           0.01         1.19 AvgPool;StatefulPartitionedCall/StatefulPartitionedCall/PartitionedCall_174/PartitionedCall/AvgPool 
+Conv2D               Conv2D               NPU              128             0.10        390              0.08        188          4        390          0           0        256           0.00         0.26 Identity             
+
+Network summary for vww4_128_128_INT8
+Accelerator configuration               Ethos_U85_256
+System configuration             Ethos_U85_SYS_DRAM_Low
+Memory mode                            Dedicated_Sram
+Accelerator clock                                 500 MHz
+Design peak SRAM bandwidth                      14.90 GB/s
+Design peak DRAM bandwidth                       3.49 GB/s
+
+Total SRAM used                                128.58 KiB
+Total DRAM used                                342.05 KiB
+
+CPU operators = 0 (0.0%)
+NPU operators = 81 (100.0%)
+
+Average SRAM bandwidth                           2.92 GB/s
+Input   SRAM bandwidth                           1.34 MB/batch
+Weight  SRAM bandwidth                           0.33 MB/batch
+Output  SRAM bandwidth                           1.06 MB/batch
+Total   SRAM bandwidth                           2.78 MB/batch
+Total   SRAM bandwidth            per input      2.78 MB/inference (batch size 1)
+
+Average DRAM bandwidth                           0.59 GB/s
+Input   DRAM bandwidth                           0.25 MB/batch
+Weight  DRAM bandwidth                           0.27 MB/batch
+Output  DRAM bandwidth                           0.00 MB/batch
+Total   DRAM bandwidth                           0.56 MB/batch
+Total   DRAM bandwidth            per input      0.56 MB/inference (batch size 1)
+
+Neural network macs                          18763264 MACs/batch
+

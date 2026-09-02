@@ -1,0 +1,11 @@
+applied; backup: /opt/arm/ml-embedded-evaluation-kit/source/app/use_case/inference_runner/src/UseCaseHandler.cc.bak.c04
+80ee5f5b3d2070ec5616782c2c3907893e37534990cdb1f32d36a3e29ea3b01a  /opt/arm/ml-embedded-evaluation-kit/dependencies/core-driver/src/ethosu_driver.c
+c909918ae80e7ede203e7bea5b13081d8f10996ff763145253b531b0095cf08c  /opt/arm/ml-embedded-evaluation-kit/source/app/use_case/inference_runner/src/UseCaseHandler.cc
+62955b046f7622576fc35045225e34989f724820db04ae326b2903a13ebd05aa  /work/u85mech/poc/build-orig/bin/mlek_inference_runner.axf
+2cf583ac9b9d8f87053477a034c85c65cbc6e9ba7bb4b7ed02f62afac071b1cd  /work/u85mech/poc/build-control/bin/mlek_inference_runner.axf
+00e21c48c6eabe671f0a0482874879f18e674e2a0d149d159b80d7ed4317e852  /work/u85mech/poc/build-irq1/bin/mlek_inference_runner.axf
+Reverted /opt/arm/ml-embedded-evaluation-kit/dependencies/core-driver/src/ethosu_driver.c from backup
+reverted from /opt/arm/ml-embedded-evaluation-kit/source/app/use_case/inference_runner/src/UseCaseHandler.cc.bak.c04
+driver: reverted-identical
+handler: reverted-identical
+BUILD_PHASE_DONE

@@ -1,0 +1,36 @@
+{
+ "created": "2026-09-02",
+ "plan_anchor": "paper-u85-mechanism-plan-anchor=a2a4689",
+ "amendments": [
+  "paper-u85-commandstream-rewrite-plan-anchor=8971ecd (P0-C0)",
+  "analyzer v2->v3.1 (rejection-driven, pre-acceptance): 07a531a, bceaf17, 9d28d9c, 949c532",
+  "P0-D2 profiled re-acquisition (one-hot irq-history), appends to frozen P0-D"
+ ],
+ "qualifications": [
+  "paper-u85-commandstream-rewrite-qualified=88d9c98",
+  "paper-u85-layer-profiling-qualified=4b058f4"
+ ],
+ "raw_evidence": {
+  "P0-C0": "gihwan:/home/gihwan/mps4/U85_MECH_P0C0_20260902T003028Z",
+  "P0-C": "gihwan:/home/gihwan/mps4/U85_MECH_P0C_20260902T015728Z",
+  "P0-D": "gihwan:/home/gihwan/mps4/U85_MECH_P0D_20260902T024627Z",
+  "P0-D2+view": "gihwan:/home/gihwan/mps4/U85_MECH_P0D2_20260902T051659Z"
+ },
+ "derived_sha256": {
+  "U85_FORMAL_MATRIX.csv": "7bd22d1e2997a70324bc16aa92edafc739a49a1fd3112663f6916c392d00907f",
+  "U85_OPERATOR_MATCH.csv": "a94f792278d51dcb83088e46ef72f3b359906ef2d277912093c48025f9d6e361",
+  "U85_256_512_DIFFERENTIAL.csv": "7bcdb5d1e6a638a4c69f7253a00ad852f9829c2c53bf93ae0138fa2067d591bd",
+  "U85_ATTRIBUTION_UNITS.csv": "c3c369f1f9bb6b4071425c40eca92311abf650cf1a89d35131321eb8f647d6cb",
+  "U85_GROUP_DIFFERENTIAL.csv": "08bf014283c52496f2ded7add7c4bbfc28259b1329b309d56f6367a492b4701f",
+  "U85_MECHANISM_RESULTS.md": "4b091feec215d4e2d79976ac76c82dcbed26a5adb9b9fd4b19bf2eb131b7f589",
+  "U85_MECHANISM_LIMITATIONS.md": "abb7d39468051a2d5e9617ad70bc7b0975ed65a1b8ed3eb11e724ad0356c02a1"
+ },
+ "holds": [
+  "P1",
+  "P2",
+  "P3",
+  "P4",
+  "narrative",
+  "interpretation"
+ ]
+}

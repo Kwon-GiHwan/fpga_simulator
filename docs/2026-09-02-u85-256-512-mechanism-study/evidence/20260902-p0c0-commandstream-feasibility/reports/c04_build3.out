@@ -1,0 +1,19 @@
+Backup: /opt/arm/ml-embedded-evaluation-kit/dependencies/core-driver/src/ethosu_driver.c.bak
+Patched: /opt/arm/ml-embedded-evaluation-kit/dependencies/core-driver/src/ethosu_driver.c
+  - Added profiling buffer and print function
+  - Modified ethosu_irq_handler for mid-stream IRQ
+  - Added profiling print after ethosu_inference_end
+applied; backup: /opt/arm/ml-embedded-evaluation-kit/source/app/use_case/inference_runner/src/UseCaseHandler.cc.bak.c04
+applied device_u85 history-clear
+80ee5f5b3d2070ec5616782c2c3907893e37534990cdb1f32d36a3e29ea3b01a  /opt/arm/ml-embedded-evaluation-kit/dependencies/core-driver/src/ethosu_driver.c
+c909918ae80e7ede203e7bea5b13081d8f10996ff763145253b531b0095cf08c  /opt/arm/ml-embedded-evaluation-kit/source/app/use_case/inference_runner/src/UseCaseHandler.cc
+4577473c23d8943359321a81cd2bbf8a4c9b6b3d26c424791116ce4e4a0c935b  /work/u85mech/poc/build-orig/bin/mlek_inference_runner.axf
+7d02afd33bac99731cce547a9fc5a6d93bff3d8cfb59f95481e68856ccf14774  /work/u85mech/poc/build-control/bin/mlek_inference_runner.axf
+217c2326845b3666b041f2a44b29b304c51a8dc92f466c04dee4d24d9c5868e8  /work/u85mech/poc/build-irq1/bin/mlek_inference_runner.axf
+Reverted /opt/arm/ml-embedded-evaluation-kit/dependencies/core-driver/src/ethosu_driver.c from backup
+reverted from /opt/arm/ml-embedded-evaluation-kit/source/app/use_case/inference_runner/src/UseCaseHandler.cc.bak.c04
+reverted device_u85
+device: reverted-identical
+driver: reverted-identical
+handler: reverted-identical
+BUILD_PHASE_DONE

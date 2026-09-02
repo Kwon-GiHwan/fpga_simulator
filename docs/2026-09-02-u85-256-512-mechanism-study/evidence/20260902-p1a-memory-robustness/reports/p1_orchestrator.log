@@ -1,0 +1,17 @@
+[cell] rnnoise_INT8__Sram_Only__256 OK 9086
+[cell] rnnoise_INT8__Sram_Only__512 OK 12086
+[cell] rnnoise_INT8__Shared_Sram__256 OK 31086
+[cell] rnnoise_INT8__Shared_Sram__512 OK 46086
+[cell] dnn_s_quantized__Sram_Only__256 OK 7068
+[cell] dnn_s_quantized__Sram_Only__512 OK 9068
+[cell] dnn_s_quantized__Shared_Sram__256 OK 22068
+[cell] dnn_s_quantized__Shared_Sram__512 OK 28068
+[cell] vww4_128_128_INT8__Sram_Only__256 OK 262068
+[cell] vww4_128_128_INT8__Sram_Only__512 OK 179068
+[cell] vww4_128_128_INT8__Shared_Sram__256 OK 293068
+[cell] vww4_128_128_INT8__Shared_Sram__512 OK 261068
+[cell] yolo-fastest_192_face_v4__Sram_Only__256 OK 792074
+[cell] yolo-fastest_192_face_v4__Sram_Only__512 OK 504074
+[cell] yolo-fastest_192_face_v4__Shared_Sram__256 OK 812074
+[cell] yolo-fastest_192_face_v4__Shared_Sram__512 OK 568074
+DONE_P1A

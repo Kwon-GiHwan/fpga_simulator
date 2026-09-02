@@ -1,0 +1,116 @@
+INFO - WARN - MPS4_SCC->CFG_ACLK reads 0. Assuming default clock of 32000000
+Processor internal clock: 32000000Hz
+INFO - V2M-MPS4 revision A
+INFO - Application Note AN22b, Revision C
+INFO - MPS4 build 3
+INFO - MPS4 core clock has been set to: 32000000Hz
+INFO - CPU ID: 0x411fd230
+INFO - CPU: Cortex-M85 r1p0
+INFO - Enabling I-cache.
+INFO - Enabling D-cache.
+INFO - Relocating vector table to 0x10000000
+INFO - Configured TA_SRAM	@0x50006000
+INFO - Configured TA_EXT	@0x50006800
+INFO - Initialising Ethos-U device@0x50004000
+INFO - Using Sram_Only/Shared_Sram memory mode
+INFO - Ethos-U device initialised
+INFO - Ethos-U version info:
+INFO - 	Arch:       v2.0.0
+INFO - 	Driver:     v1.0.0
+INFO - 	MACs/cc:    256
+INFO - 	Cmd stream: v1
+INFO - HDLCD resolution id: 4
+INFO - Target system design: Arm Corstone-320
+INFO - Device MPS4 HDLCD configured
+INFO - Resolution:    320 x 240
+INFO - Colour format: ARGB8888
+INFO - ARM ML Embedded Evaluation Kit
+INFO - Version 26.03.0 Build date: Apr 21 2026 @ 09:25:19
+INFO - Compiler: GNU-15.2.1
+INFO - Copyright 2021-2026 Arm Limited and/or its affiliates <open-source-office@arm.com>
+INFO - Creating allocator using tensor arena at 0x0x31000000
+INFO - Allocating tensors
+INFO - Model INPUT tensors: 
+INFO - 	tensor type is int8
+INFO - 	tensor occupies 42 bytes with dimensions
+INFO - 		0:   1
+INFO - 		1:   1
+INFO - 		2:  42
+INFO - Scale = 0.221501
+INFO - ZeroPoint = 14
+INFO - 	tensor type is int8
+INFO - 	tensor occupies 24 bytes with dimensions
+INFO - 		0:   1
+INFO - 		1:  24
+INFO - Scale = 0.007843
+INFO - ZeroPoint = -1
+INFO - 	tensor type is int8
+INFO - 	tensor occupies 48 bytes with dimensions
+INFO - 		0:   1
+INFO - 		1:  48
+INFO - Scale = 0.047942
+INFO - ZeroPoint = -128
+INFO - 	tensor type is int8
+INFO - 	tensor occupies 96 bytes with dimensions
+INFO - 		0:   1
+INFO - 		1:  96
+INFO - Scale = 0.007843
+INFO - ZeroPoint = -1
+INFO - Model OUTPUT tensors: 
+INFO - 	tensor type is int8
+INFO - 	tensor occupies 96 bytes with dimensions
+INFO - 		0:   1
+INFO - 		1:   1
+INFO - 		2:  96
+INFO - Scale = 0.007843
+INFO - ZeroPoint = -1
+INFO - 	tensor type is int8
+INFO - 	tensor occupies 22 bytes with dimensions
+INFO - 		0:   1
+INFO - 		1:   1
+INFO - 		2:  22
+INFO - Scale = 0.003906
+INFO - ZeroPoint = -128
+INFO - 	tensor type is int8
+INFO - 	tensor occupies 48 bytes with dimensions
+INFO - 		0:   1
+INFO - 		1:   1
+INFO - 		2:  48
+INFO - Scale = 0.047942
+INFO - ZeroPoint = -128
+INFO - 	tensor type is int8
+INFO - 	tensor occupies 24 bytes with dimensions
+INFO - 		0:   1
+INFO - 		1:   1
+INFO - 		2:  24
+INFO - Scale = 0.007843
+INFO - ZeroPoint = -1
+INFO - 	tensor type is int8
+INFO - 	tensor occupies 1 bytes with dimensions
+INFO - 		0:   1
+INFO - 		1:   1
+INFO - 		2:   1
+INFO - Scale = 0.003906
+INFO - ZeroPoint = -128
+INFO - Activation buffer (a.k.a tensor arena) size used: 1988
+INFO - Number of operators: 1
+INFO - 	Operator 0: ethos-u
+INFO - NPU memory mode likely to be: Sram_Only/Shared_Sram
+INFO - Final results:
+INFO - Total number of inferences: 1
+INFO - Profile for Inference:
+INFO - NPU ACTIVE: 8753 cycles
+INFO - NPU ETHOSU_PMU_SRAM_RD_DATA_BEAT_RECEIVED: 8723 beats
+INFO - NPU ETHOSU_PMU_SRAM_WR_DATA_BEAT_WRITTEN: 171 beats
+INFO - NPU ETHOSU_PMU_EXT_RD_DATA_BEAT_RECEIVED: 0 beats
+INFO - NPU ETHOSU_PMU_EXT_WR_DATA_BEAT_WRITTEN: 0 beats
+INFO - NPU IDLE: 333 cycles
+INFO - NPU TOTAL: 9086 cycles
+INFO - C04_OUTPUT_CRC[0]: bytes=96 crc32=0xA553FCA6
+INFO - C04_OUTPUT_CRC[1]: bytes=22 crc32=0x5EDEDB4F
+INFO - C04_OUTPUT_CRC[2]: bytes=48 crc32=0x4E712C63
+INFO - C04_OUTPUT_CRC[3]: bytes=24 crc32=0xA4FC1980
+INFO - C04_OUTPUT_CRC[4]: bytes=1 crc32=0x83DCEFB7
+INFO - Inference completed.
+INFO - program terminating...
+<NUL>

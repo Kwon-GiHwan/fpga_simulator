@@ -1,0 +1,63 @@
+== generate full-op instrumented model ==
+dst_tflite_sha256: 60e6e612ca66c9c467c9a811f2709c3ac661bfd1eb09585702c6a48c7411fa00
+orig_cms_sha256: 7e1a5a3b929a80b25d39b39b4b08ef080a546c985c91bb83e2b91ecf3a8e1cf6
+mod_cms_sha256: 54edca8d19d5d493cce907fcda2e4d8e6607f3a9b34c8d789bb1e5ee437bcaaf
+VERIFY: PASS
+== B_clean: stock driver, app CRC only ==
+applied; backup: /opt/arm/ml-embedded-evaluation-kit/source/app/use_case/inference_runner/src/UseCaseHandler.cc.bak.c04
+18b86673688051c58e1f11ea98e119cb3f41e2a275ff0ead8c40497d0a4df807  /work/u85mech/pc/build-clean/bin/mlek_inference_runner.axf
+reverted from /opt/arm/ml-embedded-evaluation-kit/source/app/use_case/inference_runner/src/UseCaseHandler.cc.bak.c04
+== B_qa: driver v2, NO device history-clear, irq1 model ==
+applied; backup: /opt/arm/ml-embedded-evaluation-kit/source/app/use_case/inference_runner/src/UseCaseHandler.cc.bak.c04
+applied driver v2 (5-slot, printf)
+a3cb9719712d614fb9737d852737e247e8be6053c13ae9c9c917aceb31b46d00  /work/u85mech/pc/build-qa/bin/mlek_inference_runner.axf
+== B_full_nc: driver v2, NO device clear, full model ==
+46d0250a70aadcc1f598461565c4f71f8dfcfd5e5bdac8c80c8aab2b7e9ce1ad  /work/u85mech/pc/build-full_nc/bin/mlek_inference_runner.axf
+== B_full_wc: + device history-clear ==
+applied device_u85 history-clear
+50d1e0d6a0fd73683e68f8b5306bc046418bca6956a42abcb19f0f7e46e8aa20  /work/u85mech/pc/build-full_wc/bin/mlek_inference_runner.axf
+reverted device_u85
+reverted driver from /opt/arm/ml-embedded-evaluation-kit/dependencies/core-driver/src/ethosu_driver.c.bak
+reverted from /opt/arm/ml-embedded-evaluation-kit/source/app/use_case/inference_runner/src/UseCaseHandler.cc.bak.c04
+driver: reverted-identical
+device: reverted-identical
+handler: reverted-identical
+== runtime ==
+--- clean (completed=1):
+INFO - Total number of inferences: 1
+INFO - NPU TOTAL: 114068 cycles
+INFO - C04_OUTPUT_CRC[0]: bytes=12 crc32=0xCEE9B7FE
+--- qa (completed=1):
+PLPROF_BEGIN,1
+PLPROF_END
+INFO - Total number of inferences: 1
+INFO - NPU TOTAL: 106040 cycles
+INFO - C04_OUTPUT_CRC[0]: bytes=12 crc32=0xCEE9B7FE
+--- full_nc (completed=1):
+PLPROF_BEGIN,14
+PLPROF_END
+INFO - Total number of inferences: 1
+INFO - NPU TOTAL: 1040 cycles
+INFO - C04_OUTPUT_CRC[0]: bytes=12 crc32=0xCEE9B7FE
+--- full_wc (completed=1):
+PLPROF_BEGIN,14
+PLPROF_END
+INFO - Total number of inferences: 1
+INFO - NPU TOTAL: 1040 cycles
+INFO - C04_OUTPUT_CRC[0]: bytes=12 crc32=0xCEE9B7FE
+== determinism x2 more on full_wc ==
+--- full_wc_r2 (completed=1):
+PLPROF_BEGIN,14
+PLPROF_END
+INFO - Total number of inferences: 1
+INFO - NPU TOTAL: 1040 cycles
+INFO - C04_OUTPUT_CRC[0]: bytes=12 crc32=0xCEE9B7FE
+--- full_wc_r3 (completed=1):
+PLPROF_BEGIN,14
+PLPROF_END
+INFO - Total number of inferences: 1
+INFO - NPU TOTAL: 1040 cycles
+INFO - C04_OUTPUT_CRC[0]: bytes=12 crc32=0xCEE9B7FE
+== vela verbose capture (kws 512@Mid_512) ==
+      2 af461b1ee988ee39f778a962366042bb0f63e1c1f2a5dd47b231800847bcd3a0
+DONE_C0C_P1

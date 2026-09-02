@@ -1,0 +1,40 @@
+orig_cms_sha256: 7e1a5a3b929a80b25d39b39b4b08ef080a546c985c91bb83e2b91ecf3a8e1cf6
+mod_cms_sha256: 2e5a0a69d98559dd61c0ac051180413ef109342dbdaa505a6b87563cd74ff107
+VERIFY: PASS
+Backup: /opt/arm/ml-embedded-evaluation-kit/dependencies/core-driver/src/ethosu_driver.c.bak
+Patched: /opt/arm/ml-embedded-evaluation-kit/dependencies/core-driver/src/ethosu_driver.c
+  - Added profiling buffer and print function
+  - Modified ethosu_irq_handler for mid-stream IRQ
+  - Added profiling print after ethosu_inference_end
+applied; backup: /opt/arm/ml-embedded-evaluation-kit/source/app/use_case/inference_runner/src/UseCaseHandler.cc.bak.c04
+applied device_u85 history-clear
+acfdf4ec4fad185380ac2ac74db3f9cdfbe5711d9faeeef1e49aca212f23e2e4  /work/u85mech/poc/build-log-orig/bin/mlek_inference_runner.axf
+f00aace42fc06c41f7e528f1aaa085de08fea6eab011b934a62cc85bcc356f4a  /work/u85mech/poc/build-log-irq1/bin/mlek_inference_runner.axf
+aa67ea90f57a7aa8f2acedc51f4203fe44692ed7dbb12b8b4fd3375a8c6e8718  /work/u85mech/poc/build-log-irq3/bin/mlek_inference_runner.axf
+Reverted /opt/arm/ml-embedded-evaluation-kit/dependencies/core-driver/src/ethosu_driver.c from backup
+reverted from /opt/arm/ml-embedded-evaluation-kit/source/app/use_case/inference_runner/src/UseCaseHandler.cc.bak.c04
+reverted device_u85
+driver: reverted-identical
+device: reverted-identical
+handler: reverted-identical
+orig     COMPLETE(count=1)  wall=5s  prof_layers=0
+control  FVP_EXITED_EARLY  wall=1s  prof_layers=no-print
+irq1     COMPLETE(count=1)  wall=5s  prof_layers=1
+output dump present: {'orig': False, 'control': False, 'irq1': False}
+orig==control: True
+orig==irq1  : True
+=== verdict extraction ===
+--- orig:
+I: === PER-LAYER NPU PROFILING (0 layers) ===
+INFO - Total number of inferences: 1
+INFO - NPU TOTAL: 114070 cycles
+INFO - C04_OUTPUT_CRC[0]: bytes=12 crc32=0xCEE9B7FE
+--- irq1:
+I: === PER-LAYER NPU PROFILING (1 layers) ===
+I: 0,8055,8007,610,1166,861
+INFO - Total number of inferences: 1
+INFO - NPU TOTAL: 106040 cycles
+INFO - C04_OUTPUT_CRC[0]: bytes=12 crc32=0xCEE9B7FE
+--- irq3:
+/tmp/c045_final.sh: 41: cannot open /work/u85mech/poc/runlog/irq3.uart.log: No such file
+DONE_C045

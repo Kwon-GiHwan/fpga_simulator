@@ -1,0 +1,95 @@
+[instr] rnnoise_INT8__256_Low IRQs=48
+[instr] rnnoise_INT8__512_Mid512 IRQs=48
+[instr] rnnoise_INT8__512_Low IRQs=48
+[instr] vww4_128_128_INT8__256_Low IRQs=91
+[instr] vww4_128_128_INT8__512_Mid512 IRQs=90
+[instr] vww4_128_128_INT8__512_Low IRQs=90
+[instr] yolo-fastest_192_face_v4__256_Low IRQs=138
+[instr] yolo-fastest_192_face_v4__512_Mid512 IRQs=128
+[instr] yolo-fastest_192_face_v4__512_Low IRQs=138
+[instr] kws_micronet_m__256_Low IRQs=18
+[instr] kws_micronet_m__512_Mid512 IRQs=15
+[instr] kws_micronet_m__512_Low IRQs=20
+[instr] ad_medium_int8__256_Low IRQs=17
+[instr] ad_medium_int8__512_Mid512 IRQs=17
+[instr] ad_medium_int8__512_Low IRQs=16
+[instr] dnn_s_quantized__256_Low NOT_AVAILABLE: STOP: unsupported schema feature: shape_signature
+[instr] dnn_s_quantized__512_Mid512 NOT_AVAILABLE: STOP: unsupported schema feature: shape_signature
+[instr] dnn_s_quantized__512_Low NOT_AVAILABLE: STOP: unsupported schema feature: shape_signature
+stage1 done: 18 cells
+== phase A: clean builds ==
+[patch] patch_app.py applied; backup: /opt/arm/ml-embedded-evaluation-kit/source/app/use_case/inferen
+[build] rnnoise_INT8__256_Low/clean 7267321c151c
+[build] rnnoise_INT8__512_Mid512/clean c4e3ae52d5f2
+[build] rnnoise_INT8__512_Low/clean c4e3ae52d5f2
+[build] vww4_128_128_INT8__256_Low/clean 3e8191d41959
+[build] vww4_128_128_INT8__512_Mid512/clean f4a92f232627
+[build] vww4_128_128_INT8__512_Low/clean 7efcfa1bc12d
+[build] yolo-fastest_192_face_v4__256_Low/clean 8eb1975b5e25
+[build] yolo-fastest_192_face_v4__512_Mid512/clean 7e859b267c69
+[build] yolo-fastest_192_face_v4__512_Low/clean ab6a9a21ffbf
+[build] kws_micronet_m__256_Low/clean b0aeda812235
+[build] kws_micronet_m__512_Mid512/clean 18b866736880
+[build] kws_micronet_m__512_Low/clean f09eda808920
+[build] ad_medium_int8__256_Low/clean d143ef32e93d
+[build] ad_medium_int8__512_Mid512/clean 9c9f650898f2
+[build] ad_medium_int8__512_Low/clean 9223d051d2c3
+[build] dnn_s_quantized__256_Low/clean bd6506fa12e5
+[build] dnn_s_quantized__512_Mid512/clean 3a7ee99bf2f8
+[build] dnn_s_quantized__512_Low/clean 3a7ee99bf2f8
+[revert] verified clean
+== phase B: profiled builds ==
+[patch] patch_app.py applied; backup: /opt/arm/ml-embedded-evaluation-kit/source/app/use_case/inferen
+[patch] patch_driver_u85_v2.py applied driver v2 (5-slot, printf)
+[build] rnnoise_INT8__256_Low/prof c2cda361b2bf
+[build] rnnoise_INT8__512_Mid512/prof 160fe943cbe3
+[build] rnnoise_INT8__512_Low/prof 160fe943cbe3
+[build] vww4_128_128_INT8__256_Low/prof 0e6b1200bc5b
+[build] vww4_128_128_INT8__512_Mid512/prof f65cba5b04b4
+[build] vww4_128_128_INT8__512_Low/prof fadbb4863927
+[build] yolo-fastest_192_face_v4__256_Low/prof 18b4589d2829
+[build] yolo-fastest_192_face_v4__512_Mid512/prof f506799f0ded
+[build] yolo-fastest_192_face_v4__512_Low/prof 423cdc63b106
+[build] kws_micronet_m__256_Low/prof 26b6b946326e
+[build] kws_micronet_m__512_Mid512/prof 232d2fe83afa
+[build] kws_micronet_m__512_Low/prof 20de026cdd69
+[build] ad_medium_int8__256_Low/prof 596d1f0febd5
+[build] ad_medium_int8__512_Mid512/prof a6975adeda76
+[build] ad_medium_int8__512_Low/prof 50a5992361a0
+[revert] verified clean
+[run] rnnoise_INT8__256_Low/clean x3 exact-equal total=36086 pl=None
+[run] rnnoise_INT8__256_Low/prof x3 exact-equal total=1040 pl=17
+[run] rnnoise_INT8__512_Mid512/clean x3 exact-equal total=55086 pl=None
+[run] rnnoise_INT8__512_Mid512/prof x3 exact-equal total=1040 pl=20
+[run] rnnoise_INT8__512_Low/clean x3 exact-equal total=55086 pl=None
+[run] rnnoise_INT8__512_Low/prof x3 exact-equal total=1040 pl=20
+[run] vww4_128_128_INT8__256_Low/clean x3 exact-equal total=287068 pl=None
+[run] vww4_128_128_INT8__256_Low/prof x3 exact-equal total=1040 pl=75
+[run] vww4_128_128_INT8__512_Mid512/clean x3 exact-equal total=259068 pl=None
+[run] vww4_128_128_INT8__512_Mid512/prof x3 exact-equal total=1040 pl=75
+[run] vww4_128_128_INT8__512_Low/clean x3 exact-equal total=259068 pl=None
+[run] vww4_128_128_INT8__512_Low/prof x3 exact-equal total=1040 pl=75
+[run] yolo-fastest_192_face_v4__256_Low/clean x3 exact-equal total=812074 pl=None
+[run] yolo-fastest_192_face_v4__256_Low/prof x3 exact-equal total=1040 pl=94
+[run] yolo-fastest_192_face_v4__512_Mid512/clean x3 exact-equal total=587074 pl=None
+[run] yolo-fastest_192_face_v4__512_Mid512/prof x3 exact-equal total=1040 pl=89
+[run] yolo-fastest_192_face_v4__512_Low/clean x3 exact-equal total=566074 pl=None
+[run] yolo-fastest_192_face_v4__512_Low/prof x3 exact-equal total=2040 pl=94
+[run] kws_micronet_m__256_Low/clean x3 exact-equal total=199068 pl=None
+[run] kws_micronet_m__256_Low/prof x3 exact-equal total=1040 pl=16
+[run] kws_micronet_m__512_Mid512/clean x3 exact-equal total=114068 pl=None
+[run] kws_micronet_m__512_Mid512/prof x3 exact-equal total=1040 pl=14
+[run] kws_micronet_m__512_Low/clean x3 exact-equal total=116068 pl=None
+[run] kws_micronet_m__512_Low/prof x3 exact-equal total=2040 pl=18
+[run] ad_medium_int8__256_Low/clean x3 exact-equal total=377068 pl=None
+[run] ad_medium_int8__256_Low/prof x3 exact-equal total=1040 pl=14
+[run] ad_medium_int8__512_Mid512/clean x3 exact-equal total=235068 pl=None
+[run] ad_medium_int8__512_Mid512/prof x3 exact-equal total=1040 pl=15
+[run] ad_medium_int8__512_Low/clean x3 exact-equal total=236068 pl=None
+[run] ad_medium_int8__512_Low/prof x3 exact-equal total=1040 pl=15
+[run] dnn_s_quantized__256_Low/clean x3 exact-equal total=22068 pl=None
+[run] dnn_s_quantized__512_Mid512/clean x3 exact-equal total=29068 pl=None
+[run] dnn_s_quantized__512_Low/clean x3 exact-equal total=29068 pl=None
+output identity: all profiled cells match clean
+U85_FORMAL_MATRIX.csv written
+DONE_P0D

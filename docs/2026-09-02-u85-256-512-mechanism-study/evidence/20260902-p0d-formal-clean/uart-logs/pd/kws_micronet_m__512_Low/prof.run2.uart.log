@@ -1,0 +1,86 @@
+INFO - WARN - MPS4_SCC->CFG_ACLK reads 0. Assuming default clock of 32000000
+Processor internal clock: 32000000Hz
+INFO - V2M-MPS4 revision A
+INFO - Application Note AN22b, Revision C
+INFO - MPS4 build 3
+INFO - MPS4 core clock has been set to: 32000000Hz
+INFO - CPU ID: 0x411fd230
+INFO - CPU: Cortex-M85 r1p0
+INFO - Enabling I-cache.
+INFO - Enabling D-cache.
+INFO - Relocating vector table to 0x10000000
+INFO - Configured TA_SRAM	@0x50006000
+INFO - Configured TA_EXT	@0x50006800
+INFO - Initialising Ethos-U device@0x50004000
+INFO - Using Dedicated_Sram memory mode; fast cache size: 393216
+INFO - Ethos-U device initialised
+INFO - Ethos-U version info:
+INFO - 	Arch:       v2.0.0
+INFO - 	Driver:     v1.0.0
+INFO - 	MACs/cc:    512
+INFO - 	Cmd stream: v1
+INFO - HDLCD resolution id: 4
+INFO - Target system design: Arm Corstone-320
+INFO - Device MPS4 HDLCD configured
+INFO - Resolution:    320 x 240
+INFO - Colour format: ARGB8888
+INFO - ARM ML Embedded Evaluation Kit
+INFO - Version 26.03.0 Build date: Apr 21 2026 @ 09:25:19
+INFO - Compiler: GNU-15.2.1
+INFO - Copyright 2021-2026 Arm Limited and/or its affiliates <open-source-office@arm.com>
+INFO - Creating allocator using tensor arena at 0x0x70023a70
+INFO - Allocating tensors
+INFO - Model INPUT tensors: 
+INFO - 	tensor type is int8
+INFO - 	tensor occupies 490 bytes with dimensions
+INFO - 		0:   1
+INFO - 		1:  49
+INFO - 		2:  10
+INFO - 		3:   1
+INFO - Scale = 0.201095
+INFO - ZeroPoint = -5
+INFO - Model OUTPUT tensors: 
+INFO - 	tensor type is int8
+INFO - 	tensor occupies 12 bytes with dimensions
+INFO - 		0:   1
+INFO - 		1:  12
+INFO - Scale = 0.056054
+INFO - ZeroPoint = -54
+INFO - Activation buffer (a.k.a tensor arena) size used: 111652
+INFO - Number of operators: 1
+INFO - 	Operator 0: ethos-u
+INFO - NPU memory mode likely to be: Dedicated_Sram
+PLPROF_BEGIN,18
+PLPROF,0,8055,8007,610,1166,860,0
+PLPROF,1,42025,42024,1919,4033,862,0
+PLPROF,2,5025,5024,3894,2021,1073,0
+PLPROF,3,9025,9024,4969,1475,411,0
+PLPROF,4,1025,1024,994,531,400,0
+PLPROF,5,3025,3024,225,1402,569,0
+PLPROF,6,7025,7024,4447,1450,708,0
+PLPROF,7,3025,3024,1619,732,410,0
+PLPROF,8,4025,4024,1304,1925,963,0
+PLPROF,9,5025,5024,3339,1050,298,0
+PLPROF,10,3025,3024,1627,1064,665,0
+PLPROF,11,3025,3024,239,1406,516,0
+PLPROF,12,6025,6024,4873,948,176,0
+PLPROF,13,2025,2024,1665,394,242,0
+PLPROF,14,3025,3024,0,1235,598,0
+PLPROF,15,5025,5024,2443,1646,902,0
+PLPROF,16,5025,5024,2681,930,48,0
+PLPROF,17,2025,2024,1487,13,178,0
+PLPROF_END
+INFO - Final results:
+INFO - Total number of inferences: 1
+INFO - Profile for Inference:
+INFO - NPU ACTIVE: 1301 cycles
+INFO - NPU ETHOSU_PMU_SRAM_RD_DATA_BEAT_RECEIVED: 0 beats
+INFO - NPU ETHOSU_PMU_SRAM_WR_DATA_BEAT_WRITTEN: 0 beats
+INFO - NPU ETHOSU_PMU_EXT_RD_DATA_BEAT_RECEIVED: 0 beats
+INFO - NPU ETHOSU_PMU_EXT_WR_DATA_BEAT_WRITTEN: 1 beats
+INFO - NPU IDLE: 739 cycles
+INFO - NPU TOTAL: 2040 cycles
+INFO - C04_OUTPUT_CRC[0]: bytes=12 crc32=0xCEE9B7FE
+INFO - Inference completed.
+INFO - program terminating...
+<NUL>

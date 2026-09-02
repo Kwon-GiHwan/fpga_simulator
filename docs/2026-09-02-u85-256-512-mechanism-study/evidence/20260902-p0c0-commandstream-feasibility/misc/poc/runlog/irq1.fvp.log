@@ -1,0 +1,7 @@
+telnetterminal0: Listening for serial connection on port 5000
+telnetterminal1: Listening for serial connection on port 5001
+telnetterminal5: Listening for serial connection on port 5002
+telnetterminal2: Listening for serial connection on port 5003
+
+Warning: Corstone_SSE_320_Main: vis_hdlcd:: Visualisation setup failed - the model will run with the Visualisation window disabled
+In file: (unknown):0

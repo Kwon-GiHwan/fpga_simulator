@@ -1,0 +1,1 @@
+{"axf_sha256": "7267321c151cb1b71a0f38c05f217d2901039d3f5d914aa4189c3266fee5ebd2", "timing_adapter": "ETHOS_U_NPU_TIMING_ADAPTER_ENABLED:BOOL=ON", "model_path": "/work/u85mech/artifacts/rnnoise_INT8__256_Low/rnnoise_INT8_vela.tflite", "model_sha256": "8f342f545a9a9e1da4493fa2f73ff5779785fa5a0c7f6bfac2096153f1b2116e"}

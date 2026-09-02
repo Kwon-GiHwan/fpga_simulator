@@ -1,0 +1,1 @@
+{"axf_sha256": "bd6506fa12e52b461fca796124dcec6142fd445a668f7eec9f3c956533c58a24", "timing_adapter": "ETHOS_U_NPU_TIMING_ADAPTER_ENABLED:BOOL=ON", "model_path": "/work/u85mech/artifacts/dnn_s_quantized__256_Low/dnn_s_quantized_vela.tflite", "model_sha256": "421edf54f7cc21a688f102a71278b4d09fdb687f16668270aa0657fc209dcec1"}

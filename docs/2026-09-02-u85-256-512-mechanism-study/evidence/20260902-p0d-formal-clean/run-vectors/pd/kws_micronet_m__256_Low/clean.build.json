@@ -1,0 +1,1 @@
+{"axf_sha256": "b0aeda812235f88a71b5fcb850f512f65ffa756154e90ae7d50d5787e881cefa", "timing_adapter": "ETHOS_U_NPU_TIMING_ADAPTER_ENABLED:BOOL=ON", "model_path": "/work/u85mech/artifacts/kws_micronet_m__256_Low/kws_micronet_m_vela.tflite", "model_sha256": "7d1431a8bc9cd5ec3735e9c1f8c91cd8d1e4496286147ee5a1adec1acd72ce92"}

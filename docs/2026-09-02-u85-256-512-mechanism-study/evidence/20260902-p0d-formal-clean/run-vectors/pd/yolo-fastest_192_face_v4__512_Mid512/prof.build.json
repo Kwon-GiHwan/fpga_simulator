@@ -1,0 +1,1 @@
+{"axf_sha256": "f506799f0ded36459812e448ddbee80c229914e98c86b444ac45f4efb9625756", "timing_adapter": "ETHOS_U_NPU_TIMING_ADAPTER_ENABLED:BOOL=ON", "model_path": "/work/u85mech/pd/yolo-fastest_192_face_v4__512_Mid512/instr.tflite", "model_sha256": "21898cbdb2bb410d32f61372a1672c3f7273014270f911c482882af4e5fb1876"}

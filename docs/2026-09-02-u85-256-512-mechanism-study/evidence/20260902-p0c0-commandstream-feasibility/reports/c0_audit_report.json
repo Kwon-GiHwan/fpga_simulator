@@ -1,0 +1,658 @@
+{
+ "opcode_tables": {
+  "cmd0_entries": 63,
+  "cmd1_entries": 48,
+  "header_sha256": "8a5cbe762158db15651d65b278d71495e27b174ecacc1c7f988413f5dd665f41"
+ },
+ "cells": [
+  {
+   "cell": "rnnoise_INT8__256_Low",
+   "vela_sha256": "8f342f545a9a9e1da4493fa2f73ff5779785fa5a0c7f6bfac2096153f1b2116e",
+   "npu_partitions": 1,
+   "streams": [
+    {
+     "partition": 0,
+     "payload_bytes": 6908,
+     "cms_bytes": 6876,
+     "cms_sha256": "d89961292c695b2efb2923a21713e2d8f3fb9f629ebb3a2bf4ba052b667c6f0b",
+     "declared_len_words": 1719,
+     "actions": [
+      "FOURCC_COP1",
+      "OPTIMIZER_CONFIG",
+      "NOP",
+      "NOP",
+      "NOP",
+      "COMMAND_STREAM"
+     ],
+     "command_count": 1159,
+     "branch_count": 0,
+     "irq_count": 0,
+     "stop_count": 1,
+     "op_launches": {
+      "CMD0_OPCODE_NPU_OP_CONV": 9,
+      "CMD0_OPCODE_NPU_OP_POOL": 15,
+      "CMD0_OPCODE_NPU_OP_DMA_START": 11,
+      "CMD0_OPCODE_NPU_OP_DMA_WAIT": 11,
+      "CMD0_OPCODE_NPU_OP_ELEMENTWISE": 24,
+      "CMD0_OPCODE_NPU_OP_STOP": 1
+     },
+     "roundtrip_byte_identical": true
+    }
+   ]
+  },
+  {
+   "cell": "rnnoise_INT8__512_Mid512",
+   "vela_sha256": "12087f72b6dce2e03b1146f11dcd5e1c254f1ed6f737bc5df22c8ab0dbdf335c",
+   "npu_partitions": 1,
+   "streams": [
+    {
+     "partition": 0,
+     "payload_bytes": 6960,
+     "cms_bytes": 6928,
+     "cms_sha256": "724b7a10de2316e7089a90b35edeffc77552cc1a3b4a500dfac034701991db0f",
+     "declared_len_words": 1732,
+     "actions": [
+      "FOURCC_COP1",
+      "OPTIMIZER_CONFIG",
+      "NOP",
+      "NOP",
+      "NOP",
+      "COMMAND_STREAM"
+     ],
+     "command_count": 1155,
+     "branch_count": 0,
+     "irq_count": 0,
+     "stop_count": 1,
+     "op_launches": {
+      "CMD0_OPCODE_NPU_OP_CONV": 9,
+      "CMD0_OPCODE_NPU_OP_POOL": 15,
+      "CMD0_OPCODE_NPU_OP_DMA_START": 11,
+      "CMD0_OPCODE_NPU_OP_DMA_WAIT": 11,
+      "CMD0_OPCODE_NPU_OP_ELEMENTWISE": 24,
+      "CMD0_OPCODE_NPU_OP_STOP": 1
+     },
+     "roundtrip_byte_identical": true
+    }
+   ]
+  },
+  {
+   "cell": "rnnoise_INT8__512_Low",
+   "vela_sha256": "12087f72b6dce2e03b1146f11dcd5e1c254f1ed6f737bc5df22c8ab0dbdf335c",
+   "npu_partitions": 1,
+   "streams": [
+    {
+     "partition": 0,
+     "payload_bytes": 6960,
+     "cms_bytes": 6928,
+     "cms_sha256": "724b7a10de2316e7089a90b35edeffc77552cc1a3b4a500dfac034701991db0f",
+     "declared_len_words": 1732,
+     "actions": [
+      "FOURCC_COP1",
+      "OPTIMIZER_CONFIG",
+      "NOP",
+      "NOP",
+      "NOP",
+      "COMMAND_STREAM"
+     ],
+     "command_count": 1155,
+     "branch_count": 0,
+     "irq_count": 0,
+     "stop_count": 1,
+     "op_launches": {
+      "CMD0_OPCODE_NPU_OP_CONV": 9,
+      "CMD0_OPCODE_NPU_OP_POOL": 15,
+      "CMD0_OPCODE_NPU_OP_DMA_START": 11,
+      "CMD0_OPCODE_NPU_OP_DMA_WAIT": 11,
+      "CMD0_OPCODE_NPU_OP_ELEMENTWISE": 24,
+      "CMD0_OPCODE_NPU_OP_STOP": 1
+     },
+     "roundtrip_byte_identical": true
+    }
+   ]
+  },
+  {
+   "cell": "vww4_128_128_INT8__256_Low",
+   "vela_sha256": "869a0c6b8e7dd5339829bfd9430abfb9afe20401a17d31c437e2a193fd6afc8e",
+   "npu_partitions": 1,
+   "streams": [
+    {
+     "partition": 0,
+     "payload_bytes": 10796,
+     "cms_bytes": 10764,
+     "cms_sha256": "9fa96df25504f5b6d4fc29015a2004b4287072af29470f358714dce0d0d616c3",
+     "declared_len_words": 2691,
+     "actions": [
+      "FOURCC_COP1",
+      "OPTIMIZER_CONFIG",
+      "NOP",
+      "NOP",
+      "NOP",
+      "COMMAND_STREAM"
+     ],
+     "command_count": 1900,
+     "branch_count": 0,
+     "irq_count": 0,
+     "stop_count": 1,
+     "op_launches": {
+      "CMD0_OPCODE_NPU_OP_DMA_START": 25,
+      "CMD0_OPCODE_NPU_OP_DMA_WAIT": 25,
+      "CMD0_OPCODE_NPU_OP_CONV": 39,
+      "CMD0_OPCODE_NPU_OP_POOL": 19,
+      "CMD0_OPCODE_NPU_OP_KERNEL_WAIT": 6,
+      "CMD0_OPCODE_NPU_OP_DEPTHWISE": 17,
+      "CMD0_OPCODE_NPU_OP_ELEMENTWISE": 10,
+      "CMD0_OPCODE_NPU_OP_STOP": 1
+     },
+     "roundtrip_byte_identical": true
+    }
+   ]
+  },
+  {
+   "cell": "vww4_128_128_INT8__512_Mid512",
+   "vela_sha256": "e3c387fd064ce4f22d3f4a2ca4002fe15cb72ce892ca77c884d7913c29b00350",
+   "npu_partitions": 1,
+   "streams": [
+    {
+     "partition": 0,
+     "payload_bytes": 11084,
+     "cms_bytes": 11052,
+     "cms_sha256": "ad7f70fa600330828a5486fda5a1c1cfbb01128fd7ee1ae19d4e6363b988b766",
+     "declared_len_words": 2763,
+     "actions": [
+      "FOURCC_COP1",
+      "OPTIMIZER_CONFIG",
+      "NOP",
+      "NOP",
+      "NOP",
+      "COMMAND_STREAM"
+     ],
+     "command_count": 1887,
+     "branch_count": 0,
+     "irq_count": 0,
+     "stop_count": 1,
+     "op_launches": {
+      "CMD0_OPCODE_NPU_OP_DMA_START": 17,
+      "CMD0_OPCODE_NPU_OP_DMA_WAIT": 17,
+      "CMD0_OPCODE_NPU_OP_CONV": 39,
+      "CMD0_OPCODE_NPU_OP_POOL": 19,
+      "CMD0_OPCODE_NPU_OP_KERNEL_WAIT": 5,
+      "CMD0_OPCODE_NPU_OP_DEPTHWISE": 17,
+      "CMD0_OPCODE_NPU_OP_ELEMENTWISE": 10,
+      "CMD0_OPCODE_NPU_OP_STOP": 1
+     },
+     "roundtrip_byte_identical": true
+    }
+   ]
+  },
+  {
+   "cell": "vww4_128_128_INT8__512_Low",
+   "vela_sha256": "aae31e5a76f512d34316b70e677de837048a443b414781ff074ec0e22b6e7413",
+   "npu_partitions": 1,
+   "streams": [
+    {
+     "partition": 0,
+     "payload_bytes": 11140,
+     "cms_bytes": 11108,
+     "cms_sha256": "2500c1f4a41bfe8e3e874a970cdf8673677256e96c618c0fe9876f7afe883699",
+     "declared_len_words": 2777,
+     "actions": [
+      "FOURCC_COP1",
+      "OPTIMIZER_CONFIG",
+      "NOP",
+      "NOP",
+      "NOP",
+      "COMMAND_STREAM"
+     ],
+     "command_count": 1896,
+     "branch_count": 0,
+     "irq_count": 0,
+     "stop_count": 1,
+     "op_launches": {
+      "CMD0_OPCODE_NPU_OP_DMA_START": 19,
+      "CMD0_OPCODE_NPU_OP_DMA_WAIT": 19,
+      "CMD0_OPCODE_NPU_OP_CONV": 39,
+      "CMD0_OPCODE_NPU_OP_POOL": 19,
+      "CMD0_OPCODE_NPU_OP_KERNEL_WAIT": 5,
+      "CMD0_OPCODE_NPU_OP_DEPTHWISE": 17,
+      "CMD0_OPCODE_NPU_OP_ELEMENTWISE": 10,
+      "CMD0_OPCODE_NPU_OP_STOP": 1
+     },
+     "roundtrip_byte_identical": true
+    }
+   ]
+  },
+  {
+   "cell": "yolo-fastest_192_face_v4__256_Low",
+   "vela_sha256": "aec60a683ca0dfd54e791bf0fec34f999cf472bbf7a16c4f2e6adb09fddab53e",
+   "npu_partitions": 1,
+   "streams": [
+    {
+     "partition": 0,
+     "payload_bytes": 17536,
+     "cms_bytes": 17504,
+     "cms_sha256": "cce27b4df3d4b158749ccac96e926ae11f3cb062869f673c7145ec91a0793b8d",
+     "declared_len_words": 4376,
+     "actions": [
+      "FOURCC_COP1",
+      "OPTIMIZER_CONFIG",
+      "NOP",
+      "NOP",
+      "NOP",
+      "COMMAND_STREAM"
+     ],
+     "command_count": 3094,
+     "branch_count": 0,
+     "irq_count": 0,
+     "stop_count": 1,
+     "op_launches": {
+      "CMD0_OPCODE_NPU_OP_DMA_START": 56,
+      "CMD0_OPCODE_NPU_OP_DMA_WAIT": 56,
+      "CMD0_OPCODE_NPU_OP_CONV": 58,
+      "CMD0_OPCODE_NPU_OP_DEPTHWISE": 28,
+      "CMD0_OPCODE_NPU_OP_KERNEL_WAIT": 24,
+      "CMD0_OPCODE_NPU_OP_ELEMENTWISE": 18,
+      "CMD0_OPCODE_NPU_OP_POOL": 9,
+      "CMD0_OPCODE_NPU_OP_RESIZE": 1,
+      "CMD0_OPCODE_NPU_OP_STOP": 1
+     },
+     "roundtrip_byte_identical": true
+    }
+   ]
+  },
+  {
+   "cell": "yolo-fastest_192_face_v4__512_Mid512",
+   "vela_sha256": "8b2f4e1e0fca98e2adcf3ab9db295127c87746cfd134f37eb5cbb1d8b47b847a",
+   "npu_partitions": 1,
+   "streams": [
+    {
+     "partition": 0,
+     "payload_bytes": 17940,
+     "cms_bytes": 17908,
+     "cms_sha256": "fd67c2689cf45b6be8055769605cc6531815d23cc5e151945185c19e623675d7",
+     "declared_len_words": 4477,
+     "actions": [
+      "FOURCC_COP1",
+      "OPTIMIZER_CONFIG",
+      "NOP",
+      "NOP",
+      "NOP",
+      "COMMAND_STREAM"
+     ],
+     "command_count": 3074,
+     "branch_count": 0,
+     "irq_count": 0,
+     "stop_count": 1,
+     "op_launches": {
+      "CMD0_OPCODE_NPU_OP_DMA_START": 45,
+      "CMD0_OPCODE_NPU_OP_DMA_WAIT": 45,
+      "CMD0_OPCODE_NPU_OP_CONV": 56,
+      "CMD0_OPCODE_NPU_OP_DEPTHWISE": 28,
+      "CMD0_OPCODE_NPU_OP_KERNEL_WAIT": 16,
+      "CMD0_OPCODE_NPU_OP_ELEMENTWISE": 18,
+      "CMD0_OPCODE_NPU_OP_POOL": 9,
+      "CMD0_OPCODE_NPU_OP_RESIZE": 1,
+      "CMD0_OPCODE_NPU_OP_STOP": 1
+     },
+     "roundtrip_byte_identical": true
+    }
+   ]
+  },
+  {
+   "cell": "yolo-fastest_192_face_v4__512_Low",
+   "vela_sha256": "c5e208bb572d9da5c4ad3c6d6564b2d686eaf516e6cfba4d3880b60ee39dfa96",
+   "npu_partitions": 1,
+   "streams": [
+    {
+     "partition": 0,
+     "payload_bytes": 18920,
+     "cms_bytes": 18888,
+     "cms_sha256": "b349aa172ddcffd1cc7d859fc3d84f0eee3e8a108c0bde961f27e78647b6dbc1",
+     "declared_len_words": 4722,
+     "actions": [
+      "FOURCC_COP1",
+      "OPTIMIZER_CONFIG",
+      "NOP",
+      "NOP",
+      "NOP",
+      "COMMAND_STREAM"
+     ],
+     "command_count": 3231,
+     "branch_count": 0,
+     "irq_count": 0,
+     "stop_count": 1,
+     "op_launches": {
+      "CMD0_OPCODE_NPU_OP_DMA_START": 61,
+      "CMD0_OPCODE_NPU_OP_DMA_WAIT": 61,
+      "CMD0_OPCODE_NPU_OP_CONV": 61,
+      "CMD0_OPCODE_NPU_OP_DEPTHWISE": 28,
+      "CMD0_OPCODE_NPU_OP_KERNEL_WAIT": 21,
+      "CMD0_OPCODE_NPU_OP_ELEMENTWISE": 18,
+      "CMD0_OPCODE_NPU_OP_POOL": 9,
+      "CMD0_OPCODE_NPU_OP_RESIZE": 1,
+      "CMD0_OPCODE_NPU_OP_STOP": 1
+     },
+     "roundtrip_byte_identical": true
+    }
+   ]
+  },
+  {
+   "cell": "kws_micronet_m__256_Low",
+   "vela_sha256": "7d1431a8bc9cd5ec3735e9c1f8c91cd8d1e4496286147ee5a1adec1acd72ce92",
+   "npu_partitions": 1,
+   "streams": [
+    {
+     "partition": 0,
+     "payload_bytes": 2352,
+     "cms_bytes": 2320,
+     "cms_sha256": "702fbdda7c34452686396d8060f67aec3cd45d7c554f1a47993391a01b1399f2",
+     "declared_len_words": 580,
+     "actions": [
+      "FOURCC_COP1",
+      "OPTIMIZER_CONFIG",
+      "NOP",
+      "NOP",
+      "NOP",
+      "COMMAND_STREAM"
+     ],
+     "command_count": 418,
+     "branch_count": 0,
+     "irq_count": 0,
+     "stop_count": 1,
+     "op_launches": {
+      "CMD0_OPCODE_NPU_OP_DMA_START": 10,
+      "CMD0_OPCODE_NPU_OP_DMA_WAIT": 10,
+      "CMD0_OPCODE_NPU_OP_CONV": 11,
+      "CMD0_OPCODE_NPU_OP_DEPTHWISE": 5,
+      "CMD0_OPCODE_NPU_OP_KERNEL_WAIT": 1,
+      "CMD0_OPCODE_NPU_OP_POOL": 1,
+      "CMD0_OPCODE_NPU_OP_STOP": 1
+     },
+     "roundtrip_byte_identical": true
+    }
+   ]
+  },
+  {
+   "cell": "kws_micronet_m__512_Mid512",
+   "vela_sha256": "af461b1ee988ee39f778a962366042bb0f63e1c1f2a5dd47b231800847bcd3a0",
+   "npu_partitions": 1,
+   "streams": [
+    {
+     "partition": 0,
+     "payload_bytes": 2076,
+     "cms_bytes": 2044,
+     "cms_sha256": "7e1a5a3b929a80b25d39b39b4b08ef080a546c985c91bb83e2b91ecf3a8e1cf6",
+     "declared_len_words": 511,
+     "actions": [
+      "FOURCC_COP1",
+      "OPTIMIZER_CONFIG",
+      "NOP",
+      "NOP",
+      "NOP",
+      "COMMAND_STREAM"
+     ],
+     "command_count": 352,
+     "branch_count": 0,
+     "irq_count": 0,
+     "stop_count": 1,
+     "op_launches": {
+      "CMD0_OPCODE_NPU_OP_DMA_START": 4,
+      "CMD0_OPCODE_NPU_OP_DMA_WAIT": 4,
+      "CMD0_OPCODE_NPU_OP_CONV": 9,
+      "CMD0_OPCODE_NPU_OP_DEPTHWISE": 5,
+      "CMD0_OPCODE_NPU_OP_POOL": 1,
+      "CMD0_OPCODE_NPU_OP_STOP": 1
+     },
+     "roundtrip_byte_identical": true
+    }
+   ]
+  },
+  {
+   "cell": "kws_micronet_m__512_Low",
+   "vela_sha256": "e7819207461507ea6753bce6ce4902e18ff722de52c0ac1ff335cf5897fa9454",
+   "npu_partitions": 1,
+   "streams": [
+    {
+     "partition": 0,
+     "payload_bytes": 2764,
+     "cms_bytes": 2732,
+     "cms_sha256": "b374a9a1358bc3aeb17c3ebeba9276b388602f071f9e00538824b8b3d5156694",
+     "declared_len_words": 683,
+     "actions": [
+      "FOURCC_COP1",
+      "OPTIMIZER_CONFIG",
+      "NOP",
+      "NOP",
+      "NOP",
+      "COMMAND_STREAM"
+     ],
+     "command_count": 466,
+     "branch_count": 0,
+     "irq_count": 0,
+     "stop_count": 1,
+     "op_launches": {
+      "CMD0_OPCODE_NPU_OP_DMA_START": 12,
+      "CMD0_OPCODE_NPU_OP_DMA_WAIT": 12,
+      "CMD0_OPCODE_NPU_OP_CONV": 13,
+      "CMD0_OPCODE_NPU_OP_DEPTHWISE": 5,
+      "CMD0_OPCODE_NPU_OP_KERNEL_WAIT": 1,
+      "CMD0_OPCODE_NPU_OP_POOL": 1,
+      "CMD0_OPCODE_NPU_OP_STOP": 1
+     },
+     "roundtrip_byte_identical": true
+    }
+   ]
+  },
+  {
+   "cell": "ad_medium_int8__256_Low",
+   "vela_sha256": "ceb93f0095600c90b42763683fabc07397f7a2d1386493caa625cecd7c86abaa",
+   "npu_partitions": 1,
+   "streams": [
+    {
+     "partition": 0,
+     "payload_bytes": 2236,
+     "cms_bytes": 2204,
+     "cms_sha256": "6062df51e576b8c209c450c1a50c02f5e475d1c0d7dc1a923b82c42c154a3fe6",
+     "declared_len_words": 551,
+     "actions": [
+      "FOURCC_COP1",
+      "OPTIMIZER_CONFIG",
+      "NOP",
+      "NOP",
+      "NOP",
+      "COMMAND_STREAM"
+     ],
+     "command_count": 394,
+     "branch_count": 0,
+     "irq_count": 0,
+     "stop_count": 1,
+     "op_launches": {
+      "CMD0_OPCODE_NPU_OP_DMA_START": 8,
+      "CMD0_OPCODE_NPU_OP_DMA_WAIT": 8,
+      "CMD0_OPCODE_NPU_OP_CONV": 10,
+      "CMD0_OPCODE_NPU_OP_DEPTHWISE": 5,
+      "CMD0_OPCODE_NPU_OP_KERNEL_WAIT": 1,
+      "CMD0_OPCODE_NPU_OP_POOL": 1,
+      "CMD0_OPCODE_NPU_OP_STOP": 1
+     },
+     "roundtrip_byte_identical": true
+    }
+   ]
+  },
+  {
+   "cell": "ad_medium_int8__512_Mid512",
+   "vela_sha256": "9fa6d6e7239b70d027301eea62d6123e88e67f800d93038a67af5cf789834a99",
+   "npu_partitions": 1,
+   "streams": [
+    {
+     "partition": 0,
+     "payload_bytes": 2496,
+     "cms_bytes": 2464,
+     "cms_sha256": "b15b78f67f09eabb1a1791e8007143734cac5309eb67f430f5989f435393b424",
+     "declared_len_words": 616,
+     "actions": [
+      "FOURCC_COP1",
+      "OPTIMIZER_CONFIG",
+      "NOP",
+      "NOP",
+      "NOP",
+      "COMMAND_STREAM"
+     ],
+     "command_count": 426,
+     "branch_count": 0,
+     "irq_count": 0,
+     "stop_count": 1,
+     "op_launches": {
+      "CMD0_OPCODE_NPU_OP_DMA_START": 8,
+      "CMD0_OPCODE_NPU_OP_DMA_WAIT": 8,
+      "CMD0_OPCODE_NPU_OP_CONV": 11,
+      "CMD0_OPCODE_NPU_OP_DEPTHWISE": 5,
+      "CMD0_OPCODE_NPU_OP_POOL": 1,
+      "CMD0_OPCODE_NPU_OP_STOP": 1
+     },
+     "roundtrip_byte_identical": true
+    }
+   ]
+  },
+  {
+   "cell": "ad_medium_int8__512_Low",
+   "vela_sha256": "12d568820a72e9616ecbf08cc4c31df552cd76c40bdb5cd265b610cb621d882f",
+   "npu_partitions": 1,
+   "streams": [
+    {
+     "partition": 0,
+     "payload_bytes": 2416,
+     "cms_bytes": 2384,
+     "cms_sha256": "479c277977821701ff045c14419111332f85f815127a25788764238273f293bf",
+     "declared_len_words": 596,
+     "actions": [
+      "FOURCC_COP1",
+      "OPTIMIZER_CONFIG",
+      "NOP",
+      "NOP",
+      "NOP",
+      "COMMAND_STREAM"
+     ],
+     "command_count": 412,
+     "branch_count": 0,
+     "irq_count": 0,
+     "stop_count": 1,
+     "op_launches": {
+      "CMD0_OPCODE_NPU_OP_DMA_START": 8,
+      "CMD0_OPCODE_NPU_OP_DMA_WAIT": 8,
+      "CMD0_OPCODE_NPU_OP_CONV": 10,
+      "CMD0_OPCODE_NPU_OP_DEPTHWISE": 5,
+      "CMD0_OPCODE_NPU_OP_POOL": 1,
+      "CMD0_OPCODE_NPU_OP_STOP": 1
+     },
+     "roundtrip_byte_identical": true
+    }
+   ]
+  },
+  {
+   "cell": "dnn_s_quantized__256_Low",
+   "vela_sha256": "421edf54f7cc21a688f102a71278b4d09fdb687f16668270aa0657fc209dcec1",
+   "npu_partitions": 1,
+   "streams": [
+    {
+     "partition": 0,
+     "payload_bytes": 4016,
+     "cms_bytes": 3984,
+     "cms_sha256": "fbb9bb5d9faeca8fdae9a2ad73d51802af0d871e092ecc107640133bece21f9e",
+     "declared_len_words": 996,
+     "actions": [
+      "FOURCC_COP1",
+      "OPTIMIZER_CONFIG",
+      "NOP",
+      "NOP",
+      "NOP",
+      "COMMAND_STREAM"
+     ],
+     "command_count": 682,
+     "branch_count": 0,
+     "irq_count": 0,
+     "stop_count": 1,
+     "op_launches": {
+      "CMD0_OPCODE_NPU_OP_CONV": 4,
+      "CMD0_OPCODE_NPU_OP_POOL": 2,
+      "CMD0_OPCODE_NPU_OP_DMA_START": 1,
+      "CMD0_OPCODE_NPU_OP_DMA_WAIT": 1,
+      "CMD0_OPCODE_NPU_OP_ELEMENTWISE": 25,
+      "CMD0_OPCODE_NPU_OP_STOP": 1
+     },
+     "roundtrip_byte_identical": true
+    }
+   ]
+  },
+  {
+   "cell": "dnn_s_quantized__512_Mid512",
+   "vela_sha256": "dbd1b15d979e17f46c227fe2d83781dd455173d0974bcc1d95b916e4fa708229",
+   "npu_partitions": 1,
+   "streams": [
+    {
+     "partition": 0,
+     "payload_bytes": 4064,
+     "cms_bytes": 4032,
+     "cms_sha256": "c7d7432988d148e48bc4c426a950d905b473717b343fd3b8b6d1f446b63251d6",
+     "declared_len_words": 1008,
+     "actions": [
+      "FOURCC_COP1",
+      "OPTIMIZER_CONFIG",
+      "NOP",
+      "NOP",
+      "NOP",
+      "COMMAND_STREAM"
+     ],
+     "command_count": 686,
+     "branch_count": 0,
+     "irq_count": 0,
+     "stop_count": 1,
+     "op_launches": {
+      "CMD0_OPCODE_NPU_OP_CONV": 4,
+      "CMD0_OPCODE_NPU_OP_POOL": 2,
+      "CMD0_OPCODE_NPU_OP_DMA_START": 1,
+      "CMD0_OPCODE_NPU_OP_DMA_WAIT": 1,
+      "CMD0_OPCODE_NPU_OP_ELEMENTWISE": 25,
+      "CMD0_OPCODE_NPU_OP_STOP": 1
+     },
+     "roundtrip_byte_identical": true
+    }
+   ]
+  },
+  {
+   "cell": "dnn_s_quantized__512_Low",
+   "vela_sha256": "dbd1b15d979e17f46c227fe2d83781dd455173d0974bcc1d95b916e4fa708229",
+   "npu_partitions": 1,
+   "streams": [
+    {
+     "partition": 0,
+     "payload_bytes": 4064,
+     "cms_bytes": 4032,
+     "cms_sha256": "c7d7432988d148e48bc4c426a950d905b473717b343fd3b8b6d1f446b63251d6",
+     "declared_len_words": 1008,
+     "actions": [
+      "FOURCC_COP1",
+      "OPTIMIZER_CONFIG",
+      "NOP",
+      "NOP",
+      "NOP",
+      "COMMAND_STREAM"
+     ],
+     "command_count": 686,
+     "branch_count": 0,
+     "irq_count": 0,
+     "stop_count": 1,
+     "op_launches": {
+      "CMD0_OPCODE_NPU_OP_CONV": 4,
+      "CMD0_OPCODE_NPU_OP_POOL": 2,
+      "CMD0_OPCODE_NPU_OP_DMA_START": 1,
+      "CMD0_OPCODE_NPU_OP_DMA_WAIT": 1,
+      "CMD0_OPCODE_NPU_OP_ELEMENTWISE": 25,
+      "CMD0_OPCODE_NPU_OP_STOP": 1
+     },
+     "roundtrip_byte_identical": true
+    }
+   ]
+  }
+ ],
+ "all_roundtrips_identical": true
+}

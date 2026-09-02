@@ -1,0 +1,68 @@
+[instr] rnnoise_INT8__256_Low IRQs 48
+[instr] rnnoise_INT8__512_Mid512 IRQs 48
+[instr] rnnoise_INT8__512_Low IRQs 48
+[instr] vww4_128_128_INT8__256_Low IRQs 91
+[instr] vww4_128_128_INT8__512_Mid512 IRQs 90
+[instr] vww4_128_128_INT8__512_Low IRQs 90
+[instr] yolo-fastest_192_face_v4__256_Low IRQs 138
+[instr] yolo-fastest_192_face_v4__512_Mid512 IRQs 128
+[instr] yolo-fastest_192_face_v4__512_Low IRQs 138
+[instr] kws_micronet_m__256_Low IRQs 18
+[instr] kws_micronet_m__512_Mid512 IRQs 15
+[instr] kws_micronet_m__512_Low IRQs 20
+[instr] ad_medium_int8__256_Low IRQs 17
+[instr] ad_medium_int8__512_Mid512 IRQs 17
+[instr] ad_medium_int8__512_Low IRQs 16
+== builds (driver v3) ==
+[build] rnnoise_INT8__256_Low ecf6646c905f
+[build] rnnoise_INT8__512_Mid512 d3b61e375372
+[build] rnnoise_INT8__512_Low d3b61e375372
+[build] vww4_128_128_INT8__256_Low d05a56d50631
+[build] vww4_128_128_INT8__512_Mid512 7fdbc976f41c
+[build] vww4_128_128_INT8__512_Low 41a3587e6667
+[build] yolo-fastest_192_face_v4__256_Low 0a47e7f7a45f
+[build] yolo-fastest_192_face_v4__512_Mid512 98a46dff1727
+[build] yolo-fastest_192_face_v4__512_Low 9c212c5fef30
+[build] kws_micronet_m__256_Low 3f172da13379
+[build] kws_micronet_m__512_Mid512 3488d05db09b
+[build] kws_micronet_m__512_Low 671eedbb9b03
+[build] ad_medium_int8__256_Low 1a276891ae8f
+[build] ad_medium_int8__512_Mid512 dc14b03da468
+[build] ad_medium_int8__512_Low 4a3a3325055f
+[revert] verified clean
+== runs ==
+STOP: OUTPUT MISMATCH vs frozen clean rnnoise_INT8__256_Low
+[instr] rnnoise_INT8__256_Low IRQs 48
+[instr] rnnoise_INT8__512_Mid512 IRQs 48
+[instr] rnnoise_INT8__512_Low IRQs 48
+[instr] vww4_128_128_INT8__256_Low IRQs 91
+[instr] vww4_128_128_INT8__512_Mid512 IRQs 90
+[instr] vww4_128_128_INT8__512_Low IRQs 90
+[instr] yolo-fastest_192_face_v4__256_Low IRQs 138
+[instr] yolo-fastest_192_face_v4__512_Mid512 IRQs 128
+[instr] yolo-fastest_192_face_v4__512_Low IRQs 138
+[instr] kws_micronet_m__256_Low IRQs 18
+[instr] kws_micronet_m__512_Mid512 IRQs 15
+[instr] kws_micronet_m__512_Low IRQs 20
+[instr] ad_medium_int8__256_Low IRQs 17
+[instr] ad_medium_int8__512_Mid512 IRQs 17
+[instr] ad_medium_int8__512_Low IRQs 16
+== builds (driver v3) ==
+[revert] verified clean
+== runs ==
+[run] rnnoise_INT8__256_Low x3 exact-equal pl=15 crc-ok
+[run] rnnoise_INT8__512_Mid512 x3 exact-equal pl=19 crc-ok
+[run] rnnoise_INT8__512_Low x3 exact-equal pl=19 crc-ok
+[run] vww4_128_128_INT8__256_Low x3 exact-equal pl=75 crc-ok
+[run] vww4_128_128_INT8__512_Mid512 x3 exact-equal pl=75 crc-ok
+[run] vww4_128_128_INT8__512_Low x3 exact-equal pl=75 crc-ok
+[run] yolo-fastest_192_face_v4__256_Low x3 exact-equal pl=92 crc-ok
+[run] yolo-fastest_192_face_v4__512_Mid512 x3 exact-equal pl=88 crc-ok
+[run] yolo-fastest_192_face_v4__512_Low x3 exact-equal pl=91 crc-ok
+[run] kws_micronet_m__256_Low x3 exact-equal pl=16 crc-ok
+[run] kws_micronet_m__512_Mid512 x3 exact-equal pl=13 crc-ok
+[run] kws_micronet_m__512_Low x3 exact-equal pl=18 crc-ok
+[run] ad_medium_int8__256_Low x3 exact-equal pl=14 crc-ok
+[run] ad_medium_int8__512_Mid512 x3 exact-equal pl=16 crc-ok
+[run] ad_medium_int8__512_Low x3 exact-equal pl=15 crc-ok
+DONE_P0D2
