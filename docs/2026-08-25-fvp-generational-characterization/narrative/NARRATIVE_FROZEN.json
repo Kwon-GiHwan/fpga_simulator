@@ -1,0 +1,21 @@
+{
+ "freeze": "paper-fvp-narrative-frozen",
+ "created": "2026-08-25",
+ "scope": "FVP-only narrative, frozen before any board result exists",
+ "source_results": {
+  "name": "paper-fvp-analysis-results-frozen",
+  "digest": "11be18ef242678b2a14eb31c62b7692b93b7e4465bd70ec12060b6c2358dcdb2"
+ },
+ "documents": {
+  "DISCUSSION_POINTS.md": "01d80993c7061a43c8eb451a0226c3842c2a91fda6db26789074d3ae4543c349",
+  "LIMITATIONS.md": "fc43fe313d47028b70da7d3e9c1200067c1aebbc91deebab10f54887d4d0fb06",
+  "RESULTS_INTERPRETATION.md": "b9bf3808b17027e836d9fcadd727e0f8b061c26237f1bfc0e01a46465f2585fa"
+ },
+ "rq_status": {
+  "RQ1": "ANSWERED_FVP_SCOPE",
+  "RQ2": "ANSWERED_FVP_SCOPE",
+  "RQ3": "PENDING_VALIDATION"
+ },
+ "boundary": "board results may fill RQ3; they do not retroactively revise the FVP interpretation",
+ "new_fvp_analyses": "HOLD"
+}

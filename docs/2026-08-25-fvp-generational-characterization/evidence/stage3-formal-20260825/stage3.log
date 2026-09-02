@@ -1,0 +1,75 @@
+[ 1/74] rnnoise_INT8__SSE-300__ethos-u55-32              M3 total=112059     M1==M2==M3 wall=  0.75s   53s
+[ 2/74] kws_micronet_m__SSE-300__ethos-u55-32            M3 total=1416050    M1==M2==M3 wall=  5.11s   57s
+[ 3/74] ad_medium_int8__SSE-300__ethos-u55-32            M3 total=3202050    M1==M2==M3 wall= 11.43s   63s
+[ 4/74] vww4_128_128_INT8__SSE-300__ethos-u55-32         M3 total=2294050    M1==M2==M3 wall=  7.82s   61s
+[ 5/74] yolo-fastest_192_face_v4__SSE-300__ethos-u55-32  M3 total=7188053    M1==M2==M3 wall= 23.41s   75s
+[ 6/74] mobilenet_v2_1.0_224_INT8__SSE-300__ethos-u55-32 M3 total=22781050   M1==M2==M3 wall= 77.89s  130s
+[ 7/74] rnnoise_INT8__SSE-300__ethos-u55-64              M3 total=109059     M1==M2==M3 wall=  0.65s   53s
+[ 8/74] kws_micronet_m__SSE-300__ethos-u55-64            M3 total=730050     M1==M2==M3 wall=  3.11s   55s
+[ 9/74] ad_medium_int8__SSE-300__ethos-u55-64            M3 total=1665050    M1==M2==M3 wall=  6.87s   59s
+[10/74] vww4_128_128_INT8__SSE-300__ethos-u55-64         M3 total=1222050    M1==M2==M3 wall=  4.76s   57s
+[11/74] yolo-fastest_192_face_v4__SSE-300__ethos-u55-64  M3 total=3680053    M1==M2==M3 wall= 13.58s   65s
+[12/74] mobilenet_v2_1.0_224_INT8__SSE-300__ethos-u55-64 M3 total=12100050   M1==M2==M3 wall= 47.67s  100s
+[13/74] rnnoise_INT8__SSE-300__ethos-u55-128             M3 total=106059     M1==M2==M3 wall=  0.70s   52s
+[14/74] kws_micronet_m__SSE-300__ethos-u55-128           M3 total=405050     M1==M2==M3 wall=  2.46s   57s
+[15/74] ad_medium_int8__SSE-300__ethos-u55-128           M3 total=932050     M1==M2==M3 wall=  5.06s   57s
+[16/74] vww4_128_128_INT8__SSE-300__ethos-u55-128        M3 total=737050     M1==M2==M3 wall=  3.61s   55s
+[17/74] yolo-fastest_192_face_v4__SSE-300__ethos-u55-128 M3 total=1993053    M1==M2==M3 wall=  9.53s   62s
+[18/74] mobilenet_v2_1.0_224_INT8__SSE-300__ethos-u55-12 M3 total=7365050    M1==M2==M3 wall= 34.08s   91s
+[19/74] rnnoise_INT8__SSE-300__ethos-u55-256             M3 total=105059     M1==M2==M3 wall=  0.70s   53s
+[20/74] kws_micronet_m__SSE-300__ethos-u55-256           M3 total=244050     M1==M2==M3 wall=  1.96s   54s
+[21/74] ad_medium_int8__SSE-300__ethos-u55-256           M3 total=674050     M1==M2==M3 wall=  4.26s   56s
+[22/74] vww4_128_128_INT8__SSE-300__ethos-u55-256        M3 total=577050     M1==M2==M3 wall=  3.06s   56s
+[23/74] yolo-fastest_192_face_v4__SSE-300__ethos-u55-256 M3 total=1334053    M1==M2==M3 wall=  7.62s   60s
+[24/74] mobilenet_v2_1.0_224_INT8__SSE-300__ethos-u55-25 M3 total=5474050    M1==M2==M3 wall= 28.02s   80s
+[25/74] wav2letter_pruned_int8__SSE-300__ethos-u55-256   M3 total=15335050   M1==M2==M3 wall=110.82s  168s
+[26/74] rnnoise_INT8__SSE-300__ethos-u65-256             M3 total=65086      M1==M2==M3 wall=  0.60s   54s
+[27/74] kws_micronet_m__SSE-300__ethos-u65-256           M3 total=217068     M1==M2==M3 wall=  1.85s   53s
+[28/74] ad_medium_int8__SSE-300__ethos-u65-256           M3 total=471068     M1==M2==M3 wall=  3.71s   55s
+[29/74] vww4_128_128_INT8__SSE-300__ethos-u65-256        M3 total=417068     M1==M2==M3 wall=  2.61s   55s
+[30/74] yolo-fastest_192_face_v4__SSE-300__ethos-u65-256 M3 total=1119074    M1==M2==M3 wall=  6.87s   59s
+[31/74] mobilenet_v2_1.0_224_INT8__SSE-300__ethos-u65-25 M3 total=3730068    M1==M2==M3 wall= 23.71s   76s
+[32/74] wav2letter_pruned_int8__SSE-300__ethos-u65-256   M3 total=16341068   M1==M2==M3 wall=108.17s  168s
+[33/74] rnnoise_INT8__SSE-300__ethos-u65-512             M3 total=50086      M1==M2==M3 wall=  0.60s   54s
+[34/74] kws_micronet_m__SSE-300__ethos-u65-512           M3 total=130068     M1==M2==M3 wall=  1.85s   54s
+[35/74] ad_medium_int8__SSE-300__ethos-u65-512           M3 total=301068     M1==M2==M3 wall=  3.71s   57s
+[36/74] vww4_128_128_INT8__SSE-300__ethos-u65-512        M3 total=283068     M1==M2==M3 wall=  2.86s   56s
+[37/74] yolo-fastest_192_face_v4__SSE-300__ethos-u65-512 M3 total=747074     M1==M2==M3 wall=  7.82s   59s
+[38/74] mobilenet_v2_1.0_224_INT8__SSE-300__ethos-u65-51 M3 total=2424068    M1==M2==M3 wall= 23.81s   76s
+[39/74] wav2letter_pruned_int8__SSE-300__ethos-u65-512   M3 total=9839068    M1==M2==M3 wall=106.17s  165s
+[40/74] rnnoise_INT8__SSE-320__ethos-u85-128             M3 total=36086      M1==M2==M3 wall=  0.65s   53s
+[41/74] kws_micronet_m__SSE-320__ethos-u85-128           M3 total=369068     M1==M2==M3 wall=  2.36s   54s
+[42/74] ad_medium_int8__SSE-320__ethos-u85-128           M3 total=731068     M1==M2==M3 wall=  4.41s   56s
+[43/74] vww4_128_128_INT8__SSE-320__ethos-u85-128        M3 total=511068     M1==M2==M3 wall=  3.21s   56s
+[44/74] yolo-fastest_192_face_v4__SSE-320__ethos-u85-128 M3 total=1527074    M1==M2==M3 wall=  8.97s   61s
+[45/74] mobilenet_v2_1.0_224_INT8__SSE-320__ethos-u85-12 M3 total=5079068    M1==M2==M3 wall= 29.02s   82s
+[46/74] wav2letter_pruned_int8__SSE-320__ethos-u85-128   M3 total=28674068   M1==M2==M3 wall=127.61s  186s
+[47/74] rnnoise_INT8__SSE-320__ethos-u85-256             M3 total=36086      M1==M2==M3 wall=  0.70s   53s
+[48/74] kws_micronet_m__SSE-320__ethos-u85-256           M3 total=199068     M1==M2==M3 wall=  1.80s   54s
+[49/74] ad_medium_int8__SSE-320__ethos-u85-256           M3 total=377068     M1==M2==M3 wall=  3.31s   55s
+[50/74] vww4_128_128_INT8__SSE-320__ethos-u85-256        M3 total=287068     M1==M2==M3 wall=  2.66s   55s
+[51/74] yolo-fastest_192_face_v4__SSE-320__ethos-u85-256 M3 total=812074     M1==M2==M3 wall=  6.52s   63s
+[52/74] mobilenet_v2_1.0_224_INT8__SSE-320__ethos-u85-25 M3 total=2874068    M1==M2==M3 wall= 22.21s   74s
+[53/74] wav2letter_pruned_int8__SSE-320__ethos-u85-256   M3 total=15147068   M1==M2==M3 wall= 90.78s  149s
+[54/74] rnnoise_INT8__SSE-320__ethos-u85-512             M3 total=55086      M1==M2==M3 wall=  0.75s   53s
+[55/74] kws_micronet_m__SSE-320__ethos-u85-512           M3 total=114068     M1==M2==M3 wall=  1.50s   53s
+[56/74] ad_medium_int8__SSE-320__ethos-u85-512           M3 total=235068     M1==M2==M3 wall=  2.86s   55s
+[57/74] vww4_128_128_INT8__SSE-320__ethos-u85-512        M3 total=259068     M1==M2==M3 wall=  2.46s   55s
+[58/74] yolo-fastest_192_face_v4__SSE-320__ethos-u85-512 M3 total=587074     M1==M2==M3 wall=  6.02s   58s
+[59/74] mobilenet_v2_1.0_224_INT8__SSE-320__ethos-u85-51 M3 total=1914068    M1==M2==M3 wall= 18.45s   71s
+[60/74] wav2letter_pruned_int8__SSE-320__ethos-u85-512   M3 total=7654068    M1==M2==M3 wall= 68.67s  125s
+[61/74] rnnoise_INT8__SSE-320__ethos-u85-1024            M3 total=49086      M1==M2==M3 wall=  0.80s   53s
+[62/74] kws_micronet_m__SSE-320__ethos-u85-1024          M3 total=90068      M1==M2==M3 wall=  1.66s   53s
+[63/74] ad_medium_int8__SSE-320__ethos-u85-1024          M3 total=141068     M1==M2==M3 wall=  2.86s   54s
+[64/74] vww4_128_128_INT8__SSE-320__ethos-u85-1024       M3 total=230068     M1==M2==M3 wall=  2.71s   60s
+[65/74] yolo-fastest_192_face_v4__SSE-320__ethos-u85-102 M3 total=439074     M1==M2==M3 wall=  6.32s   58s
+[66/74] mobilenet_v2_1.0_224_INT8__SSE-320__ethos-u85-10 M3 total=1406068    M1==M2==M3 wall= 19.15s   72s
+[67/74] wav2letter_pruned_int8__SSE-320__ethos-u85-1024  M3 total=4115068    M1==M2==M3 wall= 66.52s  122s
+[68/74] rnnoise_INT8__SSE-320__ethos-u85-2048            M3 total=54086      M1==M2==M3 wall=  1.00s   52s
+[69/74] kws_micronet_m__SSE-320__ethos-u85-2048          M3 total=67068      M1==M2==M3 wall=  1.91s   54s
+[70/74] ad_medium_int8__SSE-320__ethos-u85-2048          M3 total=110068     M1==M2==M3 wall=  3.26s   55s
+[71/74] vww4_128_128_INT8__SSE-320__ethos-u85-2048       M3 total=214068     M1==M2==M3 wall=  3.36s   61s
+[72/74] yolo-fastest_192_face_v4__SSE-320__ethos-u85-204 M3 total=355074     M1==M2==M3 wall=  7.17s   64s
+[73/74] mobilenet_v2_1.0_224_INT8__SSE-320__ethos-u85-20 M3 total=1067068    M1==M2==M3 wall= 21.86s   74s
+[74/74] wav2letter_pruned_int8__SSE-320__ethos-u85-2048  M3 total=2624068    M1==M2==M3 wall= 74.69s  130s
+STAGE3_COMPLETE

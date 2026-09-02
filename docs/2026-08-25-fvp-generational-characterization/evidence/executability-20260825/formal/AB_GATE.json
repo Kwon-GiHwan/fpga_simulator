@@ -1,0 +1,47 @@
+[
+ {
+  "cell_id": "rnnoise_INT8__SSE-300__ethos-u55-32",
+  "npu": "ethos-u55",
+  "both_built": true,
+  "vela_match": true,
+  "generated_cc_raw_match": false,
+  "generated_cc_body_match": true,
+  "axf_match": true,
+  "axf_sha256": "25fbb4eef2955e708ba133edae5a48a19d09cc370829ea493fd67fed402fa0ba",
+  "embedded_build_stamp": "Version %s Build date: Apr 21 2026 @ 09:25:19",
+  "embedded_stamp_matches_epoch": true,
+  "vela_reproduces_qualification": true,
+  "generated_cc_reproduces_qualification": false,
+  "PASS": true
+ },
+ {
+  "cell_id": "rnnoise_INT8__SSE-300__ethos-u65-256",
+  "npu": "ethos-u65",
+  "both_built": true,
+  "vela_match": true,
+  "generated_cc_raw_match": false,
+  "generated_cc_body_match": true,
+  "axf_match": true,
+  "axf_sha256": "945b6aa508212c20680faec133dd8ea84510ce9159b2f89fd7099962ef35f5f6",
+  "embedded_build_stamp": "Version %s Build date: Apr 21 2026 @ 09:25:19",
+  "embedded_stamp_matches_epoch": true,
+  "vela_reproduces_qualification": true,
+  "generated_cc_reproduces_qualification": false,
+  "PASS": true
+ },
+ {
+  "cell_id": "rnnoise_INT8__SSE-320__ethos-u85-128",
+  "npu": "ethos-u85",
+  "both_built": true,
+  "vela_match": true,
+  "generated_cc_raw_match": false,
+  "generated_cc_body_match": true,
+  "axf_match": true,
+  "axf_sha256": "08555dc77e4089c2665c53143b984ff9fb45c11d685f4d5930166b1a891de314",
+  "embedded_build_stamp": "Version %s Build date: Apr 21 2026 @ 09:25:19",
+  "embedded_stamp_matches_epoch": true,
+  "vela_reproduces_qualification": true,
+  "generated_cc_reproduces_qualification": false,
+  "PASS": true
+ }
+]

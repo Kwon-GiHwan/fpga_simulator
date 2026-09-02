@@ -1,0 +1,28 @@
+diff --git a/source/hal/source/platform/mps4/source/platform_drivers.c b/source/hal/source/platform/mps4/source/platform_drivers.c
+index 35134c3..d4e6637 100644
+--- a/source/hal/source/platform/mps4/source/platform_drivers.c
++++ b/source/hal/source/platform/mps4/source/platform_drivers.c
+@@ -25,6 +25,7 @@
+ 
+ #include <string.h>
+ 
++int state;
+ #if defined(ARM_NPU)
+ #include "ethosu_npu_init.h"
+ 
+@@ -87,6 +88,7 @@ int platform_init(void)
+     SCB_EnableDCache();
+ #endif /* __DCACHE_PRESENT */
+ 
++int state;
+ #if defined(ARM_NPU)
+     create_rw_vector_table();
+ 
+@@ -98,7 +100,6 @@ int platform_init(void)
+     }
+ #endif /* ETHOS_U_NPU_TIMING_ADAPTER_ENABLED */
+ 
+-    int state;
+ 
+     /* If Arm Ethos-U NPU is to be used, we initialise it here */
+     if (0 != (state = arm_ethosu_npu_init())) {

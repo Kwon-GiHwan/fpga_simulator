@@ -1,0 +1,166 @@
+{
+ "cells_completed": 133,
+ "counts": {
+  "PRIMARY_BENCHMARK": {
+   "EXECUTABLE": 74,
+   "NOT_EXECUTABLE_MEMORY": 3,
+   "EXECUTABILITY_UNRESOLVED": 0
+  },
+  "TA_OFF_DIAGNOSTIC": {
+   "EXECUTABLE": 53,
+   "NOT_EXECUTABLE_MEMORY": 3,
+   "EXECUTABILITY_UNRESOLVED": 0
+  }
+ },
+ "E_primary": 74,
+ "E_diag": 53,
+ "projected_formal_samples": 222,
+ "FORMAL_FVP_SAMPLES": 0,
+ "memory_failures": [
+  {
+   "cell_id": "wav2letter_pruned_int8__SSE-300__ethos-u55-32",
+   "model": "wav2letter_pruned_int8",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 32,
+   "memory_mode": "Shared_Sram",
+   "universe": "PRIMARY_BENCHMARK",
+   "reason": "RETRY_LINK_REGION_OVERFLOW",
+   "initial_arena": 2097152,
+   "requested": 12000192,
+   "available": 2096904,
+   "missing": 9903288,
+   "retry_arena": 12000448,
+   "linker_overflow": "region `SRAM' overflowed by 9903296 bytes"
+  },
+  {
+   "cell_id": "wav2letter_pruned_int8__SSE-300__ethos-u55-64",
+   "model": "wav2letter_pruned_int8",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 64,
+   "memory_mode": "Shared_Sram",
+   "universe": "PRIMARY_BENCHMARK",
+   "reason": "RETRY_LINK_REGION_OVERFLOW",
+   "initial_arena": 2097152,
+   "requested": 10966640,
+   "available": 2096904,
+   "missing": 8869736,
+   "retry_arena": 10966896,
+   "linker_overflow": "region `SRAM' overflowed by 8869744 bytes"
+  },
+  {
+   "cell_id": "wav2letter_pruned_int8__SSE-300__ethos-u55-128",
+   "model": "wav2letter_pruned_int8",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 128,
+   "memory_mode": "Shared_Sram",
+   "universe": "PRIMARY_BENCHMARK",
+   "reason": "RETRY_LINK_REGION_OVERFLOW",
+   "initial_arena": 2097152,
+   "requested": 5132944,
+   "available": 2096904,
+   "missing": 3036040,
+   "retry_arena": 5133200,
+   "linker_overflow": "region `SRAM' overflowed by 3036048 bytes"
+  },
+  {
+   "cell_id": "wav2letter_pruned_int8__SSE-310__ethos-u55-32",
+   "model": "wav2letter_pruned_int8",
+   "platform": "SSE-310",
+   "npu": "ethos-u55",
+   "mac_config": 32,
+   "memory_mode": "Shared_Sram",
+   "universe": "TA_OFF_DIAGNOSTIC",
+   "reason": "RETRY_LINK_REGION_OVERFLOW",
+   "initial_arena": 2097152,
+   "requested": 12000192,
+   "available": 2096904,
+   "missing": 9903288,
+   "retry_arena": 12000448,
+   "linker_overflow": "region `SRAM' overflowed by 7806144 bytes"
+  },
+  {
+   "cell_id": "wav2letter_pruned_int8__SSE-310__ethos-u55-64",
+   "model": "wav2letter_pruned_int8",
+   "platform": "SSE-310",
+   "npu": "ethos-u55",
+   "mac_config": 64,
+   "memory_mode": "Shared_Sram",
+   "universe": "TA_OFF_DIAGNOSTIC",
+   "reason": "RETRY_LINK_REGION_OVERFLOW",
+   "initial_arena": 2097152,
+   "requested": 10966640,
+   "available": 2096904,
+   "missing": 8869736,
+   "retry_arena": 10966896,
+   "linker_overflow": "region `SRAM' overflowed by 6772592 bytes"
+  },
+  {
+   "cell_id": "wav2letter_pruned_int8__SSE-310__ethos-u55-128",
+   "model": "wav2letter_pruned_int8",
+   "platform": "SSE-310",
+   "npu": "ethos-u55",
+   "mac_config": 128,
+   "memory_mode": "Shared_Sram",
+   "universe": "TA_OFF_DIAGNOSTIC",
+   "reason": "RETRY_LINK_REGION_OVERFLOW",
+   "initial_arena": 2097152,
+   "requested": 5132944,
+   "available": null,
+   "missing": null,
+   "retry_arena": 5132944,
+   "linker_overflow": "region `SRAM' overflowed by 938640 bytes"
+  }
+ ],
+ "memory_failure_distribution": {
+  "by_npu": {
+   "ethos-u55": 6
+  },
+  "by_memory_mode": {
+   "Shared_Sram": 6
+  },
+  "by_model": {
+   "wav2letter_pruned_int8": 6
+  },
+  "by_platform": {
+   "SSE-300": 3,
+   "SSE-310": 3
+  }
+ },
+ "unresolved": [],
+ "arena_retry": {
+  "cells_that_retried": 6,
+  "retry_succeeded": 0,
+  "retry_link_overflow": 6,
+  "retry_other": 0,
+  "rule": "align_up(failing_arena + missing, 16)",
+  "ARENA_ALIGNMENT": 16
+ },
+ "vela_frozen_hash_mismatches": [],
+ "vela_hash_reproduced": 133,
+ "disk": {
+  "peak_cell_footprint_MiB": 355,
+  "median_cell_footprint_MiB": 64,
+  "min_free_observed_GiB": 4.58,
+  "gate_bytes": 1073741824,
+  "gate_ever_breached": false,
+  "cells_fully_recovered": 128,
+  "cells_excluded_from_telemetry": [
+   8,
+   9,
+   10,
+   11,
+   12
+  ],
+  "exclusion_reason": "concurrent provenance-closure extraction; executability evidence unaffected"
+ },
+ "runtime": {
+  "total_s": 9623.4,
+  "total_h": 2.67,
+  "median_cell_s": 57.8,
+  "max_cell_s": 185.6,
+  "max_cell": "wav2letter_pruned_int8__SSE-320__ethos-u85-128"
+ }
+}

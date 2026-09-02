@@ -1,0 +1,4045 @@
+{
+ "freeze": "paper-fvp-formal-evidence-frozen",
+ "created": "2026-08-25",
+ "formal_presweep_anchor": {
+  "name": "paper-fvp-formal-presweep-anchor",
+  "digest": "5dae05d24d0e3fd87a7a4b964693c52b284055a47a7061046f40ea1efd40d8ef"
+ },
+ "stage1_frozen": {
+  "name": "paper-fvp-stage1-evidence-frozen",
+  "digest": "7989048c28638c91f5a563f1a1ea218df095d7b345c9686d47209b63016b53d5",
+  "raw_evidence_sha256": "d043458b2eda753ad0c2216a2301e7ca00e0732335cd4e2235f2c92c01449625"
+ },
+ "stage2_frozen": {
+  "name": "paper-fvp-stage2-evidence-frozen",
+  "digest": "98987f52b39f86bbc299756d90876f28d8d86932a5db4d284d63489dfa5f4a41",
+  "raw_evidence_sha256": "2febbb0db5ae1431c4a957112c35ecf805e3e0ad4078debfb82b1a41b4a96d63"
+ },
+ "stage3_raw": {
+  "raw_evidence_sha256": "8a75f6aa3596eaaa57fd0e3b992f468fbdc9c5a3651e8463fce19251a636f384",
+  "log_sha256": "2e651cc9722a67d61e62e334dc7f7c820d55064ce8deee37f9703477bb8ddfcd",
+  "harness_sha256": "855962317edfeb3ee11e5374d48e04a9e936e150308cacbc4fd9a826507caf8b"
+ },
+ "FORMAL_FVP_SAMPLES": 222,
+ "cells": 74,
+ "cells_at_3_of_3": 74,
+ "formal_records": 222,
+ "determinism_verdict": {
+  "M1_equals_M2_equals_M3": "74/74",
+  "mismatching_cells": 0,
+  "equality_bearing_fields": 19,
+  "vector_definition": "DETERMINISTIC_METRIC_VECTOR.md, fixed before Stage 2 results"
+ },
+ "executability_universe": {
+  "cells": 133,
+  "E_primary": 74,
+  "E_diag": 53,
+  "results_sha256": "e3b48a363723984990ffd52722d8b49a8f1890c3089a16558372e3a7de03617e"
+ },
+ "analysis_status": "NOT_STARTED",
+ "standing_constraints": [
+  "cross-generation raw absolute cycle comparison prohibited",
+  "TA-OFF cells not admitted to the primary benchmark",
+  "no scaling across a non-executable MAC gap",
+  "wav2letter/SSE-300/U55 baseline not rebased; cumulative scaling NOT_AVAILABLE",
+  "no FVP-to-board absolute cycle equality claim"
+ ],
+ "records": [
+  {
+   "seq": 1,
+   "cell_id": "rnnoise_INT8__SSE-300__ethos-u55-32",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 32,
+   "artifact_identity": {
+    "model_sha256": "9c582545b7c13af44616c44b654f4fe721aa2585630b0ca173ca3589f6f11c2c",
+    "vela_sha256": "7728c11b4b5b33029d10648d85d754895bffe713b93048fd7d2ed4a67f8e7611",
+    "generated_cc_body_sha256": "315c6e5269037ef1718f2f778832d0a67eff53b6dad5ca18ea908224fa0cde28",
+    "generated_cc_raw_sha256_informational": "dfa2f0a2416529e71b8c6d2e4b1be288775d64bfd9b12d5418394029a15c9b6c",
+    "axf_sha256": "25fbb4eef2955e708ba133edae5a48a19d09cc370829ea493fd67fed402fa0ba"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 112059,
+    "npu_active_cycles": 111737,
+    "npu_idle_cycles": 322,
+    "axi0_rd_beats": 554,
+    "axi0_wr_beats": 386,
+    "axi1_rd_beats": 14178
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 112059,
+    "npu_active_cycles": 111737,
+    "npu_idle_cycles": 322,
+    "axi0_rd_beats": 554,
+    "axi0_wr_beats": 386,
+    "axi1_rd_beats": 14178
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 112059,
+    "npu_active_cycles": 111737,
+    "npu_idle_cycles": 322,
+    "axi0_rd_beats": 554,
+    "axi0_wr_beats": 386,
+    "axi1_rd_beats": 14178
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     0.702,
+     0.702,
+     0.752
+    ]
+   }
+  },
+  {
+   "seq": 2,
+   "cell_id": "kws_micronet_m__SSE-300__ethos-u55-32",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 32,
+   "artifact_identity": {
+    "model_sha256": "c1feed3af5dac44de7477fb4161670ba18a3fc06039e4a14da41b1c4dd454cb4",
+    "vela_sha256": "09bf0e8f3fc493b2938887584ffb6fd47936c04b6ce44b674f7cff93d58e783f",
+    "generated_cc_body_sha256": "e895a02f22eab2659dbcacfd63630947a2877b95bb201e18194ed2365349624f",
+    "generated_cc_raw_sha256_informational": "e0bdeb37a5b7f47fdff0dfdb21e47bf49644a610fa2e0aaed4595ba7f166de9b",
+    "axf_sha256": "34d3047a7789e232882479d45c2a586a7926f0c631090d789e521e45414d56ff"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1416050,
+    "npu_active_cycles": 1415272,
+    "npu_idle_cycles": 778,
+    "axi0_rd_beats": 147346,
+    "axi0_wr_beats": 48562,
+    "axi1_rd_beats": 17472
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1416050,
+    "npu_active_cycles": 1415272,
+    "npu_idle_cycles": 778,
+    "axi0_rd_beats": 147346,
+    "axi0_wr_beats": 48562,
+    "axi1_rd_beats": 17472
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1416050,
+    "npu_active_cycles": 1415272,
+    "npu_idle_cycles": 778,
+    "axi0_rd_beats": 147346,
+    "axi0_wr_beats": 48562,
+    "axi1_rd_beats": 17472
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     5.113,
+     5.164,
+     5.113
+    ]
+   }
+  },
+  {
+   "seq": 3,
+   "cell_id": "ad_medium_int8__SSE-300__ethos-u55-32",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 32,
+   "artifact_identity": {
+    "model_sha256": "a8b1c9037c2a80e6ff770f0a550777cf744a52850bed6545b2bfc9bacf604c98",
+    "vela_sha256": "feb375c21683114ff27cb6572e7749679110cc7558dbb0ed0cac7a44931aa19f",
+    "generated_cc_body_sha256": "15772ba11274a771f67f53a2895b759db47a6f8004dbce3c5768ccaf380a19d5",
+    "generated_cc_raw_sha256_informational": "bd1a8e767ba98cb3b381d3d2c9e60d92a14337072e482b10d0e04bc61ce9c0fc",
+    "axf_sha256": "f617315ad7a2d4552014744dabc67a2f5779c4a8bde893b80574cf50b8cc59c1"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 3202050,
+    "npu_active_cycles": 3201773,
+    "npu_idle_cycles": 277,
+    "axi0_rd_beats": 516304,
+    "axi0_wr_beats": 138025,
+    "axi1_rd_beats": 55740
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 3202050,
+    "npu_active_cycles": 3201773,
+    "npu_idle_cycles": 277,
+    "axi0_rd_beats": 516304,
+    "axi0_wr_beats": 138025,
+    "axi1_rd_beats": 55740
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 3202050,
+    "npu_active_cycles": 3201773,
+    "npu_idle_cycles": 277,
+    "axi0_rd_beats": 516304,
+    "axi0_wr_beats": 138025,
+    "axi1_rd_beats": 55740
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     11.48,
+     11.58,
+     11.428
+    ]
+   }
+  },
+  {
+   "seq": 4,
+   "cell_id": "vww4_128_128_INT8__SSE-300__ethos-u55-32",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 32,
+   "artifact_identity": {
+    "model_sha256": "5e76364e80c45776b735563679d45f611cab7ce7fef2ec4e2db088afe009ccae",
+    "vela_sha256": "588df75259c199fa13333725662efba934704598c3f4e25d43a74016843cc8a6",
+    "generated_cc_body_sha256": "4ab893d7df886a1df9c3c83fc3ab8f9d69ef1fdd3dbb8eb0c7ace6c83d3ea4a3",
+    "generated_cc_raw_sha256_informational": "65b398446dbe30f38849794d406a768518bfcfaecc450f63ed31d2ad2a453bf8",
+    "axf_sha256": "ff9f83d05e334f05e76846c6d6408557afcad43b7abf3545703ab7d2894b8df3"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 2294050,
+    "npu_active_cycles": 2293392,
+    "npu_idle_cycles": 658,
+    "axi0_rd_beats": 244538,
+    "axi0_wr_beats": 160855,
+    "axi1_rd_beats": 40992
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 2294050,
+    "npu_active_cycles": 2293392,
+    "npu_idle_cycles": 658,
+    "axi0_rd_beats": 244538,
+    "axi0_wr_beats": 160855,
+    "axi1_rd_beats": 40992
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 2294050,
+    "npu_active_cycles": 2293392,
+    "npu_idle_cycles": 658,
+    "axi0_rd_beats": 244538,
+    "axi0_wr_beats": 160855,
+    "axi1_rd_beats": 40992
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     7.77,
+     7.819,
+     7.82
+    ]
+   }
+  },
+  {
+   "seq": 5,
+   "cell_id": "yolo-fastest_192_face_v4__SSE-300__ethos-u55-32",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 32,
+   "artifact_identity": {
+    "model_sha256": "e94bcdb011784bead70ab0c0e9d2dae1a9ea5f103b43e1e6fac3019302cf71ab",
+    "vela_sha256": "9c30cdd344f06d91ed706bdc313a5c565a6dd0e349c3f6ee3d0051184af0290d",
+    "generated_cc_body_sha256": "41d8186ffd024b488a20c2b1eecbc6ed4681637d3ce0c046ff889fd08f44b695",
+    "generated_cc_raw_sha256_informational": "e1460a3ff61e0c8bf90de50146951a2871abe6ff5418112dfb266a171e02a623",
+    "axf_sha256": "81bc9985f0a75b22f8d0fd68e61fb2e0251f2ec652af96a21d925436413ad4e0"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 7188053,
+    "npu_active_cycles": 7187344,
+    "npu_idle_cycles": 709,
+    "axi0_rd_beats": 692173,
+    "axi0_wr_beats": 427993,
+    "axi1_rd_beats": 46387
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 7188053,
+    "npu_active_cycles": 7187344,
+    "npu_idle_cycles": 709,
+    "axi0_rd_beats": 692173,
+    "axi0_wr_beats": 427993,
+    "axi1_rd_beats": 46387
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 7188053,
+    "npu_active_cycles": 7187344,
+    "npu_idle_cycles": 709,
+    "axi0_rd_beats": 692173,
+    "axi0_wr_beats": 427993,
+    "axi1_rd_beats": 46387
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     23.357,
+     23.512,
+     23.406
+    ]
+   }
+  },
+  {
+   "seq": 6,
+   "cell_id": "mobilenet_v2_1.0_224_INT8__SSE-300__ethos-u55-32",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 32,
+   "artifact_identity": {
+    "model_sha256": "bd8d56b80557a5fca7acf14f61e5339285c02810f7d7afa714b9763fc4b86e95",
+    "vela_sha256": "11507413d86c7afda68de517b52eff92d62fe996816ff5114092e848563a3048",
+    "generated_cc_body_sha256": "43c0e131df45a5f3ac6e1f5c822e01e1e82c33e20dcc1b3b7eab19416cffb097",
+    "generated_cc_raw_sha256_informational": "f7b1816242e4dba2040df674226b2aa0650525f24605959a783db9679441fabf",
+    "axf_sha256": "9ee06f29806dd70b1be36b498149251d86ae7db857466afbc8a13da085a81cc5"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 22781050,
+    "npu_active_cycles": 22780734,
+    "npu_idle_cycles": 316,
+    "axi0_rd_beats": 3106183,
+    "axi0_wr_beats": 1303885,
+    "axi1_rd_beats": 432248
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 22781050,
+    "npu_active_cycles": 22780734,
+    "npu_idle_cycles": 316,
+    "axi0_rd_beats": 3106183,
+    "axi0_wr_beats": 1303885,
+    "axi1_rd_beats": 432248
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 22781050,
+    "npu_active_cycles": 22780734,
+    "npu_idle_cycles": 316,
+    "axi0_rd_beats": 3106183,
+    "axi0_wr_beats": 1303885,
+    "axi1_rd_beats": 432248
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     78.548,
+     79.154,
+     77.893
+    ]
+   }
+  },
+  {
+   "seq": 7,
+   "cell_id": "rnnoise_INT8__SSE-300__ethos-u55-64",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 64,
+   "artifact_identity": {
+    "model_sha256": "9c582545b7c13af44616c44b654f4fe721aa2585630b0ca173ca3589f6f11c2c",
+    "vela_sha256": "f860de6f270569d437147e4842c5068cc4819bd88b347100eda514a8c29edcb3",
+    "generated_cc_body_sha256": "4c253ea6d3a7e9b387567c00216ccb946a608bec84aebe266fac920c02d7acd7",
+    "generated_cc_raw_sha256_informational": "6d59e1893e0a2c31b1dfe2d830667fa0aad6dc00f5e1dd4d208ddc09cf2c5fcb",
+    "axf_sha256": "38c20569500d525072d5a69141d9c4ad7e615d2cb58d9d1a5e3b67c366555c9d"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 109059,
+    "npu_active_cycles": 108557,
+    "npu_idle_cycles": 502,
+    "axi0_rd_beats": 542,
+    "axi0_wr_beats": 386,
+    "axi1_rd_beats": 14176
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 109059,
+    "npu_active_cycles": 108557,
+    "npu_idle_cycles": 502,
+    "axi0_rd_beats": 542,
+    "axi0_wr_beats": 386,
+    "axi1_rd_beats": 14176
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 109059,
+    "npu_active_cycles": 108557,
+    "npu_idle_cycles": 502,
+    "axi0_rd_beats": 542,
+    "axi0_wr_beats": 386,
+    "axi1_rd_beats": 14176
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     0.702,
+     0.702,
+     0.652
+    ]
+   }
+  },
+  {
+   "seq": 8,
+   "cell_id": "kws_micronet_m__SSE-300__ethos-u55-64",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 64,
+   "artifact_identity": {
+    "model_sha256": "c1feed3af5dac44de7477fb4161670ba18a3fc06039e4a14da41b1c4dd454cb4",
+    "vela_sha256": "80e6eab37ccb675ae7028d2844e6207a7d500d4f43536e4ea9749362c6be57ee",
+    "generated_cc_body_sha256": "88d03a68b74b320012faeaab34e7709362157f10158edc808345d764927b3889",
+    "generated_cc_raw_sha256_informational": "41fc8b06442072867235aea87939dcea3c5ef1c5a4691a57481bbc4dcafeeffa",
+    "axf_sha256": "be5826f832ca3c582c11f882b2f298d087acd59702de865b65c9b88652296f43"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 730050,
+    "npu_active_cycles": 729107,
+    "npu_idle_cycles": 943,
+    "axi0_rd_beats": 147454,
+    "axi0_wr_beats": 48592,
+    "axi1_rd_beats": 17513
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 730050,
+    "npu_active_cycles": 729107,
+    "npu_idle_cycles": 943,
+    "axi0_rd_beats": 147454,
+    "axi0_wr_beats": 48592,
+    "axi1_rd_beats": 17513
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 730050,
+    "npu_active_cycles": 729107,
+    "npu_idle_cycles": 943,
+    "axi0_rd_beats": 147454,
+    "axi0_wr_beats": 48592,
+    "axi1_rd_beats": 17513
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     3.108,
+     3.158,
+     3.108
+    ]
+   }
+  },
+  {
+   "seq": 9,
+   "cell_id": "ad_medium_int8__SSE-300__ethos-u55-64",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 64,
+   "artifact_identity": {
+    "model_sha256": "a8b1c9037c2a80e6ff770f0a550777cf744a52850bed6545b2bfc9bacf604c98",
+    "vela_sha256": "b6c5e8d4b57cb6ab2da50515827b457491c902755cf8208e6b80fb09b6273480",
+    "generated_cc_body_sha256": "537e182264391f8441791eb18241ca549f9eb7f36dda703395ce673c4560876b",
+    "generated_cc_raw_sha256_informational": "9cdae65d4c767753a7bd0eb8741491eee83faac074cb2701f4458ba877b661f9",
+    "axf_sha256": "3cb6e133177999d84b629d351a8b194fa0b680e06f128979cccd6c8632d665c6"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1665050,
+    "npu_active_cycles": 1664233,
+    "npu_idle_cycles": 817,
+    "axi0_rd_beats": 517362,
+    "axi0_wr_beats": 138209,
+    "axi1_rd_beats": 55957
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1665050,
+    "npu_active_cycles": 1664233,
+    "npu_idle_cycles": 817,
+    "axi0_rd_beats": 517362,
+    "axi0_wr_beats": 138209,
+    "axi1_rd_beats": 55957
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1665050,
+    "npu_active_cycles": 1664233,
+    "npu_idle_cycles": 817,
+    "axi0_rd_beats": 517362,
+    "axi0_wr_beats": 138209,
+    "axi1_rd_beats": 55957
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     7.017,
+     6.868,
+     6.868
+    ]
+   }
+  },
+  {
+   "seq": 10,
+   "cell_id": "vww4_128_128_INT8__SSE-300__ethos-u55-64",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 64,
+   "artifact_identity": {
+    "model_sha256": "5e76364e80c45776b735563679d45f611cab7ce7fef2ec4e2db088afe009ccae",
+    "vela_sha256": "3f5f6f65e297e98862a3979cecb214d9cc576e9a0d13c14bacf4d874410675e6",
+    "generated_cc_body_sha256": "43177f5538cc2f4c3d4a1c235e60419376dcaee3f753815324993b2520e6948f",
+    "generated_cc_raw_sha256_informational": "0650534b104863f683b7bb1d2aa4dd4aa403bb3ceb18c08c8e8855f3b6f29315",
+    "axf_sha256": "b3085bffe48b87e9676e275a20a153f358c0d06ce4321ee14736e549d6bc0e2a"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1222050,
+    "npu_active_cycles": 1221662,
+    "npu_idle_cycles": 388,
+    "axi0_rd_beats": 242228,
+    "axi0_wr_beats": 160991,
+    "axi1_rd_beats": 41327
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1222050,
+    "npu_active_cycles": 1221662,
+    "npu_idle_cycles": 388,
+    "axi0_rd_beats": 242228,
+    "axi0_wr_beats": 160991,
+    "axi1_rd_beats": 41327
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1222050,
+    "npu_active_cycles": 1221662,
+    "npu_idle_cycles": 388,
+    "axi0_rd_beats": 242228,
+    "axi0_wr_beats": 160991,
+    "axi1_rd_beats": 41327
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     4.862,
+     4.763,
+     4.762
+    ]
+   }
+  },
+  {
+   "seq": 11,
+   "cell_id": "yolo-fastest_192_face_v4__SSE-300__ethos-u55-64",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 64,
+   "artifact_identity": {
+    "model_sha256": "e94bcdb011784bead70ab0c0e9d2dae1a9ea5f103b43e1e6fac3019302cf71ab",
+    "vela_sha256": "65e39a8602ff8930e26856f3e9c570ed6d6ef66763aef96be32a89a0579688e7",
+    "generated_cc_body_sha256": "ff33f97173599223657512f381f6cede2b9de4164c05fd0a213c737b8ae3b8f8",
+    "generated_cc_raw_sha256_informational": "8201643361ea0eb050a81701ecb1fe3cee0c759c5cda98be980519c2e18357d8",
+    "axf_sha256": "8946c0e501b84b6e1ff6a9d3d7b6518eca9f95fb6d310543b8d6513f4cca3426"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 3680053,
+    "npu_active_cycles": 3679244,
+    "npu_idle_cycles": 809,
+    "axi0_rd_beats": 690759,
+    "axi0_wr_beats": 427871,
+    "axi1_rd_beats": 46438
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 3680053,
+    "npu_active_cycles": 3679244,
+    "npu_idle_cycles": 809,
+    "axi0_rd_beats": 690759,
+    "axi0_wr_beats": 427871,
+    "axi1_rd_beats": 46438
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 3680053,
+    "npu_active_cycles": 3679244,
+    "npu_idle_cycles": 809,
+    "axi0_rd_beats": 690759,
+    "axi0_wr_beats": 427871,
+    "axi1_rd_beats": 46438
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     13.634,
+     13.535,
+     13.584
+    ]
+   }
+  },
+  {
+   "seq": 12,
+   "cell_id": "mobilenet_v2_1.0_224_INT8__SSE-300__ethos-u55-64",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 64,
+   "artifact_identity": {
+    "model_sha256": "bd8d56b80557a5fca7acf14f61e5339285c02810f7d7afa714b9763fc4b86e95",
+    "vela_sha256": "0caf0bb0c54911071d4fc1e39024d79e1e4d094efc7054d19bede41bf363f782",
+    "generated_cc_body_sha256": "3087a217e2eb5446064aace481003dc8cd5438f5167b95a1a45c5363e7cf3b94",
+    "generated_cc_raw_sha256_informational": "5fa7f10a78a83b3617d52723998ea6240f713563ccb678f8e92bd4678c4718c8",
+    "axf_sha256": "7803412076d743598cc77983579e73b0d8972315f30d2db6dca9866a66135923"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 12100050,
+    "npu_active_cycles": 12099239,
+    "npu_idle_cycles": 811,
+    "axi0_rd_beats": 3042795,
+    "axi0_wr_beats": 1304483,
+    "axi1_rd_beats": 433323
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 12100050,
+    "npu_active_cycles": 12099239,
+    "npu_idle_cycles": 811,
+    "axi0_rd_beats": 3042795,
+    "axi0_wr_beats": 1304483,
+    "axi1_rd_beats": 433323
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 12100050,
+    "npu_active_cycles": 12099239,
+    "npu_idle_cycles": 811,
+    "axi0_rd_beats": 3042795,
+    "axi0_wr_beats": 1304483,
+    "axi1_rd_beats": 433323
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     46.065,
+     46.172,
+     47.668
+    ]
+   }
+  },
+  {
+   "seq": 13,
+   "cell_id": "rnnoise_INT8__SSE-300__ethos-u55-128",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 128,
+   "artifact_identity": {
+    "model_sha256": "9c582545b7c13af44616c44b654f4fe721aa2585630b0ca173ca3589f6f11c2c",
+    "vela_sha256": "dc90c7834d575c66e759e294c1e22380d2b3c387cc41ead31b6810c0e714e0f3",
+    "generated_cc_body_sha256": "0c5cf35690d96cc45546540d2b7e5007b75b58cce5b19176181311b9e7418d4e",
+    "generated_cc_raw_sha256_informational": "d30fd53482ac516eef306effd4856c6b2d1d971c51c72814bb08dfac60fee71a",
+    "axf_sha256": "7276043a63f08b8e443bbe8e8d304da80b6ee935ece09dd9ead5ce0088ecb1c7"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 106059,
+    "npu_active_cycles": 105087,
+    "npu_idle_cycles": 972,
+    "axi0_rd_beats": 542,
+    "axi0_wr_beats": 386,
+    "axi1_rd_beats": 14165
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 106059,
+    "npu_active_cycles": 105087,
+    "npu_idle_cycles": 972,
+    "axi0_rd_beats": 542,
+    "axi0_wr_beats": 386,
+    "axi1_rd_beats": 14165
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 106059,
+    "npu_active_cycles": 105087,
+    "npu_idle_cycles": 972,
+    "axi0_rd_beats": 542,
+    "axi0_wr_beats": 386,
+    "axi1_rd_beats": 14165
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     0.702,
+     0.702,
+     0.702
+    ]
+   }
+  },
+  {
+   "seq": 14,
+   "cell_id": "kws_micronet_m__SSE-300__ethos-u55-128",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 128,
+   "artifact_identity": {
+    "model_sha256": "c1feed3af5dac44de7477fb4161670ba18a3fc06039e4a14da41b1c4dd454cb4",
+    "vela_sha256": "d98a6f40c47fb2ebc88f9ece65db40452220c19e23d014eb8706348215943406",
+    "generated_cc_body_sha256": "49ab8f1144b3faa3ae5cb2cfb6f17d25d192d14dbb1b4ae84bbb39bf3756493d",
+    "generated_cc_raw_sha256_informational": "fc72d635e099daab39d3161bdb947b31768016643c63cd2ec582d679fbb06cca",
+    "axf_sha256": "f65787c139b467df6710e0e18339caf67e0a31423a426f94c25c9288759f874a"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 405050,
+    "npu_active_cycles": 404092,
+    "npu_idle_cycles": 958,
+    "axi0_rd_beats": 127826,
+    "axi0_wr_beats": 48602,
+    "axi1_rd_beats": 17563
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 405050,
+    "npu_active_cycles": 404092,
+    "npu_idle_cycles": 958,
+    "axi0_rd_beats": 127826,
+    "axi0_wr_beats": 48602,
+    "axi1_rd_beats": 17563
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 405050,
+    "npu_active_cycles": 404092,
+    "npu_idle_cycles": 958,
+    "axi0_rd_beats": 127826,
+    "axi0_wr_beats": 48602,
+    "axi1_rd_beats": 17563
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     2.457,
+     2.457,
+     2.456
+    ]
+   }
+  },
+  {
+   "seq": 15,
+   "cell_id": "ad_medium_int8__SSE-300__ethos-u55-128",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 128,
+   "artifact_identity": {
+    "model_sha256": "a8b1c9037c2a80e6ff770f0a550777cf744a52850bed6545b2bfc9bacf604c98",
+    "vela_sha256": "1e7e4a459f8558ab58f27b37518d93c9a04c3661567357377d96458d6dc5942e",
+    "generated_cc_body_sha256": "88dd8486f8610dc12ebc8bd26936a3b67285e5c455009a988bd5e0ce53a4de56",
+    "generated_cc_raw_sha256_informational": "1ac59266caf807220ec1e77a20d8a246c15ca3bcb269606a87e8f657213b2dac",
+    "axf_sha256": "2d76bcbdbb506c2fb494a0fd205ced370f94cae48ad31a2b0ed214be0fbbf4f0"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 932050,
+    "npu_active_cycles": 931844,
+    "npu_idle_cycles": 206,
+    "axi0_rd_beats": 467120,
+    "axi0_wr_beats": 138449,
+    "axi1_rd_beats": 56264
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 932050,
+    "npu_active_cycles": 931844,
+    "npu_idle_cycles": 206,
+    "axi0_rd_beats": 467120,
+    "axi0_wr_beats": 138449,
+    "axi1_rd_beats": 56264
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 932050,
+    "npu_active_cycles": 931844,
+    "npu_idle_cycles": 206,
+    "axi0_rd_beats": 467120,
+    "axi0_wr_beats": 138449,
+    "axi1_rd_beats": 56264
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     5.113,
+     5.063,
+     5.063
+    ]
+   }
+  },
+  {
+   "seq": 16,
+   "cell_id": "vww4_128_128_INT8__SSE-300__ethos-u55-128",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 128,
+   "artifact_identity": {
+    "model_sha256": "5e76364e80c45776b735563679d45f611cab7ce7fef2ec4e2db088afe009ccae",
+    "vela_sha256": "dcbd0bd07fe6b391e4ccab5575b09a0dcbf927d40e4962b4f311451ba5eb7614",
+    "generated_cc_body_sha256": "1026c4928a6b237b8af222b855e2ee40e7d2a0343f2b20c2e2603993119f37e6",
+    "generated_cc_raw_sha256_informational": "7810e0805756f126ce7a20e072fb2f51334d93775fe2fcdbcfdfb88f97527379",
+    "axf_sha256": "aeaf7c5394f11136676a1b9e060981ccf490b152a9a172359bfa9a2ad1e4447d"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 737050,
+    "npu_active_cycles": 736964,
+    "npu_idle_cycles": 86,
+    "axi0_rd_beats": 232915,
+    "axi0_wr_beats": 161041,
+    "axi1_rd_beats": 41650
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 737050,
+    "npu_active_cycles": 736964,
+    "npu_idle_cycles": 86,
+    "axi0_rd_beats": 232915,
+    "axi0_wr_beats": 161041,
+    "axi1_rd_beats": 41650
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 737050,
+    "npu_active_cycles": 736964,
+    "npu_idle_cycles": 86,
+    "axi0_rd_beats": 232915,
+    "axi0_wr_beats": 161041,
+    "axi1_rd_beats": 41650
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     3.61,
+     3.609,
+     3.61
+    ]
+   }
+  },
+  {
+   "seq": 17,
+   "cell_id": "yolo-fastest_192_face_v4__SSE-300__ethos-u55-128",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 128,
+   "artifact_identity": {
+    "model_sha256": "e94bcdb011784bead70ab0c0e9d2dae1a9ea5f103b43e1e6fac3019302cf71ab",
+    "vela_sha256": "57ac3cb07347c3b409dc7d031c483325590dd5276444fd51c1cad90112cabf1e",
+    "generated_cc_body_sha256": "ba53622684e167ea214dcbb7cb281065e69d02188c1ef46715a9ff6f0eccdd9e",
+    "generated_cc_raw_sha256_informational": "8f817fa895b3ba38afeadb7ac110ecebdb6d7883a3a306fd27a0aa965c935a64",
+    "axf_sha256": "41119e6698f35999d0c169a2b27977e79ac4cbd501ae1a23fd0519a09d7dd2a5"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1993053,
+    "npu_active_cycles": 1992313,
+    "npu_idle_cycles": 740,
+    "axi0_rd_beats": 621175,
+    "axi0_wr_beats": 427941,
+    "axi1_rd_beats": 46671
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1993053,
+    "npu_active_cycles": 1992313,
+    "npu_idle_cycles": 740,
+    "axi0_rd_beats": 621175,
+    "axi0_wr_beats": 427941,
+    "axi1_rd_beats": 46671
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1993053,
+    "npu_active_cycles": 1992313,
+    "npu_idle_cycles": 740,
+    "axi0_rd_beats": 621175,
+    "axi0_wr_beats": 427941,
+    "axi1_rd_beats": 46671
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     9.575,
+     9.475,
+     9.525
+    ]
+   }
+  },
+  {
+   "seq": 18,
+   "cell_id": "mobilenet_v2_1.0_224_INT8__SSE-300__ethos-u55-128",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 128,
+   "artifact_identity": {
+    "model_sha256": "bd8d56b80557a5fca7acf14f61e5339285c02810f7d7afa714b9763fc4b86e95",
+    "vela_sha256": "621da9778b5d1410af463cecc251fcf49c12eaab24b115a7aa00f54093d808bf",
+    "generated_cc_body_sha256": "d4158f681b0ea9984f2634f7b304b23690acba942668f644e94fd3935d45787e",
+    "generated_cc_raw_sha256_informational": "75f1bdceece9f3e16c8189f7fc4b9fa6140d3fde435a67e83e69158c6db43034",
+    "axf_sha256": "926d4fb56a733c961894e0f77369404b92432039759efc4c20958f3c951a73c2"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 7365050,
+    "npu_active_cycles": 7364988,
+    "npu_idle_cycles": 62,
+    "axi0_rd_beats": 2644727,
+    "axi0_wr_beats": 1304643,
+    "axi1_rd_beats": 434266
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 7365050,
+    "npu_active_cycles": 7364988,
+    "npu_idle_cycles": 62,
+    "axi0_rd_beats": 2644727,
+    "axi0_wr_beats": 1304643,
+    "axi1_rd_beats": 434266
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 7365050,
+    "npu_active_cycles": 7364988,
+    "npu_idle_cycles": 62,
+    "axi0_rd_beats": 2644727,
+    "axi0_wr_beats": 1304643,
+    "axi1_rd_beats": 434266
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     34.487,
+     33.94,
+     34.084
+    ]
+   }
+  },
+  {
+   "seq": 19,
+   "cell_id": "rnnoise_INT8__SSE-300__ethos-u55-256",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 256,
+   "artifact_identity": {
+    "model_sha256": "9c582545b7c13af44616c44b654f4fe721aa2585630b0ca173ca3589f6f11c2c",
+    "vela_sha256": "2fdebe4cbda30f7d2b94668673cf70bdf11b6a745f5970285524c6a0593b4221",
+    "generated_cc_body_sha256": "328a3f2d527ef040143a7661cda7b14198d6f1987a49ceb9833d0f8e53e994a3",
+    "generated_cc_raw_sha256_informational": "f4205e4879e2c657919a0295c6836ea2c9d6e06f2b96d2dc03f6a47256b1784d",
+    "axf_sha256": "7abc302520b5b5667e7f8d9bca0cacfd7f6f789b8afbf109e9a8af1af5c33931"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 105059,
+    "npu_active_cycles": 104364,
+    "npu_idle_cycles": 695,
+    "axi0_rd_beats": 542,
+    "axi0_wr_beats": 386,
+    "axi1_rd_beats": 14165
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 105059,
+    "npu_active_cycles": 104364,
+    "npu_idle_cycles": 695,
+    "axi0_rd_beats": 542,
+    "axi0_wr_beats": 386,
+    "axi1_rd_beats": 14165
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 105059,
+    "npu_active_cycles": 104364,
+    "npu_idle_cycles": 695,
+    "axi0_rd_beats": 542,
+    "axi0_wr_beats": 386,
+    "axi1_rd_beats": 14165
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     0.702,
+     0.702,
+     0.702
+    ]
+   }
+  },
+  {
+   "seq": 20,
+   "cell_id": "kws_micronet_m__SSE-300__ethos-u55-256",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 256,
+   "artifact_identity": {
+    "model_sha256": "c1feed3af5dac44de7477fb4161670ba18a3fc06039e4a14da41b1c4dd454cb4",
+    "vela_sha256": "bfbeaedf0e11e287334519e9347ac74044a7f4b462372c167f5240e755ed02bc",
+    "generated_cc_body_sha256": "b96b0652e5d2a57c0cc9b5a383933d3ef769945523fd9bc6df485a8bec169d29",
+    "generated_cc_raw_sha256_informational": "dbb481e5c02db20aaeeb6b69d549dc8230d2021570cf00f43f1e5e1137b05c34",
+    "axf_sha256": "c296fd158f35445e3e5faf0c713856368e799bd1b9e4d9b18b35ccb057ddf4f7"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 244050,
+    "npu_active_cycles": 243666,
+    "npu_idle_cycles": 384,
+    "axi0_rd_beats": 92400,
+    "axi0_wr_beats": 48616,
+    "axi1_rd_beats": 17631
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 244050,
+    "npu_active_cycles": 243666,
+    "npu_idle_cycles": 384,
+    "axi0_rd_beats": 92400,
+    "axi0_wr_beats": 48616,
+    "axi1_rd_beats": 17631
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 244050,
+    "npu_active_cycles": 243666,
+    "npu_idle_cycles": 384,
+    "axi0_rd_beats": 92400,
+    "axi0_wr_beats": 48616,
+    "axi1_rd_beats": 17631
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     1.955,
+     1.955,
+     1.955
+    ]
+   }
+  },
+  {
+   "seq": 21,
+   "cell_id": "ad_medium_int8__SSE-300__ethos-u55-256",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 256,
+   "artifact_identity": {
+    "model_sha256": "a8b1c9037c2a80e6ff770f0a550777cf744a52850bed6545b2bfc9bacf604c98",
+    "vela_sha256": "55604afab6a7778a3186bc4b2ecd0726fec4239bbaeb812d7d9ed52b4a89eded",
+    "generated_cc_body_sha256": "dc49b40ba368912206cf1b6c2c4c64a9a35a3d47ec714840a2bfc9a1ba599a66",
+    "generated_cc_raw_sha256_informational": "6e849a8fb51ed6ea1e5895f358e23afbef1b4154cd79debe8d20e694ecd412aa",
+    "axf_sha256": "4ce07f94b2206cefc00204600adfca3918374104d595ad18aeaff5517c2f32ea"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 674050,
+    "npu_active_cycles": 673190,
+    "npu_idle_cycles": 860,
+    "axi0_rd_beats": 369654,
+    "axi0_wr_beats": 138343,
+    "axi1_rd_beats": 56187
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 674050,
+    "npu_active_cycles": 673190,
+    "npu_idle_cycles": 860,
+    "axi0_rd_beats": 369654,
+    "axi0_wr_beats": 138343,
+    "axi1_rd_beats": 56187
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 674050,
+    "npu_active_cycles": 673190,
+    "npu_idle_cycles": 860,
+    "axi0_rd_beats": 369654,
+    "axi0_wr_beats": 138343,
+    "axi1_rd_beats": 56187
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     4.261,
+     4.261,
+     4.261
+    ]
+   }
+  },
+  {
+   "seq": 22,
+   "cell_id": "vww4_128_128_INT8__SSE-300__ethos-u55-256",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 256,
+   "artifact_identity": {
+    "model_sha256": "5e76364e80c45776b735563679d45f611cab7ce7fef2ec4e2db088afe009ccae",
+    "vela_sha256": "cdbbf0c42353b604a8ad08c0f7d6b3430addc9121a7a6a144aaac82b7dc7978f",
+    "generated_cc_body_sha256": "07fa302073298b7be71d88638503233b58ed011a69c4a80453c63db40f756294",
+    "generated_cc_raw_sha256_informational": "c076f687bab940632d06a73256057fd553d620e2591d4734676fcbe7e90b310c",
+    "axf_sha256": "7c3fcebdc55e6bdfc179427c222ac408c3cf2d53fbc9c1f544a7e65aa9316251"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 577050,
+    "npu_active_cycles": 576336,
+    "npu_idle_cycles": 714,
+    "axi0_rd_beats": 208799,
+    "axi0_wr_beats": 161079,
+    "axi1_rd_beats": 41767
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 577050,
+    "npu_active_cycles": 576336,
+    "npu_idle_cycles": 714,
+    "axi0_rd_beats": 208799,
+    "axi0_wr_beats": 161079,
+    "axi1_rd_beats": 41767
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 577050,
+    "npu_active_cycles": 576336,
+    "npu_idle_cycles": 714,
+    "axi0_rd_beats": 208799,
+    "axi0_wr_beats": 161079,
+    "axi1_rd_beats": 41767
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     3.058,
+     3.057,
+     3.058
+    ]
+   }
+  },
+  {
+   "seq": 23,
+   "cell_id": "yolo-fastest_192_face_v4__SSE-300__ethos-u55-256",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 256,
+   "artifact_identity": {
+    "model_sha256": "e94bcdb011784bead70ab0c0e9d2dae1a9ea5f103b43e1e6fac3019302cf71ab",
+    "vela_sha256": "9309bab1b6b60e88192f584d60755620381209166eacbc8e64109abe5b12552b",
+    "generated_cc_body_sha256": "d4ae0c84399dff6209ff1aeda9de48df1a6d763b1d7a20d5a91d07bc0acd2f35",
+    "generated_cc_raw_sha256_informational": "24486f962f3165433078aa9c23ef66a2e3d53324fbbe24088b47afac30a795bc",
+    "axf_sha256": "274d2cf087c1f01b998c34be61fca0478de1d837f50c901e020fae16420677c2"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1334053,
+    "npu_active_cycles": 1333704,
+    "npu_idle_cycles": 349,
+    "axi0_rd_beats": 565453,
+    "axi0_wr_beats": 427987,
+    "axi1_rd_beats": 46803
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1334053,
+    "npu_active_cycles": 1333704,
+    "npu_idle_cycles": 349,
+    "axi0_rd_beats": 565453,
+    "axi0_wr_beats": 427987,
+    "axi1_rd_beats": 46803
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1334053,
+    "npu_active_cycles": 1333704,
+    "npu_idle_cycles": 349,
+    "axi0_rd_beats": 565453,
+    "axi0_wr_beats": 427987,
+    "axi1_rd_beats": 46803
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     7.62,
+     7.571,
+     7.62
+    ]
+   }
+  },
+  {
+   "seq": 24,
+   "cell_id": "mobilenet_v2_1.0_224_INT8__SSE-300__ethos-u55-256",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 256,
+   "artifact_identity": {
+    "model_sha256": "bd8d56b80557a5fca7acf14f61e5339285c02810f7d7afa714b9763fc4b86e95",
+    "vela_sha256": "43a89ba81b5c0380c826fa90e0260387877e6adb466a1d2da867445ee2b23475",
+    "generated_cc_body_sha256": "b355d9ac37f4ae6f9623cb7f9faaed7fd13271104076795fc8cb605c73c2c565",
+    "generated_cc_raw_sha256_informational": "eb95d4853fa703e1c567ccd1173036714fac4eb93a16ea0505d8fe2ba22a7eaf",
+    "axf_sha256": "df627c37ec305803fef44f7249e5182eea0bee9fbd97996255880332328ec3cd"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 5474050,
+    "npu_active_cycles": 5473985,
+    "npu_idle_cycles": 65,
+    "axi0_rd_beats": 2159849,
+    "axi0_wr_beats": 1304743,
+    "axi1_rd_beats": 434483
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 5474050,
+    "npu_active_cycles": 5473985,
+    "npu_idle_cycles": 65,
+    "axi0_rd_beats": 2159849,
+    "axi0_wr_beats": 1304743,
+    "axi1_rd_beats": 434483
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 5474050,
+    "npu_active_cycles": 5473985,
+    "npu_idle_cycles": 65,
+    "axi0_rd_beats": 2159849,
+    "axi0_wr_beats": 1304743,
+    "axi1_rd_beats": 434483
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     27.819,
+     27.772,
+     28.022
+    ]
+   }
+  },
+  {
+   "seq": 25,
+   "cell_id": "wav2letter_pruned_int8__SSE-300__ethos-u55-256",
+   "platform": "SSE-300",
+   "npu": "ethos-u55",
+   "mac_config": 256,
+   "artifact_identity": {
+    "model_sha256": "e0814a0e586f2f2881f7fe96e6bc0b8e4cfecc8d64ced56d8f7ca85b9b7ab257",
+    "vela_sha256": "ac0debf0ceaa7d045528fe3dd619e8a26445aa0ef02eb04431294acdc761bda2",
+    "generated_cc_body_sha256": "a8f77b1b9f2deeb12a2cffdb7062cc6c1fca61e3f3b126189b0bfc3b736a1647",
+    "generated_cc_raw_sha256_informational": "8a3840a53291c7ad6b485110521f595592d3adbb9882119e8ef54e68c65c57d1",
+    "axf_sha256": "31d74e4a0bc011c079d3b4192f1683e93a9f4ed909ae57515c5ae06858107eaf"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 15335050,
+    "npu_active_cycles": 15334328,
+    "npu_idle_cycles": 722,
+    "axi0_rd_beats": 6941179,
+    "axi0_wr_beats": 1853478,
+    "axi1_rd_beats": 1732537
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 15335050,
+    "npu_active_cycles": 15334328,
+    "npu_idle_cycles": 722,
+    "axi0_rd_beats": 6941179,
+    "axi0_wr_beats": 1853478,
+    "axi1_rd_beats": 1732537
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 15335050,
+    "npu_active_cycles": 15334328,
+    "npu_idle_cycles": 722,
+    "axi0_rd_beats": 6941179,
+    "axi0_wr_beats": 1853478,
+    "axi1_rd_beats": 1732537
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     110.074,
+     110.429,
+     110.822
+    ]
+   }
+  },
+  {
+   "seq": 26,
+   "cell_id": "rnnoise_INT8__SSE-300__ethos-u65-256",
+   "platform": "SSE-300",
+   "npu": "ethos-u65",
+   "mac_config": 256,
+   "artifact_identity": {
+    "model_sha256": "9c582545b7c13af44616c44b654f4fe721aa2585630b0ca173ca3589f6f11c2c",
+    "vela_sha256": "adbda150d7ef0c99ce65f699bb0dbc818fa50b6ea073c0386c472187a3af1b33",
+    "generated_cc_body_sha256": "e0b28218cc4f70a317d32cfe7a5016fefb62c37ae28c78763526afa66752ccc3",
+    "generated_cc_raw_sha256_informational": "2a6f8fd1e43090875e7830675dde5bfefa2abdfc6d16f043222741fed6ccec1b",
+    "axf_sha256": "945b6aa508212c20680faec133dd8ea84510ce9159b2f89fd7099962ef35f5f6"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 65086,
+    "npu_active_cycles": 64533,
+    "npu_idle_cycles": 553,
+    "axi0_rd_beats": 207,
+    "axi0_wr_beats": 179,
+    "axi1_rd_beats": 7163
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 65086,
+    "npu_active_cycles": 64533,
+    "npu_idle_cycles": 553,
+    "axi0_rd_beats": 207,
+    "axi0_wr_beats": 179,
+    "axi1_rd_beats": 7163
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 65086,
+    "npu_active_cycles": 64533,
+    "npu_idle_cycles": 553,
+    "axi0_rd_beats": 207,
+    "axi0_wr_beats": 179,
+    "axi1_rd_beats": 7163
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     0.602,
+     0.602,
+     0.602
+    ]
+   }
+  },
+  {
+   "seq": 27,
+   "cell_id": "kws_micronet_m__SSE-300__ethos-u65-256",
+   "platform": "SSE-300",
+   "npu": "ethos-u65",
+   "mac_config": 256,
+   "artifact_identity": {
+    "model_sha256": "c1feed3af5dac44de7477fb4161670ba18a3fc06039e4a14da41b1c4dd454cb4",
+    "vela_sha256": "8b7930df8bb7ff522beb03199b725cf3a920fe6cf465df13a880d0f87a202d74",
+    "generated_cc_body_sha256": "cc29eb65e2e2256351ae51161e2e4e7fd4b0b8980105ed5dc87f61aadf5c2efe",
+    "generated_cc_raw_sha256_informational": "c45b21797fc44f14b30ba438f7e05fa1ad58d7c17758b75ce943fdf7a63b3224",
+    "axf_sha256": "7ce3fcd24a05f4e99c3ba882353655713c510572ace43f3c3675f0b3cf227cdc"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 217068,
+    "npu_active_cycles": 216553,
+    "npu_idle_cycles": 515,
+    "axi0_rd_beats": 44310,
+    "axi0_wr_beats": 23393,
+    "axi1_rd_beats": 10173
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 217068,
+    "npu_active_cycles": 216553,
+    "npu_idle_cycles": 515,
+    "axi0_rd_beats": 44310,
+    "axi0_wr_beats": 23393,
+    "axi1_rd_beats": 10173
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 217068,
+    "npu_active_cycles": 216553,
+    "npu_idle_cycles": 515,
+    "axi0_rd_beats": 44310,
+    "axi0_wr_beats": 23393,
+    "axi1_rd_beats": 10173
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     1.855,
+     1.855,
+     1.854
+    ]
+   }
+  },
+  {
+   "seq": 28,
+   "cell_id": "ad_medium_int8__SSE-300__ethos-u65-256",
+   "platform": "SSE-300",
+   "npu": "ethos-u65",
+   "mac_config": 256,
+   "artifact_identity": {
+    "model_sha256": "a8b1c9037c2a80e6ff770f0a550777cf744a52850bed6545b2bfc9bacf604c98",
+    "vela_sha256": "a18115c749b13ab554dc75239523f7a3ea56650fd4f3990ffde2573702cdfe57",
+    "generated_cc_body_sha256": "66330704eeeca9979b9c01b5650b7e0078929e8c3de3fe131eb3508a2dd4acc6",
+    "generated_cc_raw_sha256_informational": "3349a0e929a1a53f6e603f483dc3efa864d25bf72d964c9b4d477a77d4b6c056",
+    "axf_sha256": "b5af59a8fa5fa9cdebb1badf724d63cfb15f3b586ffbc46c603d9625ccead0a1"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 471068,
+    "npu_active_cycles": 470324,
+    "npu_idle_cycles": 744,
+    "axi0_rd_beats": 158680,
+    "axi0_wr_beats": 57154,
+    "axi1_rd_beats": 28184
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 471068,
+    "npu_active_cycles": 470324,
+    "npu_idle_cycles": 744,
+    "axi0_rd_beats": 158680,
+    "axi0_wr_beats": 57154,
+    "axi1_rd_beats": 28184
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 471068,
+    "npu_active_cycles": 470324,
+    "npu_idle_cycles": 744,
+    "axi0_rd_beats": 158680,
+    "axi0_wr_beats": 57154,
+    "axi1_rd_beats": 28184
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     3.71,
+     3.66,
+     3.71
+    ]
+   }
+  },
+  {
+   "seq": 29,
+   "cell_id": "vww4_128_128_INT8__SSE-300__ethos-u65-256",
+   "platform": "SSE-300",
+   "npu": "ethos-u65",
+   "mac_config": 256,
+   "artifact_identity": {
+    "model_sha256": "5e76364e80c45776b735563679d45f611cab7ce7fef2ec4e2db088afe009ccae",
+    "vela_sha256": "bde9a9b568d0f1cb5a2bae1e4cc4ca80776244067200d8d00fdc42d1c0d9c05c",
+    "generated_cc_body_sha256": "f3d8fe8c19255246437286476c95b354819a69dae6cbd4f71ce9e70bdfc5c22a",
+    "generated_cc_raw_sha256_informational": "01e78c89f7da0226802ee6544f0653a2bd51b1310038d1ea0d438652272f60d0",
+    "axf_sha256": "da8f3de288b231e226bf3d1aec62a4ab3ccb88d137bc31f1dacfeec0b1b08ea5"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 417068,
+    "npu_active_cycles": 416424,
+    "npu_idle_cycles": 644,
+    "axi0_rd_beats": 75727,
+    "axi0_wr_beats": 64279,
+    "axi1_rd_beats": 22045
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 417068,
+    "npu_active_cycles": 416424,
+    "npu_idle_cycles": 644,
+    "axi0_rd_beats": 75727,
+    "axi0_wr_beats": 64279,
+    "axi1_rd_beats": 22045
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 417068,
+    "npu_active_cycles": 416424,
+    "npu_idle_cycles": 644,
+    "axi0_rd_beats": 75727,
+    "axi0_wr_beats": 64279,
+    "axi1_rd_beats": 22045
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     2.657,
+     2.657,
+     2.607
+    ]
+   }
+  },
+  {
+   "seq": 30,
+   "cell_id": "yolo-fastest_192_face_v4__SSE-300__ethos-u65-256",
+   "platform": "SSE-300",
+   "npu": "ethos-u65",
+   "mac_config": 256,
+   "artifact_identity": {
+    "model_sha256": "e94bcdb011784bead70ab0c0e9d2dae1a9ea5f103b43e1e6fac3019302cf71ab",
+    "vela_sha256": "b8c58e0f7d5c416a117cdd288f2e5191a96a23ee4f7f6947ed0367c4902302d7",
+    "generated_cc_body_sha256": "7f82298d0a6e7cda19ad470ef7cac5fec143ea7b1fd4daba63ddc6a382a29c29",
+    "generated_cc_raw_sha256_informational": "f813de6e8c00fde1fdee0ad0225623ea4e9b7fd98f6635f9300410e0ea035a3d",
+    "axf_sha256": "0a51223e058b5525bebd3c0ed5e4dbd4cb9ce51da8011a232bfcc55bedf6ac3b"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1119074,
+    "npu_active_cycles": 1118037,
+    "npu_idle_cycles": 1037,
+    "axi0_rd_beats": 256151,
+    "axi0_wr_beats": 199502,
+    "axi1_rd_beats": 26374
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1119074,
+    "npu_active_cycles": 1118037,
+    "npu_idle_cycles": 1037,
+    "axi0_rd_beats": 256151,
+    "axi0_wr_beats": 199502,
+    "axi1_rd_beats": 26374
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1119074,
+    "npu_active_cycles": 1118037,
+    "npu_idle_cycles": 1037,
+    "axi0_rd_beats": 256151,
+    "axi0_wr_beats": 199502,
+    "axi1_rd_beats": 26374
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     6.918,
+     6.867,
+     6.868
+    ]
+   }
+  },
+  {
+   "seq": 31,
+   "cell_id": "mobilenet_v2_1.0_224_INT8__SSE-300__ethos-u65-256",
+   "platform": "SSE-300",
+   "npu": "ethos-u65",
+   "mac_config": 256,
+   "artifact_identity": {
+    "model_sha256": "bd8d56b80557a5fca7acf14f61e5339285c02810f7d7afa714b9763fc4b86e95",
+    "vela_sha256": "fc3e393dd52c29f90521f764329fbf582c303b1c6ea29fd11d14ad1d96f1406e",
+    "generated_cc_body_sha256": "e4c63bf2d6a59f1c16cea6f290530ccf096b7b1532beb9aad46345eea70c475e",
+    "generated_cc_raw_sha256_informational": "e689d2d57fcc843a865b4b1aba0027d92f1a7ab62cb6302313c94deb71e7e9c3",
+    "axf_sha256": "ffb3cc5eddee3e43a4e1bdb17ea38d312b1aacf70fb87f24d981d290b29b62a2"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 3730068,
+    "npu_active_cycles": 3729063,
+    "npu_idle_cycles": 1005,
+    "axi0_rd_beats": 819627,
+    "axi0_wr_beats": 453488,
+    "axi1_rd_beats": 254532
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 3730068,
+    "npu_active_cycles": 3729063,
+    "npu_idle_cycles": 1005,
+    "axi0_rd_beats": 819627,
+    "axi0_wr_beats": 453488,
+    "axi1_rd_beats": 254532
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 3730068,
+    "npu_active_cycles": 3729063,
+    "npu_idle_cycles": 1005,
+    "axi0_rd_beats": 819627,
+    "axi0_wr_beats": 453488,
+    "axi1_rd_beats": 254532
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     23.662,
+     23.713,
+     23.709
+    ]
+   }
+  },
+  {
+   "seq": 32,
+   "cell_id": "wav2letter_pruned_int8__SSE-300__ethos-u65-256",
+   "platform": "SSE-300",
+   "npu": "ethos-u65",
+   "mac_config": 256,
+   "artifact_identity": {
+    "model_sha256": "e0814a0e586f2f2881f7fe96e6bc0b8e4cfecc8d64ced56d8f7ca85b9b7ab257",
+    "vela_sha256": "9ed66fe10f15b4fcb65b957f526d40cf86e3d9dc14c6be838b7f6c0ac8f246d8",
+    "generated_cc_body_sha256": "a0d444f5793f047e1c79794cb015181cb19fdcfe7e0166ff011334c8b9ed5fba",
+    "generated_cc_raw_sha256_informational": "58012026d87f0e469005b4d92f72aa62dca6db044b0b5644396a713f4ef86ff5",
+    "axf_sha256": "62ae21ca737aa694d996a7f3f41bbfbb6101bb24005ca117ced264af307f5329"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 16341068,
+    "npu_active_cycles": 16340607,
+    "npu_idle_cycles": 461,
+    "axi0_rd_beats": 3317934,
+    "axi0_wr_beats": 886938,
+    "axi1_rd_beats": 1391901
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 16341068,
+    "npu_active_cycles": 16340607,
+    "npu_idle_cycles": 461,
+    "axi0_rd_beats": 3317934,
+    "axi0_wr_beats": 886938,
+    "axi1_rd_beats": 1391901
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 16341068,
+    "npu_active_cycles": 16340607,
+    "npu_idle_cycles": 461,
+    "axi0_rd_beats": 3317934,
+    "axi0_wr_beats": 886938,
+    "axi1_rd_beats": 1391901
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     108.369,
+     108.016,
+     108.172
+    ]
+   }
+  },
+  {
+   "seq": 33,
+   "cell_id": "rnnoise_INT8__SSE-300__ethos-u65-512",
+   "platform": "SSE-300",
+   "npu": "ethos-u65",
+   "mac_config": 512,
+   "artifact_identity": {
+    "model_sha256": "9c582545b7c13af44616c44b654f4fe721aa2585630b0ca173ca3589f6f11c2c",
+    "vela_sha256": "13c2f7daab192e34784b571eb97cea752005b3969cda1135dd637fd73306cbb7",
+    "generated_cc_body_sha256": "bafcbaf3d375afd1ff19cc7303bbdffa9a8a4a5b41f416ac1131ca274abb6b11",
+    "generated_cc_raw_sha256_informational": "09eef3811be6fa4578a22205af2fa382b89d4f20594c1f86a2357793e1bbb127",
+    "axf_sha256": "8e51243e5e5b3b110ced49fe3e7b4db9bf07f1f6a0fde8453611f28383d3efe8"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 50086,
+    "npu_active_cycles": 49484,
+    "npu_idle_cycles": 602,
+    "axi0_rd_beats": 207,
+    "axi0_wr_beats": 176,
+    "axi1_rd_beats": 7202
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 50086,
+    "npu_active_cycles": 49484,
+    "npu_idle_cycles": 602,
+    "axi0_rd_beats": 207,
+    "axi0_wr_beats": 176,
+    "axi1_rd_beats": 7202
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 50086,
+    "npu_active_cycles": 49484,
+    "npu_idle_cycles": 602,
+    "axi0_rd_beats": 207,
+    "axi0_wr_beats": 176,
+    "axi1_rd_beats": 7202
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     0.602,
+     0.602,
+     0.602
+    ]
+   }
+  },
+  {
+   "seq": 34,
+   "cell_id": "kws_micronet_m__SSE-300__ethos-u65-512",
+   "platform": "SSE-300",
+   "npu": "ethos-u65",
+   "mac_config": 512,
+   "artifact_identity": {
+    "model_sha256": "c1feed3af5dac44de7477fb4161670ba18a3fc06039e4a14da41b1c4dd454cb4",
+    "vela_sha256": "7b67b867a8206bdaaf05869c11ff67f1462210055c126dcd13de422633d17216",
+    "generated_cc_body_sha256": "477cfb9b9002c32dc3c203a31270f0d1726d9a08357e19e53646ccb92658bf8e",
+    "generated_cc_raw_sha256_informational": "58205df8916f46d87f98db6414f3c84c22a76be32e154944b1b56825bb587bde",
+    "axf_sha256": "d59ca87ddc480b5d928d7694dd724ed6dbbbb3955622224d526c3d4b1b1bf2d0"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 130068,
+    "npu_active_cycles": 129459,
+    "npu_idle_cycles": 609,
+    "axi0_rd_beats": 46600,
+    "axi0_wr_beats": 23413,
+    "axi1_rd_beats": 10257
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 130068,
+    "npu_active_cycles": 129459,
+    "npu_idle_cycles": 609,
+    "axi0_rd_beats": 46600,
+    "axi0_wr_beats": 23413,
+    "axi1_rd_beats": 10257
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 130068,
+    "npu_active_cycles": 129459,
+    "npu_idle_cycles": 609,
+    "axi0_rd_beats": 46600,
+    "axi0_wr_beats": 23413,
+    "axi1_rd_beats": 10257
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     1.855,
+     1.855,
+     1.855
+    ]
+   }
+  },
+  {
+   "seq": 35,
+   "cell_id": "ad_medium_int8__SSE-300__ethos-u65-512",
+   "platform": "SSE-300",
+   "npu": "ethos-u65",
+   "mac_config": 512,
+   "artifact_identity": {
+    "model_sha256": "a8b1c9037c2a80e6ff770f0a550777cf744a52850bed6545b2bfc9bacf604c98",
+    "vela_sha256": "6af7fcec9a9518d706acf4c4705a4ed2aedcfb4ccfcd192da8e449e3244a4659",
+    "generated_cc_body_sha256": "a9481c04e56687ffed2410da85d2e36a4d8199da8afac62dec6767c1a048758e",
+    "generated_cc_raw_sha256_informational": "93d5a0425026aecbd6c1f653201ef92e1bda1967945469eb54a98d51c670d65d",
+    "axf_sha256": "7666ba03658f2930c967a942c0a214f71abf425a3ce278a0e2221e5235a8455c"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 301068,
+    "npu_active_cycles": 300455,
+    "npu_idle_cycles": 613,
+    "axi0_rd_beats": 160368,
+    "axi0_wr_beats": 57579,
+    "axi1_rd_beats": 28728
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 301068,
+    "npu_active_cycles": 300455,
+    "npu_idle_cycles": 613,
+    "axi0_rd_beats": 160368,
+    "axi0_wr_beats": 57579,
+    "axi1_rd_beats": 28728
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 301068,
+    "npu_active_cycles": 300455,
+    "npu_idle_cycles": 613,
+    "axi0_rd_beats": 160368,
+    "axi0_wr_beats": 57579,
+    "axi1_rd_beats": 28728
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     3.759,
+     3.759,
+     3.709
+    ]
+   }
+  },
+  {
+   "seq": 36,
+   "cell_id": "vww4_128_128_INT8__SSE-300__ethos-u65-512",
+   "platform": "SSE-300",
+   "npu": "ethos-u65",
+   "mac_config": 512,
+   "artifact_identity": {
+    "model_sha256": "5e76364e80c45776b735563679d45f611cab7ce7fef2ec4e2db088afe009ccae",
+    "vela_sha256": "7f44e427cb3900bcfbacb0c8202c196cffdce83a2b5511373851bcf402526b7b",
+    "generated_cc_body_sha256": "22033bc30f2ae367d34a16f60557a3ae05510e9d9bada48d806834d623cbc8fa",
+    "generated_cc_raw_sha256_informational": "82dccfb7c571c2f626903c03f8cd1a44d70c71ff84f6126ff9116a8cc3077141",
+    "axf_sha256": "5848263d0ac27798e8bb9b33ce751da39b7597ad415d7f88ea16b35255290639"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 283068,
+    "npu_active_cycles": 282784,
+    "npu_idle_cycles": 284,
+    "axi0_rd_beats": 76093,
+    "axi0_wr_beats": 64206,
+    "axi1_rd_beats": 22326
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 283068,
+    "npu_active_cycles": 282784,
+    "npu_idle_cycles": 284,
+    "axi0_rd_beats": 76093,
+    "axi0_wr_beats": 64206,
+    "axi1_rd_beats": 22326
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 283068,
+    "npu_active_cycles": 282784,
+    "npu_idle_cycles": 284,
+    "axi0_rd_beats": 76093,
+    "axi0_wr_beats": 64206,
+    "axi1_rd_beats": 22326
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     2.858,
+     2.857,
+     2.858
+    ]
+   }
+  },
+  {
+   "seq": 37,
+   "cell_id": "yolo-fastest_192_face_v4__SSE-300__ethos-u65-512",
+   "platform": "SSE-300",
+   "npu": "ethos-u65",
+   "mac_config": 512,
+   "artifact_identity": {
+    "model_sha256": "e94bcdb011784bead70ab0c0e9d2dae1a9ea5f103b43e1e6fac3019302cf71ab",
+    "vela_sha256": "70f1056de8372871484cd503c536472396595e678b76b5ce45d2b11c46ddbe0a",
+    "generated_cc_body_sha256": "e0b8c1b674e770ff8acfdd3c28f94d81b4c5107dc7d1be368beedf7235b16668",
+    "generated_cc_raw_sha256_informational": "ad08d8f88b3fdcc4f920773594649c62eada076341f96ff50d9e4e05cb56e7df",
+    "axf_sha256": "a4d6fd01979b07c53c6022848cbbfd137424a92462fcb370784e5b36252d0a3b"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 747074,
+    "npu_active_cycles": 746029,
+    "npu_idle_cycles": 1045,
+    "axi0_rd_beats": 258101,
+    "axi0_wr_beats": 199749,
+    "axi1_rd_beats": 26814
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 747074,
+    "npu_active_cycles": 746029,
+    "npu_idle_cycles": 1045,
+    "axi0_rd_beats": 258101,
+    "axi0_wr_beats": 199749,
+    "axi1_rd_beats": 26814
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 747074,
+    "npu_active_cycles": 746029,
+    "npu_idle_cycles": 1045,
+    "axi0_rd_beats": 258101,
+    "axi0_wr_beats": 199749,
+    "axi1_rd_beats": 26814
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     7.82,
+     7.82,
+     7.82
+    ]
+   }
+  },
+  {
+   "seq": 38,
+   "cell_id": "mobilenet_v2_1.0_224_INT8__SSE-300__ethos-u65-512",
+   "platform": "SSE-300",
+   "npu": "ethos-u65",
+   "mac_config": 512,
+   "artifact_identity": {
+    "model_sha256": "bd8d56b80557a5fca7acf14f61e5339285c02810f7d7afa714b9763fc4b86e95",
+    "vela_sha256": "7c5599aa2c880e849b60f3fbda9574280c0d81f51ce6e8534857c6d7ce9fc560",
+    "generated_cc_body_sha256": "8527821fab9122af087a7a64e1ae7102c0be3388e0cfe351ae8a70c937cfb328",
+    "generated_cc_raw_sha256_informational": "1c7e031271036757f3de4042417b3fc460fe070bd63557b05818d6b077660b84",
+    "axf_sha256": "d3407421a44ce0d87ff70ab4a93e5c88980b4459cf625ea5b492bd73a74c87a2"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 2424068,
+    "npu_active_cycles": 2423399,
+    "npu_idle_cycles": 669,
+    "axi0_rd_beats": 827774,
+    "axi0_wr_beats": 453576,
+    "axi1_rd_beats": 254695
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 2424068,
+    "npu_active_cycles": 2423399,
+    "npu_idle_cycles": 669,
+    "axi0_rd_beats": 827774,
+    "axi0_wr_beats": 453576,
+    "axi1_rd_beats": 254695
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 2424068,
+    "npu_active_cycles": 2423399,
+    "npu_idle_cycles": 669,
+    "axi0_rd_beats": 827774,
+    "axi0_wr_beats": 453576,
+    "axi1_rd_beats": 254695
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     23.911,
+     23.859,
+     23.81
+    ]
+   }
+  },
+  {
+   "seq": 39,
+   "cell_id": "wav2letter_pruned_int8__SSE-300__ethos-u65-512",
+   "platform": "SSE-300",
+   "npu": "ethos-u65",
+   "mac_config": 512,
+   "artifact_identity": {
+    "model_sha256": "e0814a0e586f2f2881f7fe96e6bc0b8e4cfecc8d64ced56d8f7ca85b9b7ab257",
+    "vela_sha256": "f77a6903da014b751929ee1fd1b2d87c79c8e8808fb39ff702ed798db0643398",
+    "generated_cc_body_sha256": "e6bbac1798c70532058f38993cbc2a33db1200841bed1426e8f6f1ea8ab2ae3c",
+    "generated_cc_raw_sha256_informational": "75594d7216558c11ae64353e59aded668f9ab7c82f8a1407bc08fe1f38ed6c8b",
+    "axf_sha256": "b0a9bc3d8897e09a4427e0fe1c4859bb0838ae7b5485a77161ed6f32da0d9faf"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 9839068,
+    "npu_active_cycles": 9838044,
+    "npu_idle_cycles": 1024,
+    "axi0_rd_beats": 3299579,
+    "axi0_wr_beats": 881591,
+    "axi1_rd_beats": 1418048
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 9839068,
+    "npu_active_cycles": 9838044,
+    "npu_idle_cycles": 1024,
+    "axi0_rd_beats": 3299579,
+    "axi0_wr_beats": 881591,
+    "axi1_rd_beats": 1418048
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 9839068,
+    "npu_active_cycles": 9838044,
+    "npu_idle_cycles": 1024,
+    "axi0_rd_beats": 3299579,
+    "axi0_wr_beats": 881591,
+    "axi1_rd_beats": 1418048
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     107.719,
+     106.557,
+     106.165
+    ]
+   }
+  },
+  {
+   "seq": 40,
+   "cell_id": "rnnoise_INT8__SSE-320__ethos-u85-128",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 128,
+   "artifact_identity": {
+    "model_sha256": "9c582545b7c13af44616c44b654f4fe721aa2585630b0ca173ca3589f6f11c2c",
+    "vela_sha256": "a41290173171ac803fa6d21fc48c36d335bae3bf9d966a10bab98d689105f321",
+    "generated_cc_body_sha256": "8abe81db73e7d6ae78f15a26a115f634607362d4febc4ad8085306214fa5107e",
+    "generated_cc_raw_sha256_informational": "e84666a157ec48c7e6287b572be5ddcd10bbafa7d1176c8c4c01d40e89d08675",
+    "axf_sha256": "08555dc77e4089c2665c53143b984ff9fb45c11d685f4d5930166b1a891de314"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 36086,
+    "npu_active_cycles": 35248,
+    "npu_idle_cycles": 838,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 36086,
+    "npu_active_cycles": 35248,
+    "npu_idle_cycles": 838,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 36086,
+    "npu_active_cycles": 35248,
+    "npu_idle_cycles": 838,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     0.652,
+     1.003,
+     0.652
+    ]
+   }
+  },
+  {
+   "seq": 41,
+   "cell_id": "kws_micronet_m__SSE-320__ethos-u85-128",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 128,
+   "artifact_identity": {
+    "model_sha256": "c1feed3af5dac44de7477fb4161670ba18a3fc06039e4a14da41b1c4dd454cb4",
+    "vela_sha256": "0cbdc135d3bb3cc66312b3fb94621c0b4f79c7f36f51bfa1d74ade5131a79df9",
+    "generated_cc_body_sha256": "22e6afd7cd60087728c56a332ef764a54ffef3944604923f1d009e4787cf5269",
+    "generated_cc_raw_sha256_informational": "f2248384ddd928a9a2d7973e07d598d1ed5f6ecef8c4978636820dd6bdc9e07a",
+    "axf_sha256": "08c5ab599af2c780986bd22bee9bded042484ff0461f0f0e7d1fb409604036f5"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 369068,
+    "npu_active_cycles": 368696,
+    "npu_idle_cycles": 372,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 369068,
+    "npu_active_cycles": 368696,
+    "npu_idle_cycles": 372,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 369068,
+    "npu_active_cycles": 368696,
+    "npu_idle_cycles": 372,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     2.306,
+     2.306,
+     2.356
+    ]
+   }
+  },
+  {
+   "seq": 42,
+   "cell_id": "ad_medium_int8__SSE-320__ethos-u85-128",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 128,
+   "artifact_identity": {
+    "model_sha256": "a8b1c9037c2a80e6ff770f0a550777cf744a52850bed6545b2bfc9bacf604c98",
+    "vela_sha256": "ab971c1f460ada733129085b61b08292352ba1946f87b7e8507a4052c2df6c20",
+    "generated_cc_body_sha256": "e4a65358aacecb74e71715a3558c23e9448ae9e060edc1528cefc29e97947c9c",
+    "generated_cc_raw_sha256_informational": "7ae57855c0be3c8a17a6180441bdeeeec046da34a7a081ba8fe73ae5ba562f8b",
+    "axf_sha256": "baa7f6007b2f0c821d96684739a1ec0d8f54897dac70150d93bad69f6900c085"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 731068,
+    "npu_active_cycles": 730426,
+    "npu_idle_cycles": 642,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 731068,
+    "npu_active_cycles": 730426,
+    "npu_idle_cycles": 642,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 731068,
+    "npu_active_cycles": 730426,
+    "npu_idle_cycles": 642,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     4.411,
+     4.513,
+     4.411
+    ]
+   }
+  },
+  {
+   "seq": 43,
+   "cell_id": "vww4_128_128_INT8__SSE-320__ethos-u85-128",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 128,
+   "artifact_identity": {
+    "model_sha256": "5e76364e80c45776b735563679d45f611cab7ce7fef2ec4e2db088afe009ccae",
+    "vela_sha256": "d18367b2706f51b23e37d71e16ed30a7d1b248ae017766d505736ee1ceac87be",
+    "generated_cc_body_sha256": "997ac16de4a446a5861a9149c4d92d27d6ebd784598d42faa8d238fe7877ed32",
+    "generated_cc_raw_sha256_informational": "317dc8086e18bec7f8e5f2976c74ea2bd4bd12cb7dea2994737cb5fc368d0321",
+    "axf_sha256": "1478f04e20fcd343fa21f9c0672f43dcfa5febdf25d7da8f0b4aaa4dd3e4a331"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 511068,
+    "npu_active_cycles": 510010,
+    "npu_idle_cycles": 1058,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 511068,
+    "npu_active_cycles": 510010,
+    "npu_idle_cycles": 1058,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 511068,
+    "npu_active_cycles": 510010,
+    "npu_idle_cycles": 1058,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     3.209,
+     3.209,
+     3.209
+    ]
+   }
+  },
+  {
+   "seq": 44,
+   "cell_id": "yolo-fastest_192_face_v4__SSE-320__ethos-u85-128",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 128,
+   "artifact_identity": {
+    "model_sha256": "e94bcdb011784bead70ab0c0e9d2dae1a9ea5f103b43e1e6fac3019302cf71ab",
+    "vela_sha256": "647d7e53d4eeaa7fd776830e838b0f66f4ab80f6601ae91b536175dc0a056ad1",
+    "generated_cc_body_sha256": "ed9c2333b841a99bfd83dbe9295e301597f3e7a127cba588b511d647ea4f6f8b",
+    "generated_cc_raw_sha256_informational": "037873542a9545a0d11309b99722e7733509f89bd3113cfe9e0b6362c5da145a",
+    "axf_sha256": "b71179c5c75e7f16e289b8bb815d539c22fad26345982fcedfb0a67ce5a717eb"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1527074,
+    "npu_active_cycles": 1526850,
+    "npu_idle_cycles": 224,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1527074,
+    "npu_active_cycles": 1526850,
+    "npu_idle_cycles": 224,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1527074,
+    "npu_active_cycles": 1526850,
+    "npu_idle_cycles": 224,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     8.822,
+     8.873,
+     8.972
+    ]
+   }
+  },
+  {
+   "seq": 45,
+   "cell_id": "mobilenet_v2_1.0_224_INT8__SSE-320__ethos-u85-128",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 128,
+   "artifact_identity": {
+    "model_sha256": "bd8d56b80557a5fca7acf14f61e5339285c02810f7d7afa714b9763fc4b86e95",
+    "vela_sha256": "a414a3eae6969abd57a279690d1c6d5c6f782eef1f8172084df6edb067a5df2e",
+    "generated_cc_body_sha256": "ec319db4cd4866de193723ecf9d84b5f15bf47f66693d6fc5df6cef6e9caf08d",
+    "generated_cc_raw_sha256_informational": "13c0f4c4d9b341ac4403a9cabd7fff8024dd092992fea2fee36c530d1a18e6e7",
+    "axf_sha256": "15eb0e39f72be777c622773c71e8c8985f0616a199a4abf42780a35ef3c23c74"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 5079068,
+    "npu_active_cycles": 5078222,
+    "npu_idle_cycles": 846,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 5079068,
+    "npu_active_cycles": 5078222,
+    "npu_idle_cycles": 846,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 5079068,
+    "npu_active_cycles": 5078222,
+    "npu_idle_cycles": 846,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     29.326,
+     29.07,
+     29.024
+    ]
+   }
+  },
+  {
+   "seq": 46,
+   "cell_id": "wav2letter_pruned_int8__SSE-320__ethos-u85-128",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 128,
+   "artifact_identity": {
+    "model_sha256": "e0814a0e586f2f2881f7fe96e6bc0b8e4cfecc8d64ced56d8f7ca85b9b7ab257",
+    "vela_sha256": "c9b0a55854a53ebdf70cf2266f57a90140e428deb3c36ecf7d4887629c4ca34f",
+    "generated_cc_body_sha256": "74cea90d966cf291283b66a33381911505b6171b6b7a13aa0e46a2f49b0a63bf",
+    "generated_cc_raw_sha256_informational": "69117fc32c79a0ced62d6c8ad2f14c10fe1031cfec6ba5909dc378aee39e9d8c",
+    "axf_sha256": "2f99f4fa17175484fbcf91db4c06c6c1fb83857a56af3d71c1673fcb0b628a98"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 28674068,
+    "npu_active_cycles": 28673038,
+    "npu_idle_cycles": 1030,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 28674068,
+    "npu_active_cycles": 28673038,
+    "npu_idle_cycles": 1030,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 28674068,
+    "npu_active_cycles": 28673038,
+    "npu_idle_cycles": 1030,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     127.772,
+     128.024,
+     127.614
+    ]
+   }
+  },
+  {
+   "seq": 47,
+   "cell_id": "rnnoise_INT8__SSE-320__ethos-u85-256",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 256,
+   "artifact_identity": {
+    "model_sha256": "9c582545b7c13af44616c44b654f4fe721aa2585630b0ca173ca3589f6f11c2c",
+    "vela_sha256": "8f342f545a9a9e1da4493fa2f73ff5779785fa5a0c7f6bfac2096153f1b2116e",
+    "generated_cc_body_sha256": "c054d583523eae1642c021b6e3bba6f5dc3927d489fb4d187a29b3cf850653b6",
+    "generated_cc_raw_sha256_informational": "5350b736f7cf27ba3c335ec18095fb4917453239ca03cef393a544bb1de35087",
+    "axf_sha256": "26f7bc0c367d1da4d8fa519d5af0cfdc52a98b22a4deeb24e3ceb23fee0e135d"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 36086,
+    "npu_active_cycles": 35206,
+    "npu_idle_cycles": 880,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 36086,
+    "npu_active_cycles": 35206,
+    "npu_idle_cycles": 880,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 36086,
+    "npu_active_cycles": 35206,
+    "npu_idle_cycles": 880,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     0.702,
+     0.702,
+     0.702
+    ]
+   }
+  },
+  {
+   "seq": 48,
+   "cell_id": "kws_micronet_m__SSE-320__ethos-u85-256",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 256,
+   "artifact_identity": {
+    "model_sha256": "c1feed3af5dac44de7477fb4161670ba18a3fc06039e4a14da41b1c4dd454cb4",
+    "vela_sha256": "7d1431a8bc9cd5ec3735e9c1f8c91cd8d1e4496286147ee5a1adec1acd72ce92",
+    "generated_cc_body_sha256": "ae558f7d39b777fcbab49dcf2df5b2d7479d91250c3ff0fa3926a7c2283fd1f0",
+    "generated_cc_raw_sha256_informational": "08fa14970f4e2c2420b64b3d0a7c12f662b79a4bedd02b1b70aa02f9d9a2a40a",
+    "axf_sha256": "4fc1193fec444d6a3a00aee219f8420b1716962aa7240031699a568d888cab08"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 199068,
+    "npu_active_cycles": 198564,
+    "npu_idle_cycles": 504,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 199068,
+    "npu_active_cycles": 198564,
+    "npu_idle_cycles": 504,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 199068,
+    "npu_active_cycles": 198564,
+    "npu_idle_cycles": 504,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     1.806,
+     1.804,
+     1.805
+    ]
+   }
+  },
+  {
+   "seq": 49,
+   "cell_id": "ad_medium_int8__SSE-320__ethos-u85-256",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 256,
+   "artifact_identity": {
+    "model_sha256": "a8b1c9037c2a80e6ff770f0a550777cf744a52850bed6545b2bfc9bacf604c98",
+    "vela_sha256": "ceb93f0095600c90b42763683fabc07397f7a2d1386493caa625cecd7c86abaa",
+    "generated_cc_body_sha256": "f867350def59c67f26399754afaac4bae2da9a37c086bb1234e323141b994dc7",
+    "generated_cc_raw_sha256_informational": "bab7743e477479b2a651d2a8898dc2b3c8b5848788fd6dda2385d9e0a5a98fb6",
+    "axf_sha256": "3bbb58c709a25daabbf76c915f3447b2aaa92158db63a99085d51abb4ed2ff03"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 377068,
+    "npu_active_cycles": 376021,
+    "npu_idle_cycles": 1047,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 377068,
+    "npu_active_cycles": 376021,
+    "npu_idle_cycles": 1047,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 377068,
+    "npu_active_cycles": 376021,
+    "npu_idle_cycles": 1047,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     3.309,
+     3.309,
+     3.309
+    ]
+   }
+  },
+  {
+   "seq": 50,
+   "cell_id": "vww4_128_128_INT8__SSE-320__ethos-u85-256",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 256,
+   "artifact_identity": {
+    "model_sha256": "5e76364e80c45776b735563679d45f611cab7ce7fef2ec4e2db088afe009ccae",
+    "vela_sha256": "869a0c6b8e7dd5339829bfd9430abfb9afe20401a17d31c437e2a193fd6afc8e",
+    "generated_cc_body_sha256": "15e68b88d781bd755801809685d9dbe8536a1d51fed8bd7ff19b27dad3b51a5b",
+    "generated_cc_raw_sha256_informational": "6f85d71d7a76ac391c35b4dbecc5a46e795bcc11109cecb17d05d9c8e4b3bfc4",
+    "axf_sha256": "23b87ac7a8bc4e3a861077ba1f75ebb7d7f2bd8a007a42d96e3040d5a46bb63f"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 287068,
+    "npu_active_cycles": 286067,
+    "npu_idle_cycles": 1001,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 287068,
+    "npu_active_cycles": 286067,
+    "npu_idle_cycles": 1001,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 287068,
+    "npu_active_cycles": 286067,
+    "npu_idle_cycles": 1001,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     2.557,
+     2.507,
+     2.657
+    ]
+   }
+  },
+  {
+   "seq": 51,
+   "cell_id": "yolo-fastest_192_face_v4__SSE-320__ethos-u85-256",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 256,
+   "artifact_identity": {
+    "model_sha256": "e94bcdb011784bead70ab0c0e9d2dae1a9ea5f103b43e1e6fac3019302cf71ab",
+    "vela_sha256": "aec60a683ca0dfd54e791bf0fec34f999cf472bbf7a16c4f2e6adb09fddab53e",
+    "generated_cc_body_sha256": "d9f00f4195498f82f6a229a55e50638966e300a228066c7665eaffe8bd60d411",
+    "generated_cc_raw_sha256_informational": "0c3aafc10280988fc52cb8bcc8ddd11e6b5caba45173ad6db999cc01e09fd14f",
+    "axf_sha256": "8e53bdc43bf7f34758b7b418c325b3dc36e2b55ad69ce2d5798ab9e84023c76e"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 812074,
+    "npu_active_cycles": 811264,
+    "npu_idle_cycles": 810,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 812074,
+    "npu_active_cycles": 811264,
+    "npu_idle_cycles": 810,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 812074,
+    "npu_active_cycles": 811264,
+    "npu_idle_cycles": 810,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     6.517,
+     6.517,
+     6.518
+    ]
+   }
+  },
+  {
+   "seq": 52,
+   "cell_id": "mobilenet_v2_1.0_224_INT8__SSE-320__ethos-u85-256",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 256,
+   "artifact_identity": {
+    "model_sha256": "bd8d56b80557a5fca7acf14f61e5339285c02810f7d7afa714b9763fc4b86e95",
+    "vela_sha256": "0c7038277d83a302238d4926e42b5c281a83dd4891a27d804d58b57873bbced5",
+    "generated_cc_body_sha256": "959a0c5aadf193c4e05bc90ec7357d2eefb690c894acd8d48ec6e7dec12b242b",
+    "generated_cc_raw_sha256_informational": "a1198ad81ee303be10be84a3d5293bf71bc02b2312b63a4300ab9584c265123d",
+    "axf_sha256": "88f0b943bfdeb9b68a93b340120757cb6e5955cdf1b982ddbb94d268d8ec5b49"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 2874068,
+    "npu_active_cycles": 2873773,
+    "npu_idle_cycles": 295,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 2874068,
+    "npu_active_cycles": 2873773,
+    "npu_idle_cycles": 295,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 2874068,
+    "npu_active_cycles": 2873773,
+    "npu_idle_cycles": 295,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     22.459,
+     22.306,
+     22.208
+    ]
+   }
+  },
+  {
+   "seq": 53,
+   "cell_id": "wav2letter_pruned_int8__SSE-320__ethos-u85-256",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 256,
+   "artifact_identity": {
+    "model_sha256": "e0814a0e586f2f2881f7fe96e6bc0b8e4cfecc8d64ced56d8f7ca85b9b7ab257",
+    "vela_sha256": "47da44440a8886649f8bdd2cd34adb1f9deca6d11f7bdfde602cd097055e06a2",
+    "generated_cc_body_sha256": "b7839b89a36661e9aae36a2486d01ebea264ab62d88e2e9aeed3d2bb8bde58ed",
+    "generated_cc_raw_sha256_informational": "3c1191f09d225e4a16caeae6322c59fe0145653ceab4a12822cea562b0d930d7",
+    "axf_sha256": "da922e22d0b866e1b795e55757d72b554d6cd1dfbd8291a2e89353c9be134e94"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 15147068,
+    "npu_active_cycles": 15146719,
+    "npu_idle_cycles": 349,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 15147068,
+    "npu_active_cycles": 15146719,
+    "npu_idle_cycles": 349,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 15147068,
+    "npu_active_cycles": 15146719,
+    "npu_idle_cycles": 349,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     90.529,
+     90.479,
+     90.783
+    ]
+   }
+  },
+  {
+   "seq": 54,
+   "cell_id": "rnnoise_INT8__SSE-320__ethos-u85-512",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 512,
+   "artifact_identity": {
+    "model_sha256": "9c582545b7c13af44616c44b654f4fe721aa2585630b0ca173ca3589f6f11c2c",
+    "vela_sha256": "12087f72b6dce2e03b1146f11dcd5e1c254f1ed6f737bc5df22c8ab0dbdf335c",
+    "generated_cc_body_sha256": "738fac77127ed6dc53426fdbf3692875ebd3f8eb453c436d73171d2294add394",
+    "generated_cc_raw_sha256_informational": "08d9975e4f49c286dc9a969fbf940a74b027dcd1576ff7f31ea4c5acb3d251b4",
+    "axf_sha256": "a840819ba13cdf141080eea12c70389ca3856fa91cfce15bd9556604602624c5"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 55086,
+    "npu_active_cycles": 54330,
+    "npu_idle_cycles": 756,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 55086,
+    "npu_active_cycles": 54330,
+    "npu_idle_cycles": 756,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 55086,
+    "npu_active_cycles": 54330,
+    "npu_idle_cycles": 756,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     0.753,
+     0.753,
+     0.752
+    ]
+   }
+  },
+  {
+   "seq": 55,
+   "cell_id": "kws_micronet_m__SSE-320__ethos-u85-512",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 512,
+   "artifact_identity": {
+    "model_sha256": "c1feed3af5dac44de7477fb4161670ba18a3fc06039e4a14da41b1c4dd454cb4",
+    "vela_sha256": "af461b1ee988ee39f778a962366042bb0f63e1c1f2a5dd47b231800847bcd3a0",
+    "generated_cc_body_sha256": "94cfe244986efeba111659988e77e7504253231011cfc9cb17b18bc87d8bf73a",
+    "generated_cc_raw_sha256_informational": "39b0339cf49b26e47ae0bff94b68a4114955677d65ab892210f60ce56cc9e15a",
+    "axf_sha256": "206fad844254ef9579ad3ca4526545726185ecf0e0938d30d1162d2052cc7b11"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 114068,
+    "npu_active_cycles": 113986,
+    "npu_idle_cycles": 82,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 114068,
+    "npu_active_cycles": 113986,
+    "npu_idle_cycles": 82,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 114068,
+    "npu_active_cycles": 113986,
+    "npu_idle_cycles": 82,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     1.505,
+     1.504,
+     1.505
+    ]
+   }
+  },
+  {
+   "seq": 56,
+   "cell_id": "ad_medium_int8__SSE-320__ethos-u85-512",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 512,
+   "artifact_identity": {
+    "model_sha256": "a8b1c9037c2a80e6ff770f0a550777cf744a52850bed6545b2bfc9bacf604c98",
+    "vela_sha256": "9fa6d6e7239b70d027301eea62d6123e88e67f800d93038a67af5cf789834a99",
+    "generated_cc_body_sha256": "e8cea217311d03f3d0a6a261f853f2772a5130f4c5aa940b8da6f288fc3b22f8",
+    "generated_cc_raw_sha256_informational": "ece33da95d082bfd5b7cd3a8dff85448cd0271e5feeea508e838178cc392cde2",
+    "axf_sha256": "764f0693656a4b661be0ff46f3f793a856b0b404a3fdbd072fc5845e4285fe44"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 235068,
+    "npu_active_cycles": 234552,
+    "npu_idle_cycles": 516,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 235068,
+    "npu_active_cycles": 234552,
+    "npu_idle_cycles": 516,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 235068,
+    "npu_active_cycles": 234552,
+    "npu_idle_cycles": 516,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     2.858,
+     2.858,
+     2.858
+    ]
+   }
+  },
+  {
+   "seq": 57,
+   "cell_id": "vww4_128_128_INT8__SSE-320__ethos-u85-512",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 512,
+   "artifact_identity": {
+    "model_sha256": "5e76364e80c45776b735563679d45f611cab7ce7fef2ec4e2db088afe009ccae",
+    "vela_sha256": "e3c387fd064ce4f22d3f4a2ca4002fe15cb72ce892ca77c884d7913c29b00350",
+    "generated_cc_body_sha256": "34d16e38563d389ccd42db33105bc7c6dd45b56295102517f91cb8dd42412836",
+    "generated_cc_raw_sha256_informational": "e0937e0403dfb5f90d1497969acc1791cce1713b17d0aa9858addc2bd976cc3e",
+    "axf_sha256": "c16e67765cb67bb712ec2e475730361ac7ad2577f4115579ddf78c8bfbb947c8"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 259068,
+    "npu_active_cycles": 258022,
+    "npu_idle_cycles": 1046,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 259068,
+    "npu_active_cycles": 258022,
+    "npu_idle_cycles": 1046,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 259068,
+    "npu_active_cycles": 258022,
+    "npu_idle_cycles": 1046,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     2.507,
+     2.457,
+     2.457
+    ]
+   }
+  },
+  {
+   "seq": 58,
+   "cell_id": "yolo-fastest_192_face_v4__SSE-320__ethos-u85-512",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 512,
+   "artifact_identity": {
+    "model_sha256": "e94bcdb011784bead70ab0c0e9d2dae1a9ea5f103b43e1e6fac3019302cf71ab",
+    "vela_sha256": "8b2f4e1e0fca98e2adcf3ab9db295127c87746cfd134f37eb5cbb1d8b47b847a",
+    "generated_cc_body_sha256": "2ba8b9328ee306c0d656d8e169a8a6433016c32f0794c071b662aed80f001414",
+    "generated_cc_raw_sha256_informational": "c97e06762080d0bdbbcf76c2f5da45ad1367a59aafb4c8d12ce8281f86d8f084",
+    "axf_sha256": "2ce167bb255efc0668268917a16e9228510b5eaaff209dd09c7ed44a86639777"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 587074,
+    "npu_active_cycles": 586275,
+    "npu_idle_cycles": 799,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 587074,
+    "npu_active_cycles": 586275,
+    "npu_idle_cycles": 799,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 587074,
+    "npu_active_cycles": 586275,
+    "npu_idle_cycles": 799,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     6.065,
+     6.015,
+     6.018
+    ]
+   }
+  },
+  {
+   "seq": 59,
+   "cell_id": "mobilenet_v2_1.0_224_INT8__SSE-320__ethos-u85-512",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 512,
+   "artifact_identity": {
+    "model_sha256": "bd8d56b80557a5fca7acf14f61e5339285c02810f7d7afa714b9763fc4b86e95",
+    "vela_sha256": "38823b6d0f0d9cfb1895c24afa8103cdfd0ebacafe52b8b8af24af82f71f1b36",
+    "generated_cc_body_sha256": "bda02db34654d042ef4c9d2efc26782e5eae6565177890f43ed13208f19f9678",
+    "generated_cc_raw_sha256_informational": "c9034cb7eea6aeed18cf3165f9d199b971a29524481aa3880bd82068f0aed747",
+    "axf_sha256": "404b2a6ccebd9f907d79f19664edc8736949386da5cf9c800e7fd7c3a59c9b2b"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1914068,
+    "npu_active_cycles": 1913404,
+    "npu_idle_cycles": 664,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1914068,
+    "npu_active_cycles": 1913404,
+    "npu_idle_cycles": 664,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1914068,
+    "npu_active_cycles": 1913404,
+    "npu_idle_cycles": 664,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     18.345,
+     18.547,
+     18.449
+    ]
+   }
+  },
+  {
+   "seq": 60,
+   "cell_id": "wav2letter_pruned_int8__SSE-320__ethos-u85-512",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 512,
+   "artifact_identity": {
+    "model_sha256": "e0814a0e586f2f2881f7fe96e6bc0b8e4cfecc8d64ced56d8f7ca85b9b7ab257",
+    "vela_sha256": "9ec8352bd7624498de819db29114964aee319dad249e8276baa01845c7de337b",
+    "generated_cc_body_sha256": "429c5a60df9604cb0e352978b06f271ef1b914485777a893989fb05504dafa3d",
+    "generated_cc_raw_sha256_informational": "3cb841132f0ea4e2357c0bc429842fca39a8e5a05535b8051204ba5bbdacbe48",
+    "axf_sha256": "a5bc45d266a6a1851ecb84b2939b09014d45faa1093997df8519aecdad9a17eb"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 7654068,
+    "npu_active_cycles": 7653598,
+    "npu_idle_cycles": 470,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 7654068,
+    "npu_active_cycles": 7653598,
+    "npu_idle_cycles": 470,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 7654068,
+    "npu_active_cycles": 7653598,
+    "npu_idle_cycles": 470,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     68.122,
+     68.321,
+     68.674
+    ]
+   }
+  },
+  {
+   "seq": 61,
+   "cell_id": "rnnoise_INT8__SSE-320__ethos-u85-1024",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 1024,
+   "artifact_identity": {
+    "model_sha256": "9c582545b7c13af44616c44b654f4fe721aa2585630b0ca173ca3589f6f11c2c",
+    "vela_sha256": "5bc1ee088fd731dbb9fed4a0d8ddcea92c11600e82b5041371149465510bee79",
+    "generated_cc_body_sha256": "bd04a8dd23e7f22ea541e93d600f6480e2df1064f9c38ed502f9c3e31d94bea1",
+    "generated_cc_raw_sha256_informational": "1b5ed0a3f41c7ef138f7a38a0fb914b6b4a5ccbcce1ff2ae92664abc25ce6b1d",
+    "axf_sha256": "845288d51544780728447c67b5b8a3dbd59f58ec9d77b5bff8905e41d2a5bec0"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 49086,
+    "npu_active_cycles": 48560,
+    "npu_idle_cycles": 526,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 49086,
+    "npu_active_cycles": 48560,
+    "npu_idle_cycles": 526,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 49086,
+    "npu_active_cycles": 48560,
+    "npu_idle_cycles": 526,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     0.802,
+     0.802,
+     0.803
+    ]
+   }
+  },
+  {
+   "seq": 62,
+   "cell_id": "kws_micronet_m__SSE-320__ethos-u85-1024",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 1024,
+   "artifact_identity": {
+    "model_sha256": "c1feed3af5dac44de7477fb4161670ba18a3fc06039e4a14da41b1c4dd454cb4",
+    "vela_sha256": "f9575c36651efe0dc3798135f4bc8f9e3fd3614a75f7ad16377994616d18a069",
+    "generated_cc_body_sha256": "899f8423d70c56b1514e433b5d8f506d21ed24c0fc4fa1d500e19fd21db99bc2",
+    "generated_cc_raw_sha256_informational": "6962701bc425c913bb1358d07200b5562b37d6662dea9130d16a8dcfeeedaa38",
+    "axf_sha256": "f4d4e0604b097394892fe03edc54c9af734fd312e9f84bb210597bb9daea000a"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 90068,
+    "npu_active_cycles": 89138,
+    "npu_idle_cycles": 930,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 90068,
+    "npu_active_cycles": 89138,
+    "npu_idle_cycles": 930,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 90068,
+    "npu_active_cycles": 89138,
+    "npu_idle_cycles": 930,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     1.655,
+     1.655,
+     1.655
+    ]
+   }
+  },
+  {
+   "seq": 63,
+   "cell_id": "ad_medium_int8__SSE-320__ethos-u85-1024",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 1024,
+   "artifact_identity": {
+    "model_sha256": "a8b1c9037c2a80e6ff770f0a550777cf744a52850bed6545b2bfc9bacf604c98",
+    "vela_sha256": "b83f28f2e5adc7fad13a41441578c95020c9c178e43d52dbf6b2bac2d789bb54",
+    "generated_cc_body_sha256": "1c1badcfd5ea898722335491fa993c3fe067c68b43a0d0053369e17fb7e7b653",
+    "generated_cc_raw_sha256_informational": "9b4b8201c0167a3a1d14fe446b56ff78325a17a3835398771b95504ac2cf8e91",
+    "axf_sha256": "841bade0ca897e877f0c04bbb69521849b27f5aa5057c65d0d07c747f839d09b"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 141068,
+    "npu_active_cycles": 140261,
+    "npu_idle_cycles": 807,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 141068,
+    "npu_active_cycles": 140261,
+    "npu_idle_cycles": 807,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 141068,
+    "npu_active_cycles": 140261,
+    "npu_idle_cycles": 807,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     2.807,
+     2.808,
+     2.857
+    ]
+   }
+  },
+  {
+   "seq": 64,
+   "cell_id": "vww4_128_128_INT8__SSE-320__ethos-u85-1024",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 1024,
+   "artifact_identity": {
+    "model_sha256": "5e76364e80c45776b735563679d45f611cab7ce7fef2ec4e2db088afe009ccae",
+    "vela_sha256": "637711c9bb5046bbf7f9010d1e1f1c25e9ea6cf643d74e8eb225c66b4ba6fed7",
+    "generated_cc_body_sha256": "603af847c8ff275eb5425ff00feacc104d1e9581eb6eb8ad536e8a376c96d749",
+    "generated_cc_raw_sha256_informational": "56c1e9c78ebdd4cee098db1e7cde758396d7a2306333979c5a4d738b37770ce8",
+    "axf_sha256": "50abba5cf2fa6ffc71e751657ff40eb410e62cb995e93d5e455f1e3a6ba6aa26"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 230068,
+    "npu_active_cycles": 229082,
+    "npu_idle_cycles": 986,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 230068,
+    "npu_active_cycles": 229082,
+    "npu_idle_cycles": 986,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 230068,
+    "npu_active_cycles": 229082,
+    "npu_idle_cycles": 986,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     2.708,
+     2.708,
+     2.708
+    ]
+   }
+  },
+  {
+   "seq": 65,
+   "cell_id": "yolo-fastest_192_face_v4__SSE-320__ethos-u85-1024",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 1024,
+   "artifact_identity": {
+    "model_sha256": "e94bcdb011784bead70ab0c0e9d2dae1a9ea5f103b43e1e6fac3019302cf71ab",
+    "vela_sha256": "aa143485cf3e64da4d46b58fe7cb2dbeab95193740ee0e13815ce3c0bdd1238b",
+    "generated_cc_body_sha256": "c03dde02bd4ec2301822f1d41ef91b47aab8aa91057d09201efb7859a9670d8b",
+    "generated_cc_raw_sha256_informational": "a176850455586b428d71f739da88a503b068a868e1e7d0d46ba09103b2bff6a5",
+    "axf_sha256": "a5db2577558cbe8b7a782ebce6171ea1d10c4583b704d1fefa533dc02b9fc41a"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 439074,
+    "npu_active_cycles": 438859,
+    "npu_idle_cycles": 215,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 439074,
+    "npu_active_cycles": 438859,
+    "npu_idle_cycles": 215,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 439074,
+    "npu_active_cycles": 438859,
+    "npu_idle_cycles": 215,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     6.267,
+     6.316,
+     6.317
+    ]
+   }
+  },
+  {
+   "seq": 66,
+   "cell_id": "mobilenet_v2_1.0_224_INT8__SSE-320__ethos-u85-1024",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 1024,
+   "artifact_identity": {
+    "model_sha256": "bd8d56b80557a5fca7acf14f61e5339285c02810f7d7afa714b9763fc4b86e95",
+    "vela_sha256": "031fade0e9b7136e2ed55a23422efbcc7aba28a32c8ebd3e043afbcc2f44bb75",
+    "generated_cc_body_sha256": "99ce17fb63d4ed46f4ad2eb4a267cd4cd0f1984442110113e3fcd8d12dd2bfff",
+    "generated_cc_raw_sha256_informational": "a2a08e4c98d5a0e1d27cce19f20fb6c867742c834762df3c0a6b26bc9422a0a6",
+    "axf_sha256": "101aba59af42d7b6c3f13e8b6800e4ae905898ba9528ca1e7df61e837405f950"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1406068,
+    "npu_active_cycles": 1405529,
+    "npu_idle_cycles": 539,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1406068,
+    "npu_active_cycles": 1405529,
+    "npu_idle_cycles": 539,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1406068,
+    "npu_active_cycles": 1405529,
+    "npu_idle_cycles": 539,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     19.098,
+     19.449,
+     19.149
+    ]
+   }
+  },
+  {
+   "seq": 67,
+   "cell_id": "wav2letter_pruned_int8__SSE-320__ethos-u85-1024",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 1024,
+   "artifact_identity": {
+    "model_sha256": "e0814a0e586f2f2881f7fe96e6bc0b8e4cfecc8d64ced56d8f7ca85b9b7ab257",
+    "vela_sha256": "4c5b640211f0aaa60eaf65ee5c9c4096a43022fd2c34127042e1304bf45def7b",
+    "generated_cc_body_sha256": "bf965705ccdeeb8feec951ece6b36c9dc98bfc245783f4645171705017876878",
+    "generated_cc_raw_sha256_informational": "ea2c5447f70e6cc6b6d19cc0ceaa207aa2f5c9d5b1e90da9c212d686450d808f",
+    "axf_sha256": "e28c25ae8cbd9ebfca2580afd88c3878c92911e48e50875608bfa8257d028a3b"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 4115068,
+    "npu_active_cycles": 4114227,
+    "npu_idle_cycles": 841,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 4115068,
+    "npu_active_cycles": 4114227,
+    "npu_idle_cycles": 841,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 4115068,
+    "npu_active_cycles": 4114227,
+    "npu_idle_cycles": 841,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     68.017,
+     66.92,
+     66.516
+    ]
+   }
+  },
+  {
+   "seq": 68,
+   "cell_id": "rnnoise_INT8__SSE-320__ethos-u85-2048",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 2048,
+   "artifact_identity": {
+    "model_sha256": "9c582545b7c13af44616c44b654f4fe721aa2585630b0ca173ca3589f6f11c2c",
+    "vela_sha256": "0cb89bfa18ffcd82d67b096c2ce3f1eefe2046b4c26175983c9d5837b790a979",
+    "generated_cc_body_sha256": "6cafcf170e94a477e4e50acdb991b319ab1ce91cbe129dad96db98c5a763cf0d",
+    "generated_cc_raw_sha256_informational": "b52da2236c0b7b75ede44e8f363d55833c61e1143d80a091b6c672a99653b82b",
+    "axf_sha256": "a3aea1f836b9e58380da1fa965df00ca9898e8ac1516c00224d739808fd30ba0"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 54086,
+    "npu_active_cycles": 53012,
+    "npu_idle_cycles": 1074,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 54086,
+    "npu_active_cycles": 53012,
+    "npu_idle_cycles": 1074,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 54086,
+    "npu_active_cycles": 53012,
+    "npu_idle_cycles": 1074,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     1.003,
+     1.003,
+     1.003
+    ]
+   }
+  },
+  {
+   "seq": 69,
+   "cell_id": "kws_micronet_m__SSE-320__ethos-u85-2048",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 2048,
+   "artifact_identity": {
+    "model_sha256": "c1feed3af5dac44de7477fb4161670ba18a3fc06039e4a14da41b1c4dd454cb4",
+    "vela_sha256": "ad756be0f88116bdbcacf23eaf95d3e9d6ad0b4b71205b3c0f58ba514252003d",
+    "generated_cc_body_sha256": "d31a0ba43d015185325dab6e80a7a17f162375e4473841f368ed57b3c8296121",
+    "generated_cc_raw_sha256_informational": "971335e107d54f5f0cf4c91a11d77032d10afa886fca02ad889d425d976874a8",
+    "axf_sha256": "17dedc201f0864367fea6c542d67ab834e1913a6be532ec68990a099242a52be"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 67068,
+    "npu_active_cycles": 66777,
+    "npu_idle_cycles": 291,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 67068,
+    "npu_active_cycles": 66777,
+    "npu_idle_cycles": 291,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 67068,
+    "npu_active_cycles": 66777,
+    "npu_idle_cycles": 291,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     1.906,
+     1.906,
+     1.905
+    ]
+   }
+  },
+  {
+   "seq": 70,
+   "cell_id": "ad_medium_int8__SSE-320__ethos-u85-2048",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 2048,
+   "artifact_identity": {
+    "model_sha256": "a8b1c9037c2a80e6ff770f0a550777cf744a52850bed6545b2bfc9bacf604c98",
+    "vela_sha256": "5d6b0526e6d7c5e26f97f789d68e34f20ffdec7749b9e2ec923efbf2053b5dc4",
+    "generated_cc_body_sha256": "5376d199863a34f7426b6b850b0eecb1d884e271eb6f252402b2610a7ae94bd8",
+    "generated_cc_raw_sha256_informational": "e5a0f890433293dcdb9c7a360ae8085d91e252e126a8e5ff203d8cc6260d5b1f",
+    "axf_sha256": "9d1dfb58684bdb327beec8fdba4757ddc813ced2da6a3b166fb4c5cb06e0cd5c"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 110068,
+    "npu_active_cycles": 109653,
+    "npu_idle_cycles": 415,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 110068,
+    "npu_active_cycles": 109653,
+    "npu_idle_cycles": 415,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 110068,
+    "npu_active_cycles": 109653,
+    "npu_idle_cycles": 415,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     3.309,
+     3.309,
+     3.26
+    ]
+   }
+  },
+  {
+   "seq": 71,
+   "cell_id": "vww4_128_128_INT8__SSE-320__ethos-u85-2048",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 2048,
+   "artifact_identity": {
+    "model_sha256": "5e76364e80c45776b735563679d45f611cab7ce7fef2ec4e2db088afe009ccae",
+    "vela_sha256": "c0b82d4d6939c2369fce19b71cfcc41cddb4cb5fc84ae615bce8967cb92ff979",
+    "generated_cc_body_sha256": "2ccde419fdcbc17aea3e3eec474ac4cbe2bdb66d81da2297cc4d87960f474fd7",
+    "generated_cc_raw_sha256_informational": "d61075029f83ad539b67d6c60dd9245828cdadae9c609ce21d627130bb53b6e5",
+    "axf_sha256": "ef963f1912c5449dcd7442e995069770059a8483779a86cea1495983613bc2f1"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 214068,
+    "npu_active_cycles": 213586,
+    "npu_idle_cycles": 482,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 214068,
+    "npu_active_cycles": 213586,
+    "npu_idle_cycles": 482,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 214068,
+    "npu_active_cycles": 213586,
+    "npu_idle_cycles": 482,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     3.36,
+     3.359,
+     3.359
+    ]
+   }
+  },
+  {
+   "seq": 72,
+   "cell_id": "yolo-fastest_192_face_v4__SSE-320__ethos-u85-2048",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 2048,
+   "artifact_identity": {
+    "model_sha256": "e94bcdb011784bead70ab0c0e9d2dae1a9ea5f103b43e1e6fac3019302cf71ab",
+    "vela_sha256": "b612256ae8dd9b702d81f8ddf334936d887fda08869fa03221b3bc51e0547b73",
+    "generated_cc_body_sha256": "3af90a269a50f1bec5294b1aeba37ba205731f95a90204718f4bcf7379d65a75",
+    "generated_cc_raw_sha256_informational": "2199ead477151c7921529ef2334ef05a64be61d4dc6f08be61e80f7200e14f97",
+    "axf_sha256": "7cc70df9a086094d6a6522c5d33d862ce0967fb72f92da6bf604bbd69b7e4356"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 355074,
+    "npu_active_cycles": 354800,
+    "npu_idle_cycles": 274,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 355074,
+    "npu_active_cycles": 354800,
+    "npu_idle_cycles": 274,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 355074,
+    "npu_active_cycles": 354800,
+    "npu_idle_cycles": 274,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     7.167,
+     7.168,
+     7.17
+    ]
+   }
+  },
+  {
+   "seq": 73,
+   "cell_id": "mobilenet_v2_1.0_224_INT8__SSE-320__ethos-u85-2048",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 2048,
+   "artifact_identity": {
+    "model_sha256": "bd8d56b80557a5fca7acf14f61e5339285c02810f7d7afa714b9763fc4b86e95",
+    "vela_sha256": "5666f10f9faf582d8322cf85a127ccd74f18e50a3c7ec42868ce123eb1883533",
+    "generated_cc_body_sha256": "24f060fa9c5f36b5379b062772ec0a0ac098d7e316058b8469f1c5df43c293a2",
+    "generated_cc_raw_sha256_informational": "6ae60ff0862ae89eb5bc7761b897e5446229f71c40aba01fd08fafab62f6dd97",
+    "axf_sha256": "3e0102db84023d6ee490ca4d898cb2a21e2507bd92d95934fb4fb3650b705ba8"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1067068,
+    "npu_active_cycles": 1066245,
+    "npu_idle_cycles": 823,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1067068,
+    "npu_active_cycles": 1066245,
+    "npu_idle_cycles": 823,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 1067068,
+    "npu_active_cycles": 1066245,
+    "npu_idle_cycles": 823,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     22.359,
+     22.105,
+     21.856
+    ]
+   }
+  },
+  {
+   "seq": 74,
+   "cell_id": "wav2letter_pruned_int8__SSE-320__ethos-u85-2048",
+   "platform": "SSE-320",
+   "npu": "ethos-u85",
+   "mac_config": 2048,
+   "artifact_identity": {
+    "model_sha256": "e0814a0e586f2f2881f7fe96e6bc0b8e4cfecc8d64ced56d8f7ca85b9b7ab257",
+    "vela_sha256": "b9aa7575d5a353d4551eeead152dc62d23496da4c1b6509ba6b048b977add895",
+    "generated_cc_body_sha256": "81c3868d82e50f2ae9ee47303284bc2914416acd5d3608f69e0b508db2930192",
+    "generated_cc_raw_sha256_informational": "6ebde55f6024f8eadc115700a5323e65cae97ea8359e2c49c1c4e0bb94ff0218",
+    "axf_sha256": "f55a1175172a02e20f6e5d11720291fd8b28564ab9f32f45d484286d58b808fc"
+   },
+   "M1": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 2624068,
+    "npu_active_cycles": 2623033,
+    "npu_idle_cycles": 1035,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M2": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 2624068,
+    "npu_active_cycles": 2623033,
+    "npu_idle_cycles": 1035,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "M3": {
+    "status": "SUCCESS",
+    "inference_count_line": 1,
+    "npu_total_cycles": 2624068,
+    "npu_active_cycles": 2623033,
+    "npu_idle_cycles": 1035,
+    "axi0_rd_beats": null,
+    "axi0_wr_beats": null,
+    "axi1_rd_beats": null
+   },
+   "determinism": {
+    "M1_equals_M2_equals_M3": true
+   },
+   "operational_telemetry_not_equality_bearing": {
+    "wall_clock_s": [
+     73.987,
+     73.98,
+     74.689
+    ]
+   }
+  }
+ ]
+}

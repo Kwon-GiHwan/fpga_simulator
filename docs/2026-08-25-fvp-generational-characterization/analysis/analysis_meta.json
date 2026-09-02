@@ -1,0 +1,11 @@
+{
+ "applied_to": "paper-fvp-formal-evidence-frozen",
+ "input_digest": "2dd77839432ac22ce21c31063456c18645465bb10d937f2fbd8f28c504b6aaba",
+ "plan_anchor": "959c473361a71a776bf889ae401ed9fc338faa6bdecea1c927d12848dc193b82",
+ "cells": 74,
+ "formal_samples": 222,
+ "ladders_analysed": 21,
+ "trend_rows": 20,
+ "ranking_pairs": 55,
+ "analysis_status": "APPLIED_ONCE"
+}

@@ -1,0 +1,58 @@
+{
+ "anchor": "paper-fvp-analysis-plan-anchor",
+ "created": "2026-08-25",
+ "input_evidence": {
+  "name": "paper-fvp-formal-evidence-frozen",
+  "digest": "2dd77839432ac22ce21c31063456c18645465bb10d937f2fbd8f28c504b6aaba"
+ },
+ "plan_sha256": "d9ad168f1b43cc3d4bec91edc54978f1d318b1499fd8c2a93942b0a61ca8099d",
+ "analyzer_sha256": "0c88203e1badd4a5951935dfb5ca7b2fa76bb27c1d516ee8cc0da0600bc5d959",
+ "analyzer_test_sha256": "ac912067b53df85c174fed1cdd4dadc9092c82c3674d982796d98b75448cdaa4",
+ "canonical_value_rule": "M1 after asserting M1==M2==M3; never averaged",
+ "canonical_metric": "npu_total_cycles",
+ "thresholds": {
+  "STRONG": 0.75,
+  "SATURATION": 0.5,
+  "boundary_note": "incremental == 0.50 is PARTIAL; saturation requires strictly < 0.50"
+ },
+ "ladders": {
+  "SSE-300/ethos-u55": [
+   32,
+   64,
+   128,
+   256
+  ],
+  "SSE-300/ethos-u65": [
+   256,
+   512
+  ],
+  "SSE-320/ethos-u85": [
+   128,
+   256,
+   512,
+   1024,
+   2048
+  ]
+ },
+ "common_semantics_pmu": [
+  "CYCLE",
+  "NPU_IDLE",
+  "CC_STALLED_ON_BLOCKDEP"
+ ],
+ "mutation_tests": {
+  "count": 26,
+  "result": "ALL_PASS",
+  "prohibitions_proven_to_reject": [
+   "M1 != M2 input",
+   "TA-OFF cell in primary",
+   "non-executable gap bridged",
+   "baseline rebased when preregistered baseline non-executable",
+   "efficiency threshold modified",
+   "cross-generation raw-cycle comparison",
+   "absolute Vela/FVP ratio as fidelity metric",
+   "cross-generation PMU outside COMMON_SEMANTICS",
+   "rank correlation over non-shared workload subset"
+  ]
+ },
+ "analysis_status": "PLAN_FROZEN_NOT_YET_APPLIED"
+}

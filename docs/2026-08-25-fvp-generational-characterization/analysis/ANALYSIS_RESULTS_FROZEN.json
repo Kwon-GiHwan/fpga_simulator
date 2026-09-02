@@ -1,0 +1,55 @@
+{
+ "freeze": "paper-fvp-analysis-results-frozen",
+ "created": "2026-08-25",
+ "input_evidence": {
+  "name": "paper-fvp-formal-evidence-frozen",
+  "digest": "2dd77839432ac22ce21c31063456c18645465bb10d937f2fbd8f28c504b6aaba"
+ },
+ "plan_anchor": {
+  "name": "paper-fvp-analysis-plan-anchor",
+  "digest": "959c473361a71a776bf889ae401ed9fc338faa6bdecea1c927d12848dc193b82"
+ },
+ "applied": "ONCE",
+ "cells": 74,
+ "formal_samples": 222,
+ "headline_counts": {
+  "ladders": 21,
+  "cumulative_available": 20,
+  "cumulative_not_available": 1,
+  "incremental_points": 53,
+  "class_STRONG": 28,
+  "class_PARTIAL": 23,
+  "class_WEAK_OR_SATURATED": 2,
+  "class_NOT_AVAILABLE": 3,
+  "saturation_none_observed": 19,
+  "saturation_observed": 1,
+  "saturation_not_available": 1,
+  "trend_ladders": 20,
+  "trend_saturation_agrees": 19,
+  "trend_rank_rho_1": 19,
+  "ranking_pairs": 55,
+  "ranking_rho_1": 31
+ },
+ "not_evaluable": [
+  "CC_STALLED_ON_BLOCKDEP cross-generation (counter never emitted by stock runner)",
+  "U85 EXT*/SRAM* family (not emitted by stock runner)",
+  "board-vs-FVP relationship (board measurements on HOLD)"
+ ],
+ "narrative_status": "NOT_STARTED",
+ "artifacts": {
+  "ANALYSIS_PLAN.md": "d9ad168f1b43cc3d4bec91edc54978f1d318b1499fd8c2a93942b0a61ca8099d",
+  "DERIVED_RESULTS.md": "8d5352f1adbd7c210cd851e49e5cfacb04d24526a44fa8716577caad45639fe7",
+  "analysis_meta.json": "d310125db6228ec58a1492c90ab59a6a4a131be3aca4fd948e5c06474d7e64aa",
+  "analysis_plan_anchor.json": "e160927185985fada2d66a0b19a1b08169f6d608cae9a3c991656517d5911af8",
+  "analyzer.py": "0c88203e1badd4a5951935dfb5ca7b2fa76bb27c1d516ee8cc0da0600bc5d959",
+  "analyzer_test.py": "ac912067b53df85c174fed1cdd4dadc9092c82c3674d982796d98b75448cdaa4",
+  "canonical_cells.csv": "4079483e05000410778a21c7c1e0d3c17f8390a5e9934d744a5db566707d85f0",
+  "executability.csv": "c304595f77d8a7556c953a0e99f5b6d7bdbb32df35ceaa1293c39c02318db5d4",
+  "pmu_within_generation.csv": "0c54a30938bb92a372fcb20344d5ba417a5e986bf51cbfe2244bd4fbf4b47390",
+  "ranking_preservation.csv": "528d396326a32778ef71b8be161ead8b0e0639aa5f1672ca37abf2dfc404d729",
+  "saturation.csv": "9167acec75d5a20a23dc3fd955778ed2e8380ea669383d8fa8f05f1daa349c58",
+  "scaling.csv": "5ca399e6cef46c2761d0c94568f134ad945834fc119b9a6290f70134ad440258",
+  "vela_fvp_trend_agreement.csv": "74ad42fd3c4a8cd5dafff9d0589de47f033d486f7152907ccc539cf7c2802001",
+  "workload_ranking.csv": "87ae1c0c8381c660cc537ed5a848520a76cab12895c05e6ba3717c829152172e"
+ }
+}
